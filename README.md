@@ -1,3 +1,5 @@
+Just a quick placeholder so far...
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/mhk-env/mhk-env.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
