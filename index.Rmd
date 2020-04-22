@@ -1,0 +1,49 @@
+---
+pagetitle: "home"
+output:
+  html_document:
+    css: tiles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
+#sz <- "fa-4x"
+
+# https://material-ui.com/customization/color/#color-tool
+# Color tool: primary: blue; secondary: orange
+# blues: #1769aa, #2196f3, #4dabf5
+# oranges: #b26500, #ff9100, #ffa733
+```
+
+<h3>Marine HydroKinetic (MHK) environmental interactions</h3>
+
+<div class="tiles">
+<div>
+  <a href="docs.html"> 
+  <h4>Document Resources</h4>
+  `r icon("file-alt")`
+  </a>
+  </div>
+<div>
+  <a href="env.html"> 
+  <h4>Environmental Interactions</h4>
+  `r icon("gears")`
+  </a>
+  </div>
+<div>
+  <a href="report.html"> 
+  <h4>Map Reporting Tool</h4>
+  `r icon("map-marked")`
+  </a>
+  </div>
+<div>
+  <a href=".html"> 
+  <h4>Regulatory Aspects</h4>
+  `r icon("institution")`
+  </a>
+  </div>
+</div>
+
+...
+

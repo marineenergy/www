@@ -1,0 +1,25 @@
+name: "mhk-env"
+navbar:
+  title: "MHK-env"
+  type: inverse # inverse or default
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "Documents"
+      icon: fa-file-alt
+      href: docs.html
+    - text: "Interactions"
+      icon: fa-gears
+      href: env.html
+    - text: "Report"
+      icon: fa-map-marked
+      href: tool.html
+    - text: "Regulations"
+      icon: fa-institution
+      href: regs.html                  
+#output:
+#  html_document:
+#    theme: darkly # https://bootswatch.com/
+    #css: styles.css
+output_dir: "."      
