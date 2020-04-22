@@ -16,7 +16,9 @@ icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
 # oranges: #b26500, #ff9100, #ffa733
 ```
 
-<h3>Marine HydroKinetic (MHK) environmental interactions</h3>
+#### Marine hydrokinetic (MHK) environmental interactions
+
+Tools and resources for environmental compliance in support of wave and tidal energy projects
 
 <div class="tiles">
 <div>
@@ -43,7 +45,21 @@ icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
   `r icon("institution")`
   </a>
   </div>
+
+<div>
+  <a href="https://openei.org/wiki/MHK-env"> 
+  <h4>What is MHK?</h4>
+  `r icon("question")`
+  </a>
+  </div>
 </div>
 
-...
+<!--
+TODO: think of scrolling sections with imagery and For more...
 
+- https://www.integral-corp.com/
+
+For more, see:
+
+- [What is MHK? (OpenEI)](https://openei.org/wiki/MHK-env)
+-->

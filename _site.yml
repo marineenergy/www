@@ -17,9 +17,18 @@ navbar:
       href: tool.html
     - text: "Regulations"
       icon: fa-institution
-      href: regs.html                  
-#output:
-#  html_document:
-#    theme: darkly # https://bootswatch.com/
+      href: regs.html
+  right:
+    - text: "About"
+      icon: fa-group
+      href: about.html
+    - text: "Help"
+      icon: fa-question
+      href: help.html
+output:
+  html_document:
+    #theme: darkly # https://bootswatch.com/
     #css: styles.css
+    include:
+      after_body: footer.html
 output_dir: "."      

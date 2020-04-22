@@ -30,3 +30,44 @@ DiagrammeR::grViz("digraph {
   height = 500)
 ```
 
+
+```{r, eval=F}
+library("DiagrammeR")
+
+# Click on B
+# Edit *.mmd in https://mermaid-js.github.io/mermaid-live-editor
+# https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html#mermaid
+mermaid('
+graph LR
+A-->B
+A-->C
+C-->E
+B-->D
+C-->D
+D-->F
+E-->F
+A[hello]
+B[test]
+click B "http://www.github.com" "This is a link"
+')
+```
+
+```{r, eval=F}
+# sequenceDiagram
+mermaid("
+sequenceDiagram
+  customer->>ticket seller: ask ticket
+  ticket seller->>database: seats
+  alt tickets available
+    database->>ticket seller: ok
+    ticket seller->>customer: confirm
+    customer->>ticket seller: ok
+    ticket seller->>database: book a seat
+    ticket seller->>printer: print ticket
+  else sold out
+    database->>ticket seller: none left
+    ticket seller->>customer: sorry
+  end
+")
+```
+

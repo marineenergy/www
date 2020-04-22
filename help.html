@@ -11,7 +11,7 @@
 
 
 
-<title>home</title>
+<title>Frequently Asked Questions</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,11 +19,14 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.3.1/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.3.1/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -70,7 +73,6 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="tiles.css" type="text/css" />
 
 
 
@@ -251,6 +253,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -258,6 +323,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -334,59 +409,42 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Frequently Asked Questions</h1>
 
 </div>
 
 
-<div id="marine-hydrokinetic-mhk-environmental-interactions" class="section level4">
-<h4>Marine hydrokinetic (MHK) environmental interactions</h4>
-<p>Tools and resources for environmental compliance in support of wave and tidal energy projects</p>
-<div class="tiles">
-<div>
-<a href="docs.html">
-<h4>
-Document Resources
-</h4>
-<i class="fa fa-file-alt fa-4x primary"></i> </a>
+<div id="who-funded-this-project" class="section level2">
+<h2>Who funded this project?</h2>
+<p>The Department of Energy.</p>
 </div>
-<div>
-<a href="env.html">
-<h4>
-Environmental Interactions
-</h4>
-<i class="fa fa-gears fa-4x primary"></i> </a>
+<div id="who-is-the-main-audience-of-this-website" class="section level2">
+<h2>Who is the main audience of this website?</h2>
+<p>Environmental regulators.</p>
 </div>
-<div>
-<a href="tool.html">
-<h4>
-Map Reporting Tool
-</h4>
-<i class="fa fa-map-marked fa-4x primary"></i> </a>
+<div id="how-do-i-use-the-reporting-tool" class="section level2">
+<h2>How do I use the Reporting Tool?</h2>
+<div id="enter-criteria-in-the-sidebar" class="section level3">
+<h3>Enter criteria in the sidebar</h3>
 </div>
-<div>
-<a href="regs.html">
-<h4>
-Regulatory Guidelines
-</h4>
-<i class="fa fa-institution fa-4x primary"></i> </a>
-</div>
-<div>
-<a href="https://openei.org/wiki/MHK-env">
-<h4>
-What is MHK?
-</h4>
-<i class="fa fa-question fa-4x primary"></i> </a>
+<div id="view-download-the-report" class="section level3">
+<h3>View / download the report</h3>
 </div>
 </div>
-<!--
-TODO: think of scrolling sections with imagery and For more...
-
-- https://www.integral-corp.com/
-
-For more, see:
-
-- [What is MHK? (OpenEI)](https://openei.org/wiki/MHK-env)
--->
+<div id="acknowledgement" class="section level2">
+<h2>Acknowledgement</h2>
+<p>This material is based upon work supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Water Power Technologies Office Award Number DE-EE0008634.</p>
+</div>
+<div id="disclaimer" class="section level2">
+<h2>Disclaimer</h2>
+<p>This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or an agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.”</p>
+</div>
+<div id="disclaimer-1" class="section level2">
+<h2>Disclaimer</h2>
+<p>This material is based upon work supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Water Power Technologies Office Award Number DE-EE0008634.</p>
+</div>
+<div id="section" class="section level2">
+<h2></h2>
 </div>
 
 <hr>
@@ -395,6 +453,8 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 </p>
 
 
+</div>
+</div>
 
 </div>
 
@@ -427,6 +487,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
