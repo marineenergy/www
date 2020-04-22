@@ -32,14 +32,14 @@ icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
   </a>
   </div>
 <div>
-  <a href="report.html"> 
+  <a href="tool.html"> 
   <h4>Map Reporting Tool</h4>
   `r icon("map-marked")`
   </a>
   </div>
 <div>
-  <a href=".html"> 
-  <h4>Regulatory Aspects</h4>
+  <a href="regs.html"> 
+  <h4>Regulatory Guidelines</h4>
   `r icon("institution")`
   </a>
   </div>

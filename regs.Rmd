@@ -3,7 +3,30 @@ title: "Regulations"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F)
 ```
 
-...
+## Regulatory Diagram
+
+[![](images/openei_regulatory-diagram.png)](https://openei.org/wiki/MHK-env/RegulatoryDiagram)
+
+```{r, eval=F}
+# TODO:
+# [3.12 Create diagrams | R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/diagrams.html)
+
+
+DiagrammeR::grViz("digraph {
+  graph [layout = dot, rankdir = TB]
+  
+  node [shape = rectangle]        
+  rec1 [label = 'Step 1. Wake up']
+  rec2 [label = 'Step 2. Write code']
+  rec3 [label =  'Step 3. ???']
+  rec4 [label = 'Step 4. PROFIT']
+  
+  # edge definitions with the node IDs
+  rec1 -> rec2 -> rec3 -> rec4
+  }", 
+  height = 500)
+```
+
