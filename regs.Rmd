@@ -2,22 +2,9 @@
 title: "Regulations"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F)
-```
-
 ## Regulatory Diagram
 
-```{r}
-# References:
-# - [Create diagrams | R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/diagrams.html)
-# - [mermaid documentation | DiagrammeR](https://rich-iannone.github.io/DiagrammeR/mermaid.html)
-# - [Flowchart | mermaid](https://mermaid-js.github.io/mermaid/#/flowchart)
-# - [Font Awesome Icons v4.7](https://fontawesome.com/v4.7.0/icons/)
-# - [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor)
-
-library("DiagrammeR")
-
-mermaid('diagrams/grid_state.mmd', height = 400)
+```{r, echo=F}
+DiagrammeR::mermaid('diagrams/grid_state.mmd', height = 500)
 ```
 
