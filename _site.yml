@@ -28,7 +28,7 @@ navbar:
 output:
   html_document:
     #theme: darkly # https://bootswatch.com/
-    #css: styles.css
+    css: styles.css
     include:
       after_body: footer.html
 output_dir: "."      

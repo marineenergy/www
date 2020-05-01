@@ -20,8 +20,17 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/d3-3.3.8/d3.min.js"></script>
+<script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="site_libs/mermaid-0.3.0/dist/mermaid.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/chromatography-0.1/chromatography.js"></script>
+<script src="site_libs/DiagrammeR-binding-1.0.5/DiagrammeR.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -70,6 +79,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
 
 
@@ -247,6 +257,9 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
 
 
 
@@ -331,6 +344,14 @@ $(document).ready(function () {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">Regulations</h1>
@@ -340,7 +361,18 @@ $(document).ready(function () {
 
 <div id="regulatory-diagram" class="section level2">
 <h2>Regulatory Diagram</h2>
-<p><a href="https://openei.org/wiki/MHK-env/RegulatoryDiagram"><img src="images/openei_regulatory-diagram.png" /></a></p>
+<pre class="r"><code># References:
+# - [Create diagrams | R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/diagrams.html)
+# - [mermaid documentation | DiagrammeR](https://rich-iannone.github.io/DiagrammeR/mermaid.html)
+# - [Flowchart | mermaid](https://mermaid-js.github.io/mermaid/#/flowchart)
+# - [Font Awesome Icons v4.7](https://fontawesome.com/v4.7.0/icons/)
+# - [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor)
+
+library(&quot;DiagrammeR&quot;)
+
+mermaid(&#39;diagrams/grid_state.mmd&#39;, height = 400)</code></pre>
+<div id="htmlwidget-7c71634dde36965d03ec" style="width:672px;height:400px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7c71634dde36965d03ec">{"x":{"diagram":"%% see in mermaid-live-editor: https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbmdyaWQtLT58WWVzfHRldGh5c1xuZ3JpZC0tPnxOb3xzdGF0ZVxuc3RhdGUtLT58WWVzfGFjb2VcbnN0YXRlLS0-fE5vfGJvZW1cbmdyaWR7ZmE6ZmEtYXJyb3dzLWFsdCBjbGFzcyBmYS1sZyA8YnI-SXMgdGhlIHByb2plY3Q8YnI-Z3JpZCBjb25uZWN0ZWQ_fVxudGV0aHlzW1RldGh5czogTVJFPGJyLz5yZWd1bGF0b3J5IGZyYW1ld29ya3NdXG5jbGljayB0ZXRoeXMgXCJodHRwczovL3RldGh5cy5wbm5sLmdvdi9yZWd1bGF0b3J5LWZyYW1ld29ya3MtbWFyaW5lLXJlbmV3YWJsZS1lbmVyZ3kjVW5pdGVkJTIwU3RhdGVzJTIwb2YlMjBBbWVyaWNhXCIgXCJSZWd1bGF0b3J5IEZyYW1ld29ya3MgZm9yIE1hcmluZSBSZW5ld2FibGUgRW5lcmd5OiBVU0FcIlxuc3RhdGV7ZmE6ZmEtaW5zdGl0dXRpb248YnI-SXMgdGhlIHByb2plY3Q8YnI-aW4gc3RhdGUgd2F0ZXJzP31cbmJvZW1bbGVhZDogQk9FTV1cbmFjb2VbbGVhZDogQUNPRS9zdGF0ZV1cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9\ngraph TD\ngrid-->|Yes|tethys\ngrid-->|No|state\nstate-->|Yes|acoe\nstate-->|No|boem\ngrid{fa:fa-arrows-alt class fa-lg <br>Is the project<br>grid connected?}\ntethys[Tethys: MRE<br/>regulatory frameworks]\nclick tethys \"https://tethys.pnnl.gov/regulatory-frameworks-marine-renewable-energy#United%20States%20of%20America\" \"Regulatory Frameworks for Marine Renewable Energy: USA\"\nstate{fa:fa-institution<br>Is the project<br>in state waters?}\nboem[lead: BOEM]\nacoe[lead: ACOE/state]"},"evals":[],"jsHooks":[]}</script>
 </div>
 
 <hr>
@@ -380,6 +412,11 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
