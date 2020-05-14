@@ -15,7 +15,7 @@ function basename(path) {
      return path.replace(/.*\//, '');
 }
 
-// main function to link svg elements to modal popups with data in csv
+// function to convert links in diagram to modal popups
 function svg_links_to_modals() {
   
   // select svg
@@ -53,3 +53,4 @@ function svg_links_to_modals() {
 
 // update links to modals
 //svg_links_to_modals();
+// instead, run in R with: htmlwidgets::onRender(diagram, "svg_links_to_modals();")
