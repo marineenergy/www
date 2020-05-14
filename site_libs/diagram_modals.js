@@ -26,11 +26,19 @@ function svg_links_to_modals() {
   svg.selectAll('g.clickable')
     .each(function(d, i) { // iterate over each
       
-      a = d3.select(this).select('g g a');
+      g   = d3.select(this).select('g g');
+      a   = d3.select(this).select('g g a');
+      url = a.attr('href');
+      
+      // replace inner html with content of a
+      g.node().innerHTML = a.html();
+      // TODO: get g attributes like transform to apply
+      
+      //g.enter()
       //a.attr('target') = '_blank';
 
       // get url
-      url = a.attr('href');
+      
       console.log('href g.clickable g g a: ' + url);
       
       // setup click event
