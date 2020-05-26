@@ -25,13 +25,15 @@
 <script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <script src="site_libs/d3-3.3.8/d3.min.js"></script>
 <script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
-<link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
-<script src="site_libs/mermaid-0.3.0/dist/mermaid.js"></script>
+<!-- <link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" /> -->
+<!-- <script src="site_libs/mermaid-0.3.0/dist/mermaid.js"></script> -->
 <link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="site_libs/chromatography-0.1/chromatography.js"></script>
 <script src="site_libs/DiagrammeR-binding-1.0.5/DiagrammeR.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+<script src="https://kit.fontawesome.com/9d6352f212.js" crossorigin="anonymous"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -257,6 +259,74 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<!-- diagram modal styling -->
+<style>
+.graphic-container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.mermaid {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    /* margin: auto; */
+    /* display: block; */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-nav {
+    display: inline-block;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #bababa;
+    padding: 8px 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#modal-nav:hover {
+  background-color: #98b2ed;
+  color: black;
+}
+
+</style>
 
 
 
@@ -285,35 +355,35 @@ $(document).ready(function () {
         <li>
   <a href="index.html">
     <span class="fa fa-home"></span>
-     
+
     Home
   </a>
 </li>
 <li>
   <a href="docs.html">
     <span class="fa fa-file-alt"></span>
-     
+
     Documents
   </a>
 </li>
 <li>
   <a href="env.html">
     <span class="fa fa-gears"></span>
-     
+
     Interactions
   </a>
 </li>
 <li>
   <a href="tool.html">
     <span class="fa fa-map-marked"></span>
-     
+
     Report
   </a>
 </li>
 <li>
   <a href="regs.html">
     <span class="fa fa-institution"></span>
-     
+
     Regulations
   </a>
 </li>
@@ -322,14 +392,14 @@ $(document).ready(function () {
         <li>
   <a href="about.html">
     <span class="fa fa-group"></span>
-     
+
     About
   </a>
 </li>
 <li>
   <a href="help.html">
     <span class="fa fa-question"></span>
-     
+
     Help
   </a>
 </li>
@@ -347,14 +417,57 @@ $(document).ready(function () {
 </div>
 
 
-<div id="regulatory-diagram" class="section level2">
-<h2>Regulatory Diagram</h2>
-<p>Original version without running <code>svg_links_to_modals()</code> in <code>site_libs/diagram_modals.js</code>:</p>
-<div id="htmlwidget-b3389bdb90d363ec619c" style="width:672px;height:500px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b3389bdb90d363ec619c">{"x":{"diagram":"graph TD\ngrid-->|Yes|tethys\ngrid-->|No|state\nstate-->|Yes|acoe\nstate-->|No|boem\ngrid{fa:fa-arrows-alt<br>Is the project<br>grid connected?}\ntethys[Tethys: MRE<br/>regulatory frameworks]\n%% click tethys \"https://tethys.pnnl.gov/regulatory-frameworks-marine-renewable-energy#United%20States%20of%20America\" \"Regulatory Frameworks for Marine Renewable Energy: USA\"\nclick tethys \"./modals/test_modal.html\" \"Regulatory Frameworks for Marine Renewable Energy: USA\"\nstate{fa:fa-institution<br>Is the project<br>in state waters?}\nboem[lead: BOEM]\nacoe[lead: ACOE/state]\n\n%% see in mermaid-live-editor: https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbmdyaWQtLT58WWVzfHRldGh5c1xuZ3JpZC0tPnxOb3xzdGF0ZVxuc3RhdGUtLT58WWVzfGFjb2VcbnN0YXRlLS0-fE5vfGJvZW1cbmdyaWR7ZmE6ZmEtYXJyb3dzLWFsdDxicj5JcyB0aGUgcHJvamVjdDxicj5ncmlkIGNvbm5lY3RlZD99XG50ZXRoeXNbVGV0aHlzOiBNUkU8YnIvPnJlZ3VsYXRvcnkgZnJhbWV3b3Jrc11cbmNsaWNrIHRldGh5cyBcImh0dHBzOi8vdGV0aHlzLnBubmwuZ292L3JlZ3VsYXRvcnktZnJhbWV3b3Jrcy1tYXJpbmUtcmVuZXdhYmxlLWVuZXJneSNVbml0ZWQlMjBTdGF0ZXMlMjBvZiUyMEFtZXJpY2FcIiBcIlJlZ3VsYXRvcnkgRnJhbWV3b3JrcyBmb3IgTWFyaW5lIFJlbmV3YWJsZSBFbmVyZ3k6IFVTQVwiXG5zdGF0ZXtmYTpmYS1pbnN0aXR1dGlvbjxicj5JcyB0aGUgcHJvamVjdDxicj5pbiBzdGF0ZSB3YXRlcnM_fVxuYm9lbVtsZWFkOiBCT0VNXVxuYWNvZVtsZWFkOiBBQ09FL3N0YXRlXSIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9"},"evals":[],"jsHooks":[]}</script>
-<!--script src="site_libs/d3.v5.min.js"></script>
-<script src="site_libs/diagram_modals.js"></script-->
-</div>
+<h2>ACOE-led Processes</h2>
+    <div class="graphic-container">
+      <div class="mermaid">
+        graph LR
+            return[<center>fas:fa-backward</center>Main Diagram]
+            acoe{<center>fas:fa-user</center>ACOE-led Processes}
+            nepa["NEPA"]
+            cwa401["CWA 401"]
+            cwa404["CWA 404"]
+            czma["CZMA"]
+            rha10["RHA 10"]
+            fwca["FWCA"]
+            esa["ESA"]
+            nhpa["NHPA"]
+            mmpa["MMPA"]
+            fish["Essential Fish Habitat"]
+
+            return --- acoe
+            acoe --> nepa
+            acoe --> cwa401
+            acoe --> cwa404
+            acoe --> czma
+            acoe --> rha10
+            acoe --> fwca
+            acoe --> esa
+            acoe --> nhpa
+            acoe --> mmpa
+            acoe --> fish
+
+            click return "./regs.html"
+            click nepa clicked_nepa
+            click cwa401 clicked_cwa401
+            click cwa404 clicked_cwa404
+            click czma clicked_czma
+            click rha10 clicked_rha10
+            click fwca clicked_fwca
+            click esa clicked_esa
+            click nhpa clicked_nhpa
+            click mmpa clicked_mmpa
+            click fish clicked_fish
+        </div>
+    </div>
+    <div id="modal-popup" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <button id="modal-nav" onclick="window.history.back();">&#8249;</button>
+            <button id="modal-nav" onclick="window.history.forward();">&#8250;</button>
+            <iframe id="openei-frame" src="https://openei.org/wiki/MHK-env" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+
 
 <hr>
 <p>
@@ -405,5 +518,113 @@ $(document).ready(function () {
   })();
 </script>
 
+
+<!-- call updateModal and showModal on node click -->
+<script>
+   var clicked_nepa = function(){ updateModal("nepa-modal"); showModal(); };
+   var clicked_cwa401 = function(){ updateModal("cwa401-modal"); showModal(); };
+   var clicked_cwa404 = function(){ updateModal("cwa404-modal"); showModal(); };
+   var clicked_czma = function(){ updateModal("czma-modal"); showModal(); };
+   var clicked_rha10 = function(){ updateModal("rha10-modal"); showModal(); };
+   var clicked_fwca = function(){ updateModal("fwca-modal"); showModal(); };
+   var clicked_esa = function(){ updateModal("esa-modal"); showModal(); };
+   var clicked_nhpa = function(){ updateModal("nhpa-modal"); showModal(); };
+   var clicked_mmpa = function(){ updateModal("mmpa-modal"); showModal(); };
+   var clicked_fish = function(){ updateModal("fish-modal"); showModal(); };
+</script>
+
+
+<!-- show/hide modal popup -->
+<script>
+function showModal() {
+   var modal = document.getElementById("modal-popup");
+   var span = document.getElementsByClassName("modal-close")[0];
+   modal.style.display = "block";
+
+   span.onclick = function() {
+       modal.style.display = "none";
+       var src = "https://openei.org/wiki/MHK-env";
+       document.getElementById("openei-frame").src = src;
+   }
+   window.onclick = function(event) {
+       if (event.target == modal) {
+           modal.style.display = "none";
+           var src = "https://openei.org/wiki/MHK-env";
+           document.getElementById("openei-frame").src = src;
+       }
+   }
+};
+</script>
+
+<!-- Change iframe window source -->
+<script>
+function updateModal(ele) {
+ var eleId = ele;
+ const cwa401_url = "https://openei.org/wiki/MHK-env/Regulations/CWA-401";
+ const cwa404_url = "https://openei.org/wiki/MHK-env/Regulations/CWA-404";
+ const nepa_url = "https://openei.org/wiki/MHK-env/Regulations/NEPA";
+ const czma_url = "https://openei.org/wiki/MHK-env/Regulations/CZMA";
+ const rha10_url = "https://openei.org/wiki/MHK-env/Regulations/RHA-10";
+ const fwca_url = "https://openei.org/wiki/MHK-env/Regulations/FWCA";
+ const esa_url = "https://openei.org/wiki/MHK-env/Regulations/ESA";
+ const nhpa_url = "https://openei.org/wiki/MHK-env/Regulations/NHPA";
+ const mmpa_url = "https://openei.org/wiki/MHK-env/Regulations/MMPA";
+ const fish_url = "https://openei.org/wiki/MHK-env/Regulations/Essential_Fish_Habitat";
+
+ if (eleId=="nepa-modal") {
+     var src = nepa_url;
+ } else if (eleId=="cwa401-modal") {
+     var src = cwa401_url;
+ } else if (eleId=="cwa404-modal") {
+     var src = cwa404_url;
+ } else if (eleId=="czma-modal") {
+     var src = czma_url;
+ } else if (eleId=="rha10-modal") {
+     var src = rha10_url;
+ } else if (eleId=="fwca-modal") {
+     var src = fwca_url;
+ } else if (eleId=="esa-modal") {
+     var src = esa_url;
+ } else if (eleId=="nhpa-modal") {
+     var src = nhpa_url;
+ } else if (eleId=="mmpa-modal") {
+     var src = mmpa_url;
+ } else if (eleId=="fish-modal") {
+     var src = fish_url;
+ } else {
+   var src = "https://openei.org/wiki/MHK-env";
+ }
+   document.getElementById("openei-frame").src = src;
+};
+</script>
+
 </body>
+
+<!-- mermaid diagram styling with javascript -->
+<script>
+   var rect = ".node rect { fill:#99d1b3; stroke:#333; stroke-width:1px; }"
+   var rect_hover = " .node rect:hover { fill:#75a189; }"
+   // var rect_active = " .node rect:active { transform:translateY(2px); }"
+   var rect_active = " .node rect:active { fill:#75a189; }"
+
+   var label = ".clickable foreignObject { color:black; }"
+   var label_hover = ".clickable foreignObject:hover { color:#5e6bb5; fill:#75a189; background:#5e6bb5}"
+
+   var polygon = " .node polygon { fill:#96b0e0; stroke:#333; stroke-width:3px; }"
+
+
+   var config = {
+     startOnLoad:true,
+     flowchart:{
+       useMaxWidth:true,
+       htmlLabels:true,
+     },
+     securityLevel:'loose',
+     themeCSS: polygon + rect + rect_hover + rect_active + label // label_hover
+   };
+
+   mermaid.initialize(config);
+</script>
+
+
 </html>
