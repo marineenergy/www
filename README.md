@@ -1,3 +1,6 @@
+Diagram to-do:
+- Place mermaid code in separate file, parse file and replace mermaid text on build (not Rmd)
+
 Just a quick placeholder so far...
 
 ## Welcome to GitHub Pages
