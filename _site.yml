@@ -6,6 +6,9 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Projects"
+      icon: fa-file-alt
+      href: projects.html
     - text: "Documents"
       icon: fa-file-alt
       href: docs.html

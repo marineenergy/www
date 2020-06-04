@@ -11,7 +11,7 @@
 
 
 
-<title>tool.utf8</title>
+<title>Regulations</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,6 +22,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/d3-3.3.8/d3.min.js"></script>
+<script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+<script src="site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/chromatography-0.1/chromatography.js"></script>
+<script src="site_libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -341,12 +349,18 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Regulations</h1>
 
 </div>
 
 
-<iframe style="position: absolute; width: 100%; height: 100%; border: none" src="http://shiny.mhk-env.us/report/">
-</iframe>
+<div id="regulatory-diagram" class="section level2">
+<h2>Regulatory Diagram</h2>
+<div id="htmlwidget-d541adaf94d25b5a18f7" style="width:672px;height:500px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d541adaf94d25b5a18f7">{"x":{"diagram":"graph TD\ngrid{<center>fa:fa-arrows-alt<\/center>Is the project<br>grid connected?}\ntethys[Tethys: MRE<br/>regulatory frameworks<center>fas:fa-external-link-alt<\/center>]\nterritory{<center>fa:fa-institution<\/center>Is the project<br>in state waters?}\nboem[lead: BOEM<center>fas:fa-external-link-alt<\/center>]\nlead{<center>fas:fa-people-arrows<\/center>Who is leading<br>the project?}\nstate[lead: State<center>fas:fa-external-link-alt<\/center>]\nacoe[lead: ACOE<center>fas:fa-external-link-alt<\/center>]\n\ngrid-->|Yes|tethys\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> acoe\n\nclick tethys \"https://tethys.pnnl.gov/regulatory-frameworks-marine-renewable-energy#United%20States%20of%20America\"\nclick acoe \"./regs-acoe.html\"\nclick state \"./regs-state.html\"\nclick boem \"./regs-boem.html\""},"evals":[],"jsHooks":{"render":[{"code":"svg_links_to_modals();","data":null}]}}</script>
+<script src="site_libs/d3.v5.min.js"></script>
+<script src="site_libs/diagram_modals.js"></script>
+</div>
 
 <hr>
 <p>

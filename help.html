@@ -73,6 +73,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
 
 
@@ -357,6 +358,13 @@ div.tocify {
   </a>
 </li>
 <li>
+  <a href="projects.html">
+    <span class="fa fa-file-alt"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
   <a href="docs.html">
     <span class="fa fa-file-alt"></span>
      
@@ -501,7 +509,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

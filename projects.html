@@ -32,6 +32,13 @@
 <script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
 <script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
 <script src="site_libs/leaflet-providers-plugin-2.0.3/leaflet-providers-plugin.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.13/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -292,6 +299,13 @@ $(document).ready(function () {
   </a>
 </li>
 <li>
+  <a href="projects.html">
+    <span class="fa fa-file-alt"></span>
+     
+    Projects
+  </a>
+</li>
+<li>
   <a href="docs.html">
     <span class="fa fa-file-alt"></span>
      
@@ -351,8 +365,9 @@ $(document).ready(function () {
 
 <div id="map" class="section level2">
 <h2>Map</h2>
-<div id="htmlwidget-4f0a359fb19d17783316" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4f0a359fb19d17783316">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
+<p><div id="htmlwidget-6d4381aaeffce7537937" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6d4381aaeffce7537937">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.OceanBasemap",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[40.77056,44.92047,44.9098,40.77056,48.182972,21.465886,30.52028,44.75968,44.69],[-73.94,-66.98717,-67.04563,-73.94,-122.732,-157.754183,-91.20356,-92.86726,-124.134],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["Roosevelt Island Tidal Energy (RITE) Project Pilot (Tidal)","Western Passage Tidal Energy Project (Tidal)","Cobscook Bay Tidal Energy Project (Tidal)","Roosevelt Island Tidal Energy (RITE) Project Demonstration (Tidal)","Admiralty Inlet Pilot Tidal Project (Tidal)","Kaneohe Bay OPT Wave Project (Wave)","Mississippi River Projects (Riverine)","Lock and Dam No. 2 Hydroelectric Project (Riverine)","Wave Energy Technology - New Zealand Multi-Mode Wave Energy Converter Advancement Project (Oregon) (Wave)"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[21.465886,48.182972],"lng":[-157.754183,-66.98717]}},"evals":[],"jsHooks":[]}</script><div id="htmlwidget-dffe3e29572562f44ac1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dffe3e29572562f44ac1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9"],["Riverine","Riverine","Tidal","Tidal","Tidal","Tidal","Tidal","Wave","Wave"],["<a href=https://tethys.pnnl.gov/project-sites/lock-dam-no-2-hydroelectric-project>Lock and Dam No. 2 Hydroelectric Project<\/a>","<a href=https://tethys.pnnl.gov/project-sites/mississippi-river-projects>Mississippi River Projects<\/a>","<a href=https://tethys.pnnl.gov/project-sites/admiralty-inlet-pilot-tidal-project>Admiralty Inlet Pilot Tidal Project<\/a>","<a href=https://tethys.pnnl.gov/project-sites/cobscook-bay-tidal-energy-project>Cobscook Bay Tidal Energy Project<\/a>","<a href=https://tethys.pnnl.gov/project-sites/roosevelt-island-tidal-energy-rite-project-demonstration>Roosevelt Island Tidal Energy (RITE) Project Demonstration<\/a>","<a href=https://tethys.pnnl.gov/project-sites/roosevelt-island-tidal-energy-rite-project-pilot>Roosevelt Island Tidal Energy (RITE) Project Pilot<\/a>","<a href=https://tethys.pnnl.gov/project-sites/western-passage-tidal-energy-project>Western Passage Tidal Energy Project<\/a>","<a href=https://tethys.pnnl.gov/project-sites/kaneohe-bay-opt-wave-project>Kaneohe Bay OPT Wave Project<\/a>","<a href=https://tethys.pnnl.gov/project-sites/wave-energy-technology-new-zealand-multi-mode-wave-energy-converter-advancement>Wave Energy Technology - New Zealand Multi-Mode Wave Energy Converter Advancement Project (Oregon)<\/a>"],["Device no longer in the water","Device no longer in the water","Device never deployed","Planned project","Device no longer in the water","Device in operation","Planned project","Device no longer in the water","Device no longer in the water"],["2013-08-01","2013-08-12","2015-06-17","2019-05-31","2018-03-02","2019-10-07","2019-06-01","2013-08-16","2013-05-22"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Technology<\/th>\n      <th>Title<\/th>\n      <th>Status<\/th>\n      <th>Last Updated<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":null,"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,25,50,100,null]}},"evals":[],"jsHooks":[]}</script></p>
 </div>
 
 <hr>

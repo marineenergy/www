@@ -1,12 +1,101 @@
 ---
 title: "Projects"
+editor_options: 
+  chunk_output_type: console
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+```
 
 ## Map
 
-```{r, echo=F}
-library(leaflet)
+```{r, eval=F}
+library(here)
+library(glue)
+library(rvest)
+library(dplyr)
+library(purrr)
+library(stringr)
+library(jsonlite)
+library(readr)
 
-leaflet() %>% 
-  addProviderTiles(providers$Esri.OceanBasemap) #%>% 
+projects_csv <- here("data/tethys_projects.csv")
+tethys_url   <- "https://tethys.pnnl.gov"
+projects_url <- glue("{tethys_url}/oes-environmental-metadata?country=190&type=project_site_annex_iv&status=All&search=")
+
+# helper function ----
+project_url_to_lonlat <- function(p_url){
+  # read json data
+  p_data <- read_html(p_url) %>% 
+    html_nodes('script[data-drupal-selector=drupal-settings-json]') %>%
+    html_text() %>% 
+    fromJSON()
+  
+  # return lon_lat
+  p_data$geofield_google_map[[1]]$data$features$geometry$coordinates[[1]]
+}
+
+# get table of projects ----
+tbl_projects <- read_html(projects_url) %>% 
+  html_table() %>% 
+  .[[1]] %>% 
+  as_tibble() %>% 
+  mutate(
+    href    = read_html(projects_url) %>% 
+      html_nodes("td a") %>% 
+      html_attr("href"),
+    url     = glue("{tethys_url}{href}"),
+    lon_lat = map(url, project_url_to_lonlat),
+    lon     = map_dbl(lon_lat, 1),
+    lat     = map_dbl(lon_lat, 2),
+    tech         = str_remove(Technology, fixed("Marine Energy (General), ")),
+    last_updated = as.Date(pts_projects$`Last Updated`, format = "%B %e, %Y")) %>% 
+  select(-lon_lat)
+
+write_csv(tbl_projects, projects_csv)
+```
+
+
+```{r}
+library(here)
+library(glue)
+library(readr)
+library(dplyr)
+library(purrr)
+library(stringr)
+library(sf)
+library(leaflet)
+library(DT)
+library(markdown)
+
+projects_csv <- here("data/tethys_projects.csv")
+
+pts_projects <- read_csv(projects_csv) %>% 
+  st_as_sf(coords = c("lon", "lat"), crs = 4326, remove = F)
+
+leaflet(pts_projects) %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) %>% 
+  addMarkers(label = ~glue("{Title} ({tech})"))
+
+#pts_projects %>% st_drop_geometry() %>% View()
+
+pts_projects %>% 
+  st_drop_geometry() %>% 
+  mutate(
+    title = map2_chr(
+      Title, url, 
+      function(x, y)
+        glue("<a href={y}>{x}</a>"))) %>% 
+  select(
+    Technology = tech, 
+    Title = title, 
+    Status, 
+    `Last Updated` = last_updated) %>% 
+  arrange(Technology, Title) %>% 
+  datatable(
+    escape = F, 
+    options = list(
+      pageLength = Inf,
+      dom = 't'))
 ```
