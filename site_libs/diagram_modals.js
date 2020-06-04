@@ -59,6 +59,33 @@ function svg_links_to_modals() {
     });
 }
 
+
+function style_mmd(){
+     var rect = ".node rect { fill:#99d1b3; stroke:#333; stroke-width:2px; }"
+   var rect_hover = " .node rect:hover { fill:#75a189; }"
+   // var rect_active = " .node rect:active { transform:translateY(2px); }"
+   var rect_active = " .node rect:active { fill:#75a189; }"
+
+   var label = ".clickable foreignObject { color:black; }"
+   var label_hover = ".clickable foreignObject:hover { color:#5e6bb5; fill:#75a189; background:#5e6bb5}"
+
+   var polygon = " .node polygon { fill:#96b0e0; stroke:#333; stroke-width:3px; }"
+
+
+   var config = {
+     startOnLoad:true,
+     flowchart:{
+       useMaxWidth:true,
+       htmlLabels:true,
+     },
+     securityLevel:'loose',
+     themeCSS: polygon + rect + rect_hover + rect_active + label // + label_hover
+   };
+
+   mermaid.initialize(config);
+  
+}
+
 // update links to modals
 //svg_links_to_modals();
 // instead, run in R with: htmlwidgets::onRender(diagram, "svg_links_to_modals();")

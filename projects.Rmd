@@ -1,0 +1,12 @@
+---
+title: "Projects"
+---
+
+## Map
+
+```{r, echo=F}
+library(leaflet)
+
+leaflet() %>% 
+  addProviderTiles(providers$Esri.OceanBasemap) #%>% 
+```

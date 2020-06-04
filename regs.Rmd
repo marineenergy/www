@@ -5,8 +5,9 @@ title: "Regulations"
 ## Regulatory Diagram
 
 ```{r, echo=F}
-diagram <- DiagrammeR::mermaid('diagrams/grid_state.mmd', height = 500)
+diagram <- DiagrammeR::mermaid('diagrams/regs.mmd', height = 500)
 htmlwidgets::onRender(diagram, "svg_links_to_modals();")
+#htmlwidgets::onRender(diagram, "svg_links_to_modals();style_mmd();")
 ```
 
 <script src="site_libs/d3.v5.min.js"></script>
