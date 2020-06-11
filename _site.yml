@@ -3,9 +3,6 @@ navbar:
   title: "MHK-env"
   type: inverse # inverse or default
   left:
-    - text: "Home"
-      icon: fa-home
-      href: index.html
     - text: "Projects"
       icon: fa-file-alt
       href: projects.html
