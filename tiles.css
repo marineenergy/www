@@ -1,7 +1,7 @@
 .tiles {
   display: grid;
   /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
-  grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
   grid-gap: 1rem;
   /*
   justify-content: center;
@@ -22,7 +22,7 @@
   border-radius: 2rem;
   background-size: cover;
   
-  display: flex;
+  /*display: flex;*/
   text-align: center;
 }
 /*
