@@ -7,9 +7,12 @@ title: "Regulations"
 Original version without running `svg_links_to_modals()` in `site_libs/diagram_modals.js`:
 
 ```{r, echo=F}
-diagram <- DiagrammeR::mermaid('diagrams/grid_state.mmd', height = 500)
+#diagram <- DiagrammeR::mermaid('diagrams/grid_state.mmd', height = 500)
 # htmlwidgets::onRender(diagram, "svg_links_to_modals();")
-diagram
+#diagram
+
+# remotes::install_github("bbest/DiagrammeR")
+DiagrammeR::mermaid('diagrams/grid_state.mmd', height = 500)
 ```
 
 <!--script src="site_libs/d3.v5.min.js"></script>
