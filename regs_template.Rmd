@@ -1,0 +1,21 @@
+---
+title: "Regulations"
+output:
+  html_document:
+    css: "styles.css"
+params:
+  #mmd: "diagrams/regs.mmd"  
+  mmd: "diagrams/grid_state.mmd"  
+---
+
+## Regulatory Diagram
+
+```{r, echo=F}
+path_mmd <- file.path("diagrams", params$mmd)
+diagram <- DiagrammeR::mermaid(path_mmd, height = 500)
+#htmlwidgets::onRender(diagram, "svg_links_to_modals();")
+htmlwidgets::onRender(diagram, "svg_links_to_modals();style_mmd();")
+```
+
+<script src="site_libs/d3.v5.min.js"></script>
+<script src="site_libs/diagram_modals.js"></script>
