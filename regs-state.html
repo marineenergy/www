@@ -279,6 +279,10 @@ $(document).ready(function () {
 /* ===================== */
 /* Main elements */
 /* ===================== */
+.state-content {
+    display: none;
+}
+
 .state-reference {
     width: 300px;
     height: 200px;
@@ -328,6 +332,7 @@ $(document).ready(function () {
     font-weight: bold;
     color: black;
     cursor: pointer;
+    /* float:left; */
 }
 .return-home:hover {
     background-color: #75a189;
@@ -483,85 +488,83 @@ $(document).ready(function () {
 </div><!--/.navbar -->
 
 <div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">Regulations</h1>
-
+    <h1 class="title toc-ignore">Regulations</h1>
 </div>
+
 
 <!-- diagram container -->
 <h2>State-led Processes</h2>
     <div class="diagram-container">
         <!-- node connectors -->
         <div class="return-home" onclick="location.href='./regs.html';"><i class="fas fa-backward"></i><br>Main Diagram</div>
-        <div class="point-up"></div>
-        <div class="vert-line" style="height:60px;"></div>
-        <div class="point-down"></div>
+        <!-- <div class="point-up"></div> -->
+        <!-- <div class="vert-line" style="height:60px;"></div> -->
+        <div style="height:45px;"></div>
+        <!-- <div class="point-down"></div> -->
         <!-- state selection -->
         <div id="state-decision">
             <select class="custom-select" id="stateSelect">
-                <option value="0" selected>Select State:</option>
-                <option value="1">Alabama</option>
-                <option value="2">Alaska</option>
-                <option value="3">Arizona</option>
-                <option value="4">Arkansas</option>
-                <option value="5">California</option>
-                <option value="6">Colorado</option>
-                <option value="7">Connecticut</option>
-                <option value="8">Delaware</option>
-                <option value="9">Florida</option>
-                <option value="10">Georgia</option>
-                <option value="11">Hawaii</option>
-                <option value="12">Idaho</option>
-                <option value="13">Illinois</option>
-                <option value="14">Indiana</option>
-                <option value="15">Iowa</option>
-                <option value="16">Kansas</option>
-                <option value="17">Kentucky</option>
-                <option value="18">Louisiana</option>
-                <option value="19">Maine</option>
-                <option value="20">Maryland</option>
-                <option value="21">Massachusetts</option>
-                <option value="22">Michigan</option>
-                <option value="23">Minnesota</option>
-                <option value="24">Mississippi</option>
-                <option value="25">Missouri</option>
-                <option value="26">Montana</option>
-                <option value="27">Nebraska</option>
-                <option value="28">Nevada</option>
-                <option value="29">New Hampshire</option>
-                <option value="30">New Jersey</option>
-                <option value="31">New Mexico</option>
-                <option value="32">New York</option>
-                <option value="33">North Carolina</option>
-                <option value="34">North Dakota</option>
-                <option value="35">Ohio</option>
-                <option value="36">Oklahoma</option>
-                <option value="37">Oregon</option>
-                <option value="38">Pennsylvania</option>
-                <option value="39">Rhode Island</option>
-                <option value="40">South Carolina</option>
-                <option value="41">South Dakota</option>
-                <option value="42">Tennessee</option>
-                <option value="43">Texas</option>
-                <option value="44">Utah</option>
-                <option value="45">Vermont</option>
-                <option value="46">Virginia</option>
-                <option value="47">Washington</option>
-                <option value="48">West Virginia</option>
-                <option value="49">Wisconsin</option>
-                <option value="50">Wyoming</option>
+                <option value="select-none" selected>Select State:</option>
+                <option value="alaska">Alaska</option>
+                <option value="california">California</option>
+                <option value="florida">Florida</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="maine">Maine</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="new-york">New York</option>
+                <option value="oregon">Oregon</option>
+                <option value="rhode-island">Rhode Island</option>
+                <option value="washington">Washington</option>
             </select>
-            <!-- dynamic state selection -->
-            <div id="state-selection" style="display: none;">
-                <div class="vert-line" style="height:60px; margin-top:3px;"></div>
-                <div class="point-down"></div>
-                <!-- capture state selection... do something or link somewhere? -->
-                <div class="state-reference" id="state-ref"></div>
-            </div>
-    </div>
+        </div>
 
+        <!-- dynamic state selection -->
+        <div id="state-selection">
+        <!-- <div id="state-selection" style="display: none;"> -->
+            <div style="height:45px;"></div>
+
+            <div class="state-content" id="select-none"></div>
+
+            <div class="state-content" id="alaska">
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#CZMA_Consistency_Review">CZMA Consistency Review</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Water_Quality_Review">Water Quality Review</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Land_Use_Permit">Land Use Permit</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Right_of_Way_Review">Right of Way Review</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Tidelands_Lease_Review">Tidelands Lease Review</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Special_Area_Review">Special Area Review</a><br>
+                <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Fish_Habitat_Review">Fish Habitat Review</a>
+            </div>
+            <div class="state-content" id="california">
+                <p>Hello california</p>
+            </div>
+            <div class="state-content" id="florida">
+                <p>Hello florida</p>
+            </div>
+            <div class="state-content" id="hawaii">
+                <p>Hello hawaii</p>
+            </div>
+            <div class="state-content" id="maine">
+                <p>Hello maine</p>
+            </div>
+            <div class="state-content" id="massachusetts">
+                <p>Hello massachusetts</p>
+            </div>
+            <div class="state-content" id="new-york">
+                <p>Hello new york</p>
+            </div>
+            <div class="state-content" id="oregon">
+                <p>Hello oregon</p>
+            </div>
+            <div class="state-content" id="rhode-island">
+                <p>Hello rhode island</p>
+            </div>
+            <div class="state-content" id="washington">
+                <p>Hello washington</p>
+            </div>
+
+        </div>
+
+    </div>
 
 
 <hr>
@@ -620,23 +623,21 @@ select = document.getElementById("stateSelect");
 select.onchange = function() {
     var selected = document.getElementById("stateSelect");
     var index = selected.selectedIndex;
+    var state = document.getElementsByTagName("option")[index].value;
 
-    if (selected.options[index].text == "Select State:") {
-        document.getElementById("state-ref").innerHTML = "Nothing here...";
-        var x = document.getElementById("state-selection");
-        x.style.display = "none";
-    } else {
-        var x = document.getElementById("state-selection");
-
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        }
-
-        document.getElementById("state-ref").innerHTML = selected.options[index].text;
-
+    var x = document.getElementsByClassName("state-content");
+    var i;
+    for (i=0; i<x.length; i++) {
+        x[i].style.display = "none";
     }
+
+    var y = document.getElementById(state).id;
+    var z = document.getElementById(y);
+    z.style.display = "block";
 }
 </script>
+
+
 
 </body>
 
