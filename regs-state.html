@@ -22,6 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -32,7 +34,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -524,7 +526,7 @@ State-led Processes
 <p><a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#CZMA_Consistency_Review">CZMA Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Water_Quality_Review">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Land_Use_Permit">Land Use Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Right_of_Way_Review">Right of Way Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Tidelands_Lease_Review">Tidelands Lease Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Special_Area_Review">Special Area Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Fish_Habitat_Review">Fish Habitat Review</a><br></p>
 </div>
 <div id="california" class="state-content">
-<p>Hello California</p>
+<p><a href="https://openei.org/wiki/MHK-env/Regulations/California#CZMA_Consistency_Review">CZMA Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#Water_Quality_Review">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#Coastal_Development_Permit">Coastal Development Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Environmental_Quality_Act_Determination">California Environmental Quality Act Determination</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#State_Lands_Lease">State Lands Lease</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Endangered_Species_Consultation">California Endangered Species Consultation</a><br></p>
 </div>
 <div id="florida" class="state-content">
 <p>Hello Florida</p>
@@ -645,7 +647,7 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
