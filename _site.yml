@@ -4,7 +4,7 @@ navbar:
   type: inverse # inverse or default
   left:
     - text: "Projects"
-      icon: fa-file-alt
+      icon: fa-check-square
       href: projects.html
     - text: "Documents"
       icon: fa-file-alt

@@ -18,9 +18,15 @@ icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
 
 #### Marine hydrokinetic (MHK) environmental interactions
 
-Tools and resources for environmental compliance in support of wave and tidal energy projects
+Tools and resources for environmental compliance in support of projects for wave and tidal [i.e. marine hydrokinetic (MHK)] energy.
 
 <div class="tiles">
+<div>
+  <a href="projects.html"> 
+  <h4>Projects</h4>
+  `r icon("check-square")`
+  </a>
+  </div>
 <div>
   <a href="docs.html"> 
   <h4>Document Resources</h4>

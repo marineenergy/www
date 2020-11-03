@@ -25,8 +25,19 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -352,7 +363,7 @@ div.tocify {
       <ul class="nav navbar-nav">
         <li>
   <a href="projects.html">
-    <span class="fa fa-file-alt"></span>
+    <span class="fa fa-check-square"></span>
      
     Projects
   </a>
@@ -417,35 +428,22 @@ div.tocify {
 
 <div id="who-funded-this-project" class="section level2">
 <h2>Who funded this project?</h2>
-<p>The Department of Energy.</p>
+<p>This project is funded by the <strong>U.S. Department of Energy</strong> and was selected as a winner under Federal Opportunity Announcement DE-FOA-0001837 Marine and Hydrokinetic Technology Advancement and Data Dissemination Topic Area 3: Dissemination of Environmental Data and Analyses to Facilitate the Marine Energy Regulatory Process.</p>
 </div>
 <div id="who-is-the-main-audience-of-this-website" class="section level2">
 <h2>Who is the main audience of this website?</h2>
-<p>Environmental regulators.</p>
-</div>
-<div id="how-do-i-use-the-reporting-tool" class="section level2">
-<h2>How do I use the Reporting Tool?</h2>
-<div id="enter-criteria-in-the-sidebar" class="section level3">
-<h3>Enter criteria in the sidebar</h3>
-</div>
-<div id="view-download-the-report" class="section level3">
-<h3>View / download the report</h3>
-</div>
-</div>
-<div id="acknowledgement" class="section level2">
-<h2>Acknowledgement</h2>
-<p>This material is based upon work supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Water Power Technologies Office Award Number DE-EE0008634.</p>
+<p>Environmental regulators and developers.</p>
+<!--
+## How do I use the Reporting Tool?
+
+### Enter criteria in the sidebar
+
+### View / download the report
+-->
 </div>
 <div id="disclaimer" class="section level2">
 <h2>Disclaimer</h2>
-<p>This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or an agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.”</p>
-</div>
-<div id="disclaimer-1" class="section level2">
-<h2>Disclaimer</h2>
-<p>This material is based upon work supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under the Water Power Technologies Office Award Number DE-EE0008634.</p>
-</div>
-<div id="section" class="section level2">
-<h2></h2>
+<p>These web services were prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or an agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.</p>
 </div>
 
 <hr>
@@ -463,7 +461,7 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
