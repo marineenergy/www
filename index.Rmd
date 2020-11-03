@@ -16,7 +16,7 @@ icon <- function(x){ shiny::icon(x, class="fa-4x primary") }
 # oranges: #b26500, #ff9100, #ffa733
 ```
 
-#### Marine hydrokinetic (MHK) environmental interactions
+#### Marine hydrokinetic (MHK) environmental compliance
 
 Tools and resources for environmental compliance in support of projects for wave and tidal [i.e. marine hydrokinetic (MHK)] energy.
 
