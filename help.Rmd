@@ -17,7 +17,7 @@ This project is funded by the **U.S. Department of Energy** and was selected as 
 
 ## Who is the main audience of this website?
 
-Environmental regulators and developers of marine hydrokinetic energy.
+Environmental regulators and developers of marine hydrokinetic energy technologies.
 
 <!--
 ## How do I use the Reporting Tool?
