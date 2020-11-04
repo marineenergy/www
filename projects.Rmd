@@ -323,8 +323,9 @@ js <- HTML(paste(
       
       console.log(`project_name: ${d_project.project_name}`);
       console.log(`link: ${link}`);
-      
-      window.open(link,'_blank');
+      if (typeof link !== 'undefined'){
+        window.open(link,'_blank');
+      }
     }
   });", sep=''))
 
