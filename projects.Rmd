@@ -49,8 +49,8 @@ tbl_projects <- read_html(projects_url) %>%
     lon_lat = map(url, project_url_to_lonlat),
     lon     = map_dbl(lon_lat, 1),
     lat     = map_dbl(lon_lat, 2),
-    tech         = str_remove(Technology, fixed("Marine Energy (General), ")),
-    last_updated = as.Date(pts_projects$`Last Updated`, format = "%B %e, %Y")) %>% 
+    tech         = str_remove(Technology, fixed("Marine Energy (General), "))) %>% 
+    # last_updated = as.Date(pts_projects$`Last Updated`, format = "%B %e, %Y")) %>% 
   select(-lon_lat)
 
 write_csv(tbl_projects, projects_csv)
