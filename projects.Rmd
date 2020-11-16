@@ -2,62 +2,12 @@
 title: "Projects"
 editor_options: 
   chunk_output_type: console
+output:
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, message = F, warning = F)
-```
-
-## Map
-
-```{r mapoff, eval=F}
-library(here)
-library(glue)
-library(rvest)
-library(dplyr)
-library(purrr)
-library(stringr)
-library(jsonlite)
-library(readr)
-
-projects_csv <- here("data/tethys_projects.csv")
-tethys_url   <- "https://tethys.pnnl.gov"
-projects_url <- glue("{tethys_url}/oes-environmental-metadata?country=190&type=project_site_annex_iv&status=All&search=")
-
-# helper function ----
-project_url_to_lonlat <- function(p_url){
-  # read json data
-  p_data <- read_html(p_url) %>% 
-    html_nodes('script[data-drupal-selector=drupal-settings-json]') %>%
-    html_text() %>% 
-    fromJSON()
-  
-  # return lon_lat
-  p_data$geofield_google_map[[1]]$data$features$geometry$coordinates[[1]]
-}
-
-# get table of projects ----
-tbl_projects <- read_html(projects_url) %>% 
-  html_table() %>% 
-  .[[1]] %>% 
-  as_tibble() %>% 
-  mutate(
-    href    = read_html(projects_url) %>% 
-      html_nodes("td a") %>% 
-      html_attr("href"),
-    url     = glue("{tethys_url}{href}"),
-    lon_lat = map(url, project_url_to_lonlat),
-    lon     = map_dbl(lon_lat, 1),
-    lat     = map_dbl(lon_lat, 2),
-    tech         = str_remove(Technology, fixed("Marine Energy (General), "))) %>% 
-    # last_updated = as.Date(pts_projects$`Last Updated`, format = "%B %e, %Y")) %>% 
-  select(-lon_lat)
-
-write_csv(tbl_projects, projects_csv)
-```
-
-
-```{r map}
 library(here)
 library(glue)
 library(readr)
@@ -68,36 +18,87 @@ library(sf)
 library(leaflet)
 # library(DT)
 library(markdown)
+library(markdown)
+library(htmltools)
+```
 
-projects_csv <- here("data/tethys_projects.csv")
+## Map
 
-pts_projects <- read_csv(projects_csv) %>% 
-  st_as_sf(coords = c("lon", "lat"), crs = 4326, remove = F)
+```{r map}
+# [MHK Project Timeline Input - Google Sheets](https://docs.google.com/spreadsheets/d/1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0/edit#gid=793817660)
 
-leaflet(pts_projects) %>% 
+#get the data
+csv_key <- "1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0"
+csv_url <- glue::glue("https://docs.google.com/spreadsheets/d/{csv_key}/gviz/tq?tqx=out:csv&sheet=0")
+
+permit_types <- c(
+  "Notice of Intent/Preliminary Permit Application",
+  "Draft Pilot License App",
+  "Final Pilot License App",
+  "Draft License App",
+  "Final License App",
+  "Environmental Assessment",
+  "Settlement Agreement",
+  "Permit Issued")
+
+md2html <- function(x){
+  markdownToHTML(text = x, fragment.only = T)}
+
+d <- readr::read_csv(csv_url) %>% 
+  select(-starts_with("X"))
+
+d_xy <- d %>% 
+  filter(!is.na(longitude), !is.na(latitude)) %>% 
+  select(
+    project_name, 
+    technology_type, 
+    date_beg, date_end,
+    longitude, latitude)
+
+d_permits <- d %>% 
+  select(
+    project_name, 
+    permit_type, license_date, link) %>% 
+  filter(!is.na(permit_type)) %>% 
+  mutate(
+    permit_type  = factor(
+      permit_type, levels = permit_types, ordered = T)) %>% 
+  arrange(project_name, permit_type) %>% 
+  mutate(
+    permit_md = ifelse(
+      is.na(link),
+      glue("- {permit_type}: {license_date}"),
+      glue("- [{permit_type}]({link}): {license_date}"))) %>% 
+  group_by(project_name) %>% 
+  summarize(
+    permits_md = paste(permit_md, collapse = "\n"),
+    .groups = "drop")
+
+sites <- d_xy %>% 
+  left_join(
+    d_permits, by = "project_name") %>% 
+  mutate(
+    label_md = glue(
+      "**{project_name}** (_{technology_type}_)"),
+    popup_md = glue(
+      "**{project_name}** (_{technology_type}_)<br>
+      Dates: {date_beg} to {date_end}<br>
+      Location (lon, lat): {longitude}, {latitude}<br>
+      {permits_md}"),
+    label_html = map_chr(label_md, md2html),
+    popup_html = map_chr(popup_md, md2html)) %>% 
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326, remove = F) %>% 
+  arrange(project_name)
+
+sites$label_html <- sites$label_html %>% lapply(HTML)
+sites$popup_html <- sites$popup_html %>% lapply(HTML)
+
+leaflet(
+  data = sites, width = "100%") %>% 
   addProviderTiles(providers$Esri.OceanBasemap) %>% 
-  addMarkers(label = ~glue("{Title} ({tech})"))
-
-#pts_projects %>% st_drop_geometry() %>% View()
-
-# pts_projects %>% 
-#   st_drop_geometry() %>% 
-#   mutate(
-#     title = map2_chr(
-#       Title, url, 
-#       function(x, y)
-#         glue("<a href={y}>{x}</a>"))) %>% 
-#   select(
-#     Technology = tech, 
-#     Title = title, 
-#     Status, 
-#     `Last Updated` = last_updated) %>% 
-#   arrange(Technology, Title) %>% 
-#   datatable(
-#     escape = F, 
-#     options = list(
-#       pageLength = Inf,
-#       dom = 't'))
+  addMarkers(
+    label        = ~label_html, 
+    popup        = ~popup_html)
 ```
 
 
