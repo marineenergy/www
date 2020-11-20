@@ -210,7 +210,7 @@ d2 <- d %>%
     item = ifelse(
       is.na(section_link),
       glue("Hello {state}"),
-      glue('<a href="{section_link}">{section_name}</a><br>'))) %>% 
+      glue('<a href="{section_link}" target = "_blank">{section_name}</a><br>'))) %>% 
   group_by(state, state_code) %>% 
   summarize(
     items_html = paste(item, collapse = "\n")) %>% 
@@ -224,7 +224,8 @@ d2$state_html %>%
   paste(collapse = "\n") %>% 
   cat()
 ```
-  
+
+<!--
   <div class="state-content" id="alaska">
   <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#CZMA_Consistency_Review">CZMA Consistency Review</a><br>
   <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Water_Quality_Review">Water Quality Review</a><br>
@@ -262,6 +263,7 @@ d2$state_html %>%
   <p>Hello washington</p>
   </div>
 
+-->
 
   </div>
 </div>
