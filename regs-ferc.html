@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Regulations</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/d3-3.3.8/d3.min.js"></script>
+<script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
+<!-- <link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" /> -->
+<!-- <script src="site_libs/mermaid-0.3.0/dist/mermaid.js"></script> -->
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/chromatography-0.1/chromatography.js"></script>
+<script src="site_libs/DiagrammeR-binding-1.0.5/DiagrammeR.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+<script src="https://kit.fontawesome.com/9d6352f212.js" crossorigin="anonymous"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+<!-- diagram modal styling -->
+<style>
+.graphic-container {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.mermaid {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    /* margin: auto; */
+    /* display: block; */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-nav {
+    display: inline-block;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #bababa;
+    padding: 8px 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#modal-nav:hover {
+  background-color: #98b2ed;
+  color: black;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">MHK-env</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+
+    Home
+  </a>
+</li>
+<li>
+  <a href="docs.html">
+    <span class="fa fa-file-alt"></span>
+
+    Documents
+  </a>
+</li>
+<li>
+  <a href="env.html">
+    <span class="fa fa-gears"></span>
+
+    Interactions
+  </a>
+</li>
+<li>
+  <a href="tool.html">
+    <span class="fa fa-map-marked"></span>
+
+    Report
+  </a>
+</li>
+<li>
+  <a href="regs.html">
+    <span class="fa fa-institution"></span>
+
+    Regulations
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">
+    <span class="fa fa-group"></span>
+
+    About
+  </a>
+</li>
+<li>
+  <a href="help.html">
+    <span class="fa fa-question"></span>
+
+    Help
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Regulations</h1>
+
+</div>
+
+
+<h2>FERC Process</h2>
+
+Grid-connected projects fall under FERC’s regulatory process.
+<br>
+<br><b>Resources</b>
+<ul>
+  <li> 
+  <a href="https://www.ferc.gov/industries-data/hydropower/licensing/hydrokinetic-projects" target="_blank">Hydrokinetic Projects (FERC) </a>
+  </li>
+  <li>
+    <a href="https://www.energy.gov/sites/prod/files/2020/09/f78/mhk-regulatory-processes-handbook-2020.pdf" target="_blank">Handbook of Marine Hydrokinetic Regulatory Processes (DOE-EERE) </a>
+    </li>
+</ul>
+   
+
+<hr>
+<p>
+Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href="/help.html#acknowledgements">Acknowledgements</a>.
+</p>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+<!-- call updateModal and showModal on node click -->
+<script>
+   var clicked_nepa = function(){ updateModal("nepa-modal"); showModal(); };
+   var clicked_cwa401 = function(){ updateModal("cwa401-modal"); showModal(); };
+   var clicked_cwa404 = function(){ updateModal("cwa404-modal"); showModal(); };
+   var clicked_cwa408 = function(){ updateModal("cwa408-modal"); showModal(); };
+   var clicked_czma = function(){ updateModal("czma-modal"); showModal(); };
+   var clicked_rha10 = function(){ updateModal("rha10-modal"); showModal(); };
+   var clicked_fwca = function(){ updateModal("fwca-modal"); showModal(); };
+   var clicked_esa = function(){ updateModal("esa-modal"); showModal(); };
+   var clicked_nhpa = function(){ updateModal("nhpa-modal"); showModal(); };
+   var clicked_mmpa = function(){ updateModal("mmpa-modal"); showModal(); };
+   var clicked_fish = function(){ updateModal("fish-modal"); showModal(); };
+   var clicked_mbta = function(){ updateModal("mbta-modal"); showModal(); };
+   var clicked_paton = function(){ updateModal("paton-modal"); showModal(); };
+</script>
+
+
+<!-- show/hide modal popup -->
+<script>
+function showModal() {
+   var modal = document.getElementById("modal-popup");
+   var span = document.getElementsByClassName("modal-close")[0];
+   modal.style.display = "block";
+
+   span.onclick = function() {
+       modal.style.display = "none";
+       var src = "https://openei.org/wiki/MHK-env";
+       document.getElementById("openei-frame").src = src;
+   }
+   window.onclick = function(event) {
+       if (event.target == modal) {
+           modal.style.display = "none";
+           var src = "https://openei.org/wiki/MHK-env";
+           document.getElementById("openei-frame").src = src;
+       }
+   }
+};
+</script>
+
+<!-- Change iframe window source -->
+<script>
+function updateModal(ele) {
+ var eleId = ele;
+ const cwa401_url = "https://openei.org/wiki/MHK-env/Regulations/CWA-401";
+ const cwa404_url = "https://openei.org/wiki/MHK-env/Regulations/CWA-404";
+ const cwa408_url = "https://openei.org/wiki/MHK-env/Regulations/CWA-408";
+ const nepa_url = "https://openei.org/wiki/MHK-env/Regulations/NEPA";
+ const czma_url = "https://openei.org/wiki/MHK-env/Regulations/CZMA";
+ const rha10_url = "https://openei.org/wiki/MHK-env/Regulations/RHA-10";
+ const fwca_url = "https://openei.org/wiki/MHK-env/Regulations/FWCA";
+ const esa_url = "https://openei.org/wiki/MHK-env/Regulations/ESA";
+ const nhpa_url = "https://openei.org/wiki/MHK-env/Regulations/NHPA";
+ const mmpa_url = "https://openei.org/wiki/MHK-env/Regulations/MMPA";
+ const fish_url = "https://openei.org/wiki/MHK-env/Regulations/Essential_Fish_Habitat";
+ const mbta_url = "https://openei.org/wiki/MHK-env/Regulations/MBTA";
+ const paton_url = "https://openei.org/wiki/MHK-env/Regulations/PATON";
+
+ if (eleId=="nepa-modal") {
+     var src = nepa_url;
+ } else if (eleId=="cwa401-modal") {
+     var src = cwa401_url;
+ } else if (eleId=="cwa404-modal") {
+     var src = cwa404_url;
+ } else if (eleId=="cwa408-modal") {
+     var src = cwa408_url;
+ } else if (eleId=="czma-modal") {
+     var src = czma_url;
+ } else if (eleId=="rha10-modal") {
+     var src = rha10_url;
+ } else if (eleId=="fwca-modal") {
+     var src = fwca_url;
+ } else if (eleId=="esa-modal") {
+     var src = esa_url;
+ } else if (eleId=="nhpa-modal") {
+     var src = nhpa_url;
+ } else if (eleId=="mmpa-modal") {
+     var src = mmpa_url;
+ } else if (eleId=="fish-modal") {
+     var src = fish_url;
+ } else if (eleId=="mbta-modal") {
+     var src = mbta_url;
+ } else if (eleId=="paton-modal") {
+     var src = paton_url;
+ } else {
+   var src = "https://openei.org/wiki/MHK-env";
+ }
+   document.getElementById("openei-frame").src = src;
+   var anchor = document.getElementById("modal-anchor");
+   anchor.setAttribute('href', src);
+   anchor.innerHTML = src;
+};
+</script>
+
+</body>
+
+<!-- mermaid diagram styling with javascript -->
+<script>
+   var rect = ".node rect { fill:#99d1b3; stroke:#333; stroke-width:1px; }"
+   var rect_hover = " .node rect:hover { fill:#75a189; }"
+   // var rect_active = " .node rect:active { transform:translateY(2px); }"
+   var rect_active = " .node rect:active { fill:#75a189; }"
+
+   var label = ".clickable foreignObject { color:black; }"
+   var label_hover = ".clickable foreignObject:hover { color:#5e6bb5; fill:#75a189; background:#5e6bb5}"
+
+   var polygon = " .node polygon { fill:#96b0e0; stroke:#333; stroke-width:3px; }"
+
+
+   var config = {
+     startOnLoad:true,
+     flowchart:{
+       useMaxWidth:true,
+       htmlLabels:true,
+     },
+     securityLevel:'loose',
+     themeCSS: polygon + rect + rect_hover + rect_active + label // label_hover
+   };
+
+   mermaid.initialize(config);
+</script>
+
+
+</html>
