@@ -1,0 +1,50 @@
+.tiles {
+  display: grid;
+  /* Grid column layout (3 col X n rows), equal parts */
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+  
+  /* This makes both rows equal height */
+  /* grid-template-rows: minmax(auto, 1fr) minmax(auto, 1fr); */
+  
+  /* row gap x col gap */
+  grid-gap: 2rem 1rem;
+  margin-top: 4rem;
+}
+
+.tiles > div {
+  /* background: #4dabf5; */
+  /* background: #54a4d8; */
+  background: #255473;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.2rem;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+}
+
+.tiles div h5 {
+  padding: 0.2rem;
+  font-weight: bold;
+  color: #1b79a1;
+  text-transform: uppercase;
+}
+
+.tiles p {
+  font-style: italic;
+  color: black; 
+  /* font-weight: bold; */
+}
+
+.tiles a {
+    background: #f0f0f0;
+    width: 100%;
+    padding: 0.2rem;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.tiles a:hover {
+  opacity: 0.9;
+  color: #255473;
+}
+

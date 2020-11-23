@@ -1,39 +1,98 @@
+/* Title block styling */
+.title-block {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+
+.logo {
+  width: 30%;
+  min-width: 225px;
+  max-width: 275px;
+  display: inline-block;
+}
+
+.title-block h4 {
+  width: 60%;
+  margin-left: 2rem;
+}
+
+/* Adjust title block for small screens */
+@media screen and (max-width: 680px) {
+  .title-block {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .logo {
+    vertical-align: middle;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .title-block h4 {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+
+/* Styling for button tiles */
 .tiles {
   display: grid;
-  /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
-  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
-  grid-gap: 1rem;
-  /*
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  align-content: stretch;
-  grid-template-rows: auto;
-  display: flex;
-  justify-content: end;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  */
+  /* Grid column layout (3 col X n rows), equal parts */
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+  /* This makes both rows equal height */
+  /* grid-template-rows: minmax(auto, 1fr) minmax(auto, 1fr); */
+  /* row gap x col gap */
+  grid-gap: 3rem 1rem;
+  margin-top: 4rem;
 }
+
 .tiles > div {
-  background: #4dabf5;
-  padding: 1.5rem;
-  border-radius: 2rem;
+  /* background: #4dabf5; */
+  background: #54a4d8;
+  padding: 1.5rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.2rem;
   background-size: cover;
-  
-  /*display: flex;*/
+  display: flex;
   text-align: center;
 }
-/*
-body {
-  margin: 0.2rem;
-  font: 12px system-ui;
-}
-*/
 
-
-.tiles div h4 {
-  /*color: Coral; */
+.tiles div h5 {
   font-weight: bold;
+  color: #1b79a1;
+  margin-top: -6rem;
+}
+
+.tiles h5 {
+    text-transform: uppercase;
+}
+
+.tiles a {
+    background: #f0f0f0;
+    width: 100%;
+    padding: 2rem 0.2rem 0.2rem 0.2rem;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.tiles a:hover{
+  /*opacity:0.9;*/
+  background: #ffffff;
+}
+
+.tiles p {
+    overflow: auto;
+    color: #000000;
+    text-align: center;
+    padding: 0rem 0.2rem 0rem 0.2rem;
+}
+
+.tiles img {
+    width: 25%;
+    /* Image top margin relative to font size of root element */
+    margin-top: -7.5rem;
+    min-width: 60px;
 }

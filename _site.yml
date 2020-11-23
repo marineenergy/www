@@ -30,5 +30,6 @@ output:
     #theme: darkly # https://bootswatch.com/
     css: styles.css
     include:
+      before_body: banner.html
       after_body: footer.html
 output_dir: "."      

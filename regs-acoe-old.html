@@ -259,6 +259,77 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<!-- diagram modal styling -->
+<style>
+.graphic-container {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.mermaid {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    /* margin: auto; */
+    /* display: block; */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal-nav {
+    display: inline-block;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid #bababa;
+    padding: 8px 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#modal-nav:hover {
+  background-color: #98b2ed;
+  color: black;
+}
+
+</style>
+
+
+
 </head>
 
 <body>
@@ -340,29 +411,81 @@ $(document).ready(function () {
 <div class="fluid-row" id="header">
 
 
-<h1 class="title toc-ignore">
-  <a href="https://mhk-env.us/regs.html" style="text-decoration:none;">
-    <span class="fas fa-arrow-circle-left"></span>
-  </a>&nbsp Regulations
-</h1>
+
+<h1 class="title toc-ignore">Regulations</h1>
 
 </div>
 
 
-<h2>FERC Process</h2>
-
-Grid-connected projects fall under FERC’s regulatory process.
+<h2>ACOE-led Process</h2>
+<br>Projects in state waters require authorization from the U.S. Army Corps of Engineers(ACOE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the ACOE encompasses the following regulatory elements:
 <br>
-<br><b>Resources</b>
-<ul>
-  <li> 
-  <a href="https://www.ferc.gov/industries-data/hydropower/licensing/hydrokinetic-projects" target="_blank">Hydrokinetic Projects (FERC) </a>
-  </li>
-  <li>
-    <a href="https://www.energy.gov/sites/prod/files/2020/09/f78/mhk-regulatory-processes-handbook-2020.pdf" target="_blank">Handbook of Marine Hydrokinetic Regulatory Processes (DOE-EERE) </a>
-    </li>
-</ul>
-   
+<br>
+<br>
+<br>
+    <div class="graphic-container">
+      <div class="mermaid">
+        graph LR
+            return[<center>fas:fa-backward</center>Main Diagram]
+            acoe{<center>fas:fa-user</center>ACOE-led Processes}
+            nepa["NEPA"]
+            cwa401["CWA 401"]
+            cwa404["CWA 404"]
+            cwa408["CWA 408"]
+            czma["CZMA"]
+            rha10["RHA 10"]
+            fwca["FWCA"]
+            esa["ESA"]
+            nhpa["NHPA"]
+            mmpa["MMPA"]
+            fish["EFH"]
+            mbta["MBTA"]
+            paton["PATONs"]
+
+            return --- acoe
+            acoe --> nepa
+            acoe --> cwa401
+            acoe --> cwa404
+            acoe --> cwa408
+            acoe --> czma
+            acoe --> rha10
+            acoe --> fwca
+            acoe --> esa
+            acoe --> nhpa
+            acoe --> mmpa
+            acoe --> fish
+            acoe --> mbta
+            acoe --> paton
+
+            click return "./regs.html"
+            click nepa clicked_nepa
+            click cwa401 clicked_cwa401
+            click cwa404 clicked_cwa404
+            click cwa408 clicked_cwa408
+            click czma clicked_czma
+            click rha10 clicked_rha10
+            click fwca clicked_fwca
+            click esa clicked_esa
+            click nhpa clicked_nhpa
+            click mmpa clicked_mmpa
+            click fish clicked_fish
+            click mbta clicked_mbta
+            click paton clicked_paton
+        </div>
+    </div>
+    <div id="modal-popup" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <button id="modal-nav" onclick="window.history.back();">&#8249;</button>
+            <button id="modal-nav" onclick="window.history.forward();">&#8250;</button>
+            <div id="anchor-container" style="display:inline-block; padding-left: 20px;">
+                <b>Source</b>: <a id="modal-anchor" href="" target="_blank"></a>
+                <span style='color:grey;'>(To open external content follow this link.)</span>
+            </div>
+            <iframe id="openei-frame" src="https://openei.org/wiki/MHK-env" width="100%" height="600px"></iframe>
+        </div>
+    </div>
+
 
 <hr>
 <p>

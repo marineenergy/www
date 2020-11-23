@@ -263,7 +263,7 @@ $(document).ready(function () {
 <style>
 .graphic-container {
     width: 100%;
-    height: 650px;
+    height: 900px;
     position: relative;
     text-align: center;
     display: block;
@@ -280,7 +280,13 @@ $(document).ready(function () {
 }
 </style>
 
-
+<style>
+    .cssClass > rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+</style>
 
 </head>
 
@@ -292,73 +298,73 @@ $(document).ready(function () {
 
 
 
-<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">MHK-env</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-
-    Home
-  </a>
-</li>
-<li>
-  <a href="docs.html">
-    <span class="fa fa-file-alt"></span>
-
-    Documents
-  </a>
-</li>
-<li>
-  <a href="env.html">
-    <span class="fa fa-gears"></span>
-
-    Interactions
-  </a>
-</li>
-<li>
-  <a href="tool.html">
-    <span class="fa fa-map-marked"></span>
-
-    Report
-  </a>
-</li>
-<li>
-  <a href="regs.html">
-    <span class="fa fa-institution"></span>
-
-    Regulations
-  </a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="about.html">
-    <span class="fa fa-group"></span>
-
-    About
-  </a>
-</li>
-<li>
-  <a href="help.html">
-    <span class="fa fa-question"></span>
-
-    Help
-  </a>
-</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+  <div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">MHK-env</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>
+    <a href="projects.html">
+      <span class="fa fa-check-square"></span>
+       
+      Projects
+    </a>
+  </li>
+  <li>
+    <a href="docs.html">
+      <span class="fa fa-file-alt"></span>
+       
+      Documents
+    </a>
+  </li>
+  <li>
+    <a href="env.html">
+      <span class="fa fa-gears"></span>
+       
+      Interactions
+    </a>
+  </li>
+  <li>
+    <a href="tool.html">
+      <span class="fa fa-map-marked"></span>
+       
+      Report
+    </a>
+  </li>
+  <li>
+    <a href="regs.html">
+      <span class="fa fa-institution"></span>
+       
+      Regulations
+    </a>
+  </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+    <a href="about.html">
+      <span class="fa fa-group"></span>
+       
+      About
+    </a>
+  </li>
+  <li>
+    <a href="help.html">
+      <span class="fa fa-question"></span>
+       
+      Help
+    </a>
+  </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container -->
+  </div><!--/.navbar -->
 
 <div class="fluid-row" id="header">
 
@@ -387,22 +393,26 @@ $(document).ready(function () {
       territory-->|No|boem
       lead --> state
       lead --> acoe
-
+      
       click ferc "./regs-ferc.html"
-      click acoe "./regs-acoe-new.html"
+      click acoe "./regs-acoe.html"
       click state "./regs-state.html"
       click boem "https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines" _blank
+      
+      classDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8;
+      classDef endNode:hover fill:#75a189;
+      classDef endNode:active fill:#75a189;
+      
+      classDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;
+      
+      class ferc,acoe,state,boem endNode
+      class grid,territory,lead decisionNode
     </div>
   </div>
 
 
 <hr>
 <p>
-<br>
-<br>
-<br>
-<br>
-<br>
 Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href="/help.html#acknowledgements">Acknowledgements</a>.
 </p>
 
@@ -451,33 +461,19 @@ $(document).ready(function () {
 </script>
 
 
-</body>
-
-<!-- mermaid diagram styling with javascript -->
+<!-- mermaid diagram initialization -->
 <script>
-   var rect = ".node rect { fill:#99d1b3; stroke:#333; stroke-width:2px; }"
-   var rect_hover = " .node rect:hover { fill:#75a189; }"
-   // var rect_active = " .node rect:active { transform:translateY(2px); }"
-   var rect_active = " .node rect:active { fill:#75a189; }"
-
-   var label = ".clickable foreignObject { color:black; }"
-   var label_hover = ".clickable foreignObject:hover { color:#5e6bb5; fill:#75a189; background:#5e6bb5}"
-
-   var polygon = " .node polygon { fill:#96b0e0; stroke:#333; stroke-width:3px; }"
-
-
    var config = {
      startOnLoad:true,
      flowchart:{
        useMaxWidth:true,
        htmlLabels:true,
+       curve:'cardinal'
      },
-     securityLevel:'loose',
-     themeCSS: polygon + rect + rect_hover + rect_active + label // + label_hover
+     securityLevel:'loose'
    };
-
    mermaid.initialize(config);
 </script>
 
-
+</body>
 </html>
