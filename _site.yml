@@ -28,7 +28,7 @@ navbar:
 output:
   html_document:
     theme: yeti # journal # darkly # cosmo # yeti # lumen # darkly # https://bootswatch.com/
-    css: styles.css
+    css: libs/styles.css
     mathjax: null    
     include:
       before_body: banner.html

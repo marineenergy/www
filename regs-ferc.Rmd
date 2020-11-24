@@ -2,7 +2,7 @@
 pagetitle: "Regulations"
 output:
   html_document:
-    css: [styles.css, acoe-tiles.css]
+    css: [libs/styles.css, libs/regs-acoe_tiles.css]
 ---
 
 ```{r setup, include=FALSE}
