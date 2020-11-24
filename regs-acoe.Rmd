@@ -32,15 +32,32 @@ Projects in state waters require authorization from the U.S. Army Corps of Engin
 <div class="tiles">
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-401" target="_blank"><h5>Clean Water Act §401</h5><p>(CWA §401)</p></a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-401" target="_blank">
+  <h5>Clean Water Act §401</h5>
+  <p>(CWA §401)</p>
+  </a>
 </div>
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-404" target="_blank"><h5>Clean Water Act §404</h5><p>(CWA §404)</p></a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-404" target="_blank">
+  <h5>
+  Clean Water Act §404
+  </h5>
+  <p>
+  (CWA §404)
+  </p>
+  </a>
 </div>
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-408" target="_blank"><h5>Clean Water Act §408</h5><p>(CWA §408)</p></a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-408" target="_blank">
+  <h5>
+  Clean Water Act §408
+  </h5>
+  <p>
+  (CWA §408)
+  </p>
+  </a>
 </div>
 
 <div>
@@ -135,3 +152,6 @@ Projects in state waters require authorization from the U.S. Army Corps of Engin
 
 </div>
 
+<script>
+$( "#acoe-led-processes > div > div > p" ).remove();
+</script>
