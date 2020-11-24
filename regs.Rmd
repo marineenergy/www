@@ -1,0 +1,46 @@
+---
+title: "Regulations"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"></script>
+
+```{r}
+library(DiagrammeR)
+
+mermaid(diagram = "
+  graph TD
+  grid{<center>fa:fa-arrows-alt</center>Is the project<br>grid connected?}
+  ferc[FERC Process<center>fas:fa-external-link-alt</center>]
+  territory{<center>fa:fa-institution</center>Is the project<br>in state waters?}
+  boem[BOEM Regulatory <br>Framework and <br>Guidelines<center>fas:fa-external-link-alt</center>]
+  lead{<center>fas:fa-people-arrows</center>Who is leading<br>the project?}
+  state[State Process<center>fas:fa-external-link-alt</center>]
+  acoe[ACOE Process<center>fas:fa-external-link-alt</center>]
+
+  grid-->|Yes|ferc
+  grid-->|No|territory
+  territory-->|Yes|lead
+  territory-->|No|boem
+  lead --> state
+  lead --> acoe
+  
+  click ferc './regs-ferc.html'
+  click acoe './regs-acoe.html'
+  click state './regs-state.html'
+  click boem 'https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines' _blank
+  
+  classDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8;
+  classDef endNode:hover fill:#75a189;
+  classDef endNode:active fill:#75a189;
+  
+  classDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;
+  
+  class ferc,acoe,state,boem endNode
+  class grid,territory,lead decisionNode") # , height = 500)
+```
+
