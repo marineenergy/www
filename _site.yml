@@ -27,7 +27,7 @@ navbar:
       href: help.html
 output:
   html_document:
-    #theme: darkly # https://bootswatch.com/
+    theme: yeti # journal # darkly # cosmo # yeti # lumen # darkly # https://bootswatch.com/
     css: styles.css
     include:
       before_body: banner.html

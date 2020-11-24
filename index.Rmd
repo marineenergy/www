@@ -2,7 +2,7 @@
 pagetitle: "home"
 output:
   html_document:
-    css: tiles.css
+    css: [styles.css, tiles.css]
 ---
 
 ```{r setup, include=FALSE}

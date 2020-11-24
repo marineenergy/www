@@ -1,3 +1,9 @@
 .section {
   opacity: 1;
 }
+
+.navbar-inverse {
+    /* BBwtf */
+    background-color: #54a4d8; /*#008cba; */
+    border-color: #006687;
+}
