@@ -44,7 +44,7 @@ The project has four main objectives:
 - [Electric Power Research Institute](https://www.epri.com)
 - [European Marine Energy Centre Ltd.](http://www.emec.org.uk)
 - [H.T. Harvey & Associates](https://www.harveyecology.com)
-- [Integral Consulting](https://www.integral-corp.com)
+- [Integral Consulting Inc.](https://www.integral-corp.com)
 - [Kearns & West](https://kearnswest.com)
 - [Ocean Renewable Power Company](https://www.orpc.co/)
 - [Pacific Energy Ventures](https://tethys.pnnl.gov/organization/pacific-energy-ventures-llc)
