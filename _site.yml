@@ -31,6 +31,6 @@ output:
     css: libs/styles.css
     mathjax: null    
     include:
-      before_body: banner.html
-      after_body: footer.html
+#      before_body: libs/banner.html
+      after_body: "libs/footer.html"
 output_dir: "."      
