@@ -11,7 +11,7 @@
 
 
 
-<title>home</title>
+<title>Untitled</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -82,7 +82,6 @@ h6 {
 </style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
-<link rel="stylesheet" href="tiles.css" type="text/css" />
 
 
 
@@ -349,97 +348,84 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Untitled</h1>
 
 </div>
 
 
-<!--
-#### Marine hydrokinetic (MHK) environmental compliance
-
-Tools and resources for environmental compliance in support of projects for wave and tidal [i.e. marine hydrokinetic (MHK)] energy.
--->
-<div id="marine-hydrokinetic-mhk-environmental-compliance" class="section level4">
-
-<div class="title-block">
-<img class="logo" src="images\logo.png" alt="MHK-env Logo">
-<h4 style="display:inline-block; text-aling:center;">
-Tools and resources for environmental compliance in support of projects for wave and tidal [i.e. marine hydrokinetic (MHK)] energy.
-</h4>
+<style>
+.graphic-container {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  text-align: center;
+  display: block;
+}
+.mermaid {
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  /* margin: auto; */
+  /* display: block; */
+}
+</style>
+<div class="mermaid">
+<p>graph TD grid–&gt;|Yes|tethys grid–&gt;|No|state state–&gt;|Yes|acoe state–&gt;|No|boem grid{fa:fa-arrows-alt<br>Is the project<br>grid connected?} tethys[Tethys: MRE<br/>regulatory frameworks] click tethys “<a href="https://tethys.pnnl.gov/regulatory-frameworks-marine-renewable-energy#United%20States%20of%20America" class="uri">https://tethys.pnnl.gov/regulatory-frameworks-marine-renewable-energy#United%20States%20of%20America</a>” “Regulatory Frameworks for Marine Renewable Energy: USA” state{fa:fa-institution<br>Is the project<br>in state waters?} boem[lead: BOEM] acoe[lead: ACOE/state]</p>
 </div>
-<div style="clear:both;">
-
-</div>
-<div class="tiles">
-<div>
-<a href="projects.html"> <img src="images\icons\projects.png">
-<h5>
-Projects
-</h5>
-<p>
-An interactive map and project timelines with access to existing permitting documentation of previously permitted projects in the U.S.
-</p>
-</a>
-</div>
-<div>
-<a href="tool.html"> <img src="images\icons\catalog.png" />
-<h5>
-Data catalog, mapper, and reporting tool
-</h5>
-<p>
-Draw a polygon and generate a report compiling relevant spatial, academic, and regulatory information into one document.
-</p>
-</a>
-</div>
-<div>
-<a href="env.html"> <img src="images\icons\env.png" />
-<h5>
-Environmental Interactions
-</h5>
-<p>
-Access papers on various environmental interactions from the Tethys Knowledgebase.
-</p>
-</a>
-</div>
-<div>
-<a href="docs.html"> <!-- <img src="images\icons\searchable.png" /> --> <img src="images\icons\guidelines.png" />
-<h5>
-Searchable Documents
-</h5>
-<p>
-Documents relevant to projects, precedent and mitigation from various academic research and regulatory sources, including references from Tethys and tagged FERC permitting documents.
-</p>
-</a>
-</div>
-<div>
-<a href="regs.html"> <!-- <img src="images\icons\guidelines.png" /> --> <img src="images\icons\searchable.png" />
-<h5>
-Guidelines and Flow Charts
-</h5>
-<p>
-Guidelines and flow charts on applicable regulations, example documents, best practices, and other resources for federal (FERC, USACE, and BOEM) and state (AK, CA, FL, HI, OR, MA, ME, NY, RI, WA) processes.
-</p>
-</a>
-</div>
-<div>
-<a href="https://openei.org/wiki/PRIMRE/MRE_Basics" target="_blank"> <img src="images\icons\question.png" />
-<h5>
-What is MHK?
-</h5>
-<p>
-Learn more about marine and hydrokinetic energy (MHK). MHK is the harnessing of water’s kinetic energy to generate electricity. It encompasses wave, tidal, and ocean current power.
-</p>
-</a>
+<div class="graphic-container">
+<div class="mermaid">
+graph TD grid{
+<center>
+fa:fa-arrows-alt
+</center>
+Is the project<br>grid connected?} ferc[FERC Process
+<center>
+fas:fa-external-link-alt
+</center>
+] territory{
+<center>
+fa:fa-institution
+</center>
+Is the project<br>in state waters?} boem[BOEM Regulatory <br>Framework and <br>Guidelines
+<center>
+fas:fa-external-link-alt
+</center>
+] lead{
+<center>
+fas:fa-people-arrows
+</center>
+Who is leading<br>the project?} state[State Process
+<center>
+fas:fa-external-link-alt
+</center>
+] acoe[ACOE Process
+<center>
+fas:fa-external-link-alt
+</center>
+<p>]</p>
+<p>grid–&gt;|Yes|ferc grid–&gt;|No|territory territory–&gt;|Yes|lead territory–&gt;|No|boem lead –&gt; state lead –&gt; acoe</p>
+<p>click ferc “./regs-ferc.html” click acoe “./regs-acoe.html” click state “./regs-state.html” click boem “<a href="https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines" class="uri">https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines</a>” _blank</p>
+<p>classDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8; classDef endNode:hover fill:#75a189; classDef endNode:active fill:#75a189;</p>
+<p>classDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;</p>
+<p>class ferc,acoe,state,boem endNode class grid,territory,lead decisionNode</p>
 </div>
 </div>
-<!--
-TODO: think of scrolling sections with imagery and For more...
-
-- https://www.integral-corp.com/
-
-For more, see:
-
-- [What is MHK? (OpenEI)](https://openei.org/wiki/MHK-env)
--->
+<!-- mermaid diagram initialization -->
+<script>
+var config = {
+ startOnLoad:true,
+ flowchart:{
+ useMaxWidth:true,
+ htmlLabels:true,
+ curve:'cardinal'
+ },
+ securityLevel:'loose'
+ };
+ mermaid.initialize(config);
+</script>
 
 <hr>
 <img src="images/footer.jpg" width="100%"/>

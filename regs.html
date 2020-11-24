@@ -22,6 +22,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 <script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
 <script src="site_libs/d3-3.3.8/d3.min.js"></script>
 <script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
@@ -29,9 +33,7 @@
 <script src="site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
 <link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="site_libs/chromatography-0.1/chromatography.js"></script>
-<script src="site_libs/DiagrammeR-binding-1.0.6.1/DiagrammeR.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="site_libs/DiagrammeR-binding-1.0.6.9000/DiagrammeR.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -40,7 +42,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -359,9 +361,11 @@ $(document).ready(function () {
 </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.8.3/mermaid.min.js"></script>
-<div id="htmlwidget-f471c4972bba42b3db73" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f471c4972bba42b3db73">{"x":{"diagram":"\n  graph TD\n  grid{<center>fa:fa-arrows-alt<\/center>Is the project<br>grid connected?}\n  ferc[FERC Process<center>fas:fa-external-link-alt<\/center>]\n  territory{<center>fa:fa-institution<\/center>Is the project<br>in state waters?}\n  boem[BOEM Regulatory <br>Framework and <br>Guidelines<center>fas:fa-external-link-alt<\/center>]\n  lead{<center>fas:fa-people-arrows<\/center>Who is leading<br>the project?}\n  state[State Process<center>fas:fa-external-link-alt<\/center>]\n  acoe[ACOE Process<center>fas:fa-external-link-alt<\/center>]\n\n  grid-->|Yes|ferc\n  grid-->|No|territory\n  territory-->|Yes|lead\n  territory-->|No|boem\n  lead --> state\n  lead --> acoe\n  \n  click ferc './regs-ferc.html'\n  click acoe './regs-acoe.html'\n  click state './regs-state.html'\n  click boem 'https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines' _blank\n  \n  classDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8;\n  classDef endNode:hover fill:#75a189;\n  classDef endNode:active fill:#75a189;\n  \n  classDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n  \n  class ferc,acoe,state,boem endNode\n  class grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
+<div id="regulatory-diagram" class="section level2">
+<h2>Regulatory Diagram</h2>
+<div id="htmlwidget-392af9089b9a6116915d" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-392af9089b9a6116915d">{"x":{"diagram":"%% edit with https://mermaid-js.github.io/mermaid-live-editor\n\ngraph TD\ngrid{fa:fa-arrows-alt Is the project<br>grid connected?}\nferc[FERC Process fas:fa-external-link]\nterritory{fa:fa-institution Is the project<br>in state waters?}\nboem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]\nlead{fa:fa-people-arrows Who is leading<br>the project?}\nstate[State Process]\nacoe[ACOE Process]\n\ngrid-->|Yes|ferc\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> acoe\n\nclick ferc \"./regs-ferc.html\"\nclick acoe \"./regs-acoe.html\"\nclick state \"./regs-state.html\"\nclick boem \"https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines\" _blank\n\nclassDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8;\nclassDef endNode:hover fill:#75a189;\nclassDef endNode:active fill:#75a189;\n\nclassDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n\nclass ferc,acoe,state,boem endNode\nclass grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
+</div>
 
 <hr>
 <img src="images/footer.jpg" width="100%"/>
@@ -377,7 +381,7 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -403,15 +407,6 @@ $(document).ready(function () {
 <!-- code folding -->
 
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 
 </body>
 </html>
