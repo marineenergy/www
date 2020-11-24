@@ -2,7 +2,7 @@
 title: "Regulations"
 output:
   html_document:
-    css: "styles.css"
+    css: "libs/styles.css"
 params:
   #mmd: "diagrams/regs.mmd"  
   mmd: "diagrams/grid_state.mmd"  

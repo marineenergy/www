@@ -2,15 +2,18 @@
 pagetitle: "Regulations"
 output:
   html_document:
-    css: [styles.css, acoe-tiles.css]
+    css: [libs/styles.css, libs/regs_acoe-tiles.css]
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
-
-# Display state links based on: 
-# * [regs-state - Google Sheets](https://docs.google.com/spreadsheets/d/1LOrmOM8fLssEGnuC5KuoYhMYl0NZjtdMO1bJUMZ6doc/edit#gid=0)
 ```
+
+<style>
+.section h5 {
+  margin-top: 0;
+}
+</style>
 
 <h1 class="title toc-ignore">
   <a href="https://mhk-env.us/regs.html" style="text-decoration:none;">
@@ -29,30 +32,15 @@ Projects in state waters require authorization from the U.S. Army Corps of Engin
 <div class="tiles">
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-401" target="_blank">
-  <h5>
-  Clean Water Act §401
-  </h5>
-  <p>(CWA §401)</p>
-  </a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-401" target="_blank"><h5>Clean Water Act §401</h5><p>(CWA §401)</p></a>
 </div>
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-404" target="_blank">
-  <h5>
-  Clean Water Act §404
-  </h5>
-  <p>(CWA §404)</p>
-  </a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-404" target="_blank"><h5>Clean Water Act §404</h5><p>(CWA §404)</p></a>
 </div>
 
 <div>
-  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-408" target="_blank">
-  <h5>
-  Clean Water Act §408
-  </h5>
-  <p>(CWA §408)</p>
-  </a>
+  <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-408" target="_blank"><h5>Clean Water Act §408</h5><p>(CWA §408)</p></a>
 </div>
 
 <div>
