@@ -16,18 +16,21 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 </style>
 
 <h1 class="title toc-ignore">
-  <a href="https://mhk-env.us/regs.html" style="text-decoration:none;">
+  <a href="./regs.html" style="text-decoration:none;">
   <span class="fas fa-arrow-circle-left"></span>
   </a>&nbsp; Regulations
 </h1>
 
-Projects in state waters require authorization from the U.S. Army Corps of Engineers(ACOE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the ACOE encompasses the following regulatory elements:
-<br>
 <br>
 
 <div style="clear:both;"></div>
 
 ## ACOE-led Processes
+
+Projects in state waters require authorization from the U.S. Army Corps of Engineers(ACOE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the ACOE encompasses the following regulatory elements:
+
+
+<div style="clear:both;"></div>
 
 <div class="tiles">
 

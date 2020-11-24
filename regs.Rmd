@@ -1,5 +1,8 @@
 ---
-title: "Regulations"
+pagetitle: "Regulations"
+output:
+  html_document:
+    css: [libs/styles.css] # , libs/regs-acoe_tiles.css]
 ---
 
 ```{r setup, include=F}
@@ -16,11 +19,18 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 #   https://fontawesome.com/icons?d=gallery&s=solid&v=5.1.0&m=free
 ```
 
+<h1 class="title toc-ignore">
+Regulations
+</h1>
+
+<br>
+
 ## Regulatory Diagram
 
+<center>
 ```{r}
-DiagrammeR::mermaid("diagrams/regs.mmd")
+DiagrammeR::mermaid("diagrams/regs.mmd", width=600, height=700)
 ```
-
+</center>
 
 

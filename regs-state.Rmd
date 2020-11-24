@@ -13,20 +13,19 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
 <h1>
-  <a href="https://mhk-env.us/regs.html" style="text-decoration:none;">
+  <a href="./regs.html" style="text-decoration:none;">
     <span class="fas fa-arrow-circle-left"></span>
-  </a> Regulations
+  </a>&nbsp; Regulations
 </h1>
 
-<!-- diagram container -->
-<h2>State-led Processes</h2>
+<br>
 
-<br>While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects.  Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process. 
+## State-led Processes
+
+While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects.  Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process. 
 <br>
 <br>
-The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available. 
-<br>
-<br>
+The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available.
 <br>
 <br>
 
@@ -66,9 +65,7 @@ d %>%
 
   <!-- dynamic state selection -->
   <div id="state-selection">
-  <!-- <div id="state-selection" style="display: none;"> -->
-  <div style="height:45px;"></div>
-  
+  <div style="height:20px;"></div>
   <div class="state-content" id="select-none"></div>
 
 ```{r, results='asis'}
