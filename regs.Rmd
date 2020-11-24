@@ -5,16 +5,14 @@ title: "Regulations"
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = F)
 
-# TODO: run after rendering this page or website
-#       to load latest mermaid JS:
-#
-#   source(here::here("render_fix-diagrams.R"))
+# NOTE: requires DiagrammeR library with latest version of mermaid-js
+#   remotes::install_github("mhk-env/DiagrammeR")
 
-# icons from fontawesome in diagram
+# icons from font awesome in diagram
 htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 # check version:
 #   rmarkdown::html_dependency_font_awesome()$version # 5.1.0
-# view gallery:
+# view gallery of icons:
 #   https://fontawesome.com/icons?d=gallery&s=solid&v=5.1.0&m=free
 ```
 
