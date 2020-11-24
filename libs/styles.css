@@ -2,11 +2,12 @@
   opacity: 1;
 }
 
+/*
 .navbar-inverse {
-    /* BBwtf */
-    background-color: #2E668B;  /* #54a4d8; #008cba; */
-    border-color: #006687;
+    background-color: #2E668B;
+    border-color: #006687; 
 }
+*/
 
 @media (max-width: 991px) {
   .navbar-header {

@@ -319,12 +319,28 @@ $(document).ready(function () {
     Report
   </a>
 </li>
-<li>
-  <a href="regs.html">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
     <span class="fa fa-institution"></span>
      
     Regulations
+     
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="regs.html">Regulations</a>
+    </li>
+    <li>
+      <a href="regs-acoe.html">ACOE Process</a>
+    </li>
+    <li>
+      <a href="regs-ferc.html">FERC Process</a>
+    </li>
+    <li>
+      <a href="regs-state.html">State Process</a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -351,15 +367,16 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Regulations</h1>
 
 </div>
 
 
 <div id="regulatory-diagram" class="section level2">
 <h2>Regulatory Diagram</h2>
-<div id="htmlwidget-9a989684623e76203074" style="width:672px;height:480px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9a989684623e76203074">{"x":{"diagram":"%% edit with https://mermaid-js.github.io/mermaid-live-editor\n\ngraph TD\ngrid{fa:fa-arrows-alt Is the project<br>grid connected?}\nferc[FERC Process fas:fa-external-link]\nterritory{fa:fa-institution Is the project<br>in state waters?}\nboem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]\nlead{fa:fa-people-arrows Who is leading<br>the project?}\nstate[State Process]\nacoe[ACOE Process]\n\ngrid-->|Yes|ferc\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> acoe\n\nclick ferc \"./regs-ferc.html\"\nclick acoe \"./regs-acoe.html\"\nclick state \"./regs-state.html\"\nclick boem \"https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines\" _blank\n\nclassDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8,text-align:center;\nclassDef endNode:hover fill:#75a189;\nclassDef endNode:active fill:#75a189;\n\nclassDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n\nclass ferc,acoe,state,boem endNode\nclass grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
+<center>
+<div id="htmlwidget-87e15881c8a708abdb81" style="width:600px;height:700px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-87e15881c8a708abdb81">{"x":{"diagram":"%% edit with https://mermaid-js.github.io/mermaid-live-editor\n\ngraph TD\ngrid{fa:fa-arrows-alt<br> Is the project<br>grid connected?}\nferc[FERC Process fas:fa-external-link]\nterritory{fa:fa-institution<br> Is the project<br>in state waters?}\nboem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]\nlead{fa:fa-people-arrows<br> Who is leading<br>the project?}\nstate[State Process]\nacoe[ACOE Process]\n\ngrid-->|Yes|ferc\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> acoe\n\nclick ferc \"./regs-ferc.html\"\nclick acoe \"./regs-acoe.html\"\nclick state \"./regs-state.html\"\nclick boem \"https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines\" _blank\n\nclassDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8,text-align:center;\nclassDef endNode:hover fill:#75a189;\nclassDef endNode:active fill:#75a189;\n\nclassDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n\nclass ferc,acoe,state,boem endNode\nclass grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
+</center>
 </div>
 
 <hr>

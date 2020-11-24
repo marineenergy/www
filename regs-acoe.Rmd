@@ -156,5 +156,5 @@ Projects in state waters require authorization from the U.S. Army Corps of Engin
 </div>
 
 <script>
-$( "#acoe-led-processes > div > div > p" ).remove();
+$("#acoe-led-processes > div.tiles > div > p").remove();
 </script>
