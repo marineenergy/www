@@ -2,7 +2,7 @@
 pagetitle: "Regulations"
 output:
   html_document:
-    css: [libs/styles.css, libs/regs-acoe_tiles.css]
+    css: [libs/styles.css] #, libs/regs-acoe_tiles.css]
 ---
 
 ```{r setup, include=FALSE}
@@ -11,11 +11,12 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 
 
 <h1 class="title toc-ignore">
-  <a href="https://mhk-env.us/regs.html" style="text-decoration:none;">
+  <a href="./regs.html" style="text-decoration:none;">
     <span class="fas fa-arrow-circle-left"></span>
   </a>&nbsp; Regulations
 </h1>
 
+<br>
 
 ## FERC Process
 
@@ -23,7 +24,8 @@ Grid-connected projects fall under FERC’s regulatory process.
 
 <br>
 
-**Resources**
+
+##### **Resources**
 
 - <a href="https://www.ferc.gov/industries-data/hydropower/licensing/hydrokinetic-projects" target="_blank">Hydrokinetic Projects (FERC) </a>
 - <a href="https://www.energy.gov/sites/prod/files/2020/09/f78/mhk-regulatory-processes-handbook-2020.pdf" target="_blank">Handbook of Marine Hydrokinetic Regulatory Processes (DOE-EERE)</a>
