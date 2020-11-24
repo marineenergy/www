@@ -48,7 +48,7 @@ The project has four main objectives:
 - [Kearns & West](https://kearnswest.com)
 - [Ocean Renewable Power Company](https://www.orpc.co/)
 - [Pacific Energy Ventures](https://tethys.pnnl.gov/organization/pacific-energy-ventures-llc)
-- [Sandia Laboratories](https://www.sandia.gov)
+- [Sandia National Laboratories](https://www.sandia.gov)
 
 ## Funding
 
