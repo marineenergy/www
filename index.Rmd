@@ -77,7 +77,7 @@ Tools and resources for environmental compliance in support of projects for wave
   </div>
   
   <div>
-  <a href="docs.html">
+  <a href="tool.html">
   <!-- <img src="images\icons\searchable.png" /> -->
   <img src="images\icons\guidelines.png" />
   <h5>

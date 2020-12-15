@@ -6,12 +6,15 @@ navbar:
     - text: "Projects"
       icon: fa-check-square
       href: projects.html
-    - text: "Documents"
-      icon: fa-file-alt
-      href: docs.html
+    # - text: "Literature"
+    #   icon: fa-file-alt
+    #   href: lit.html
     - text: "Interactions"
       icon: fa-gears
       href: env.html
+    - text: "Management"
+      icon: fa-magic
+      href: mgt.html
     - text: "Report"
       icon: fa-map-marked
       href: tool.html

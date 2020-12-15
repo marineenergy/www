@@ -13,7 +13,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 # check version:
 #   rmarkdown::html_dependency_font_awesome()$version # 5.1.0
 # view gallery of icons:
-#   https://fontawesome.com/icons?d=gallery&s=solid&v=5.1.0&m=free
+#   https://fontawesome.com/icons?d=gallery&v=5.1.0&m=free
 # TODO: sort icon for "Who is leading the project?"
 #.        since https://fontawesome.com/icons/people-arrows isn't until 5.14.0
 ```
