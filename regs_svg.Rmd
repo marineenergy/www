@@ -1,0 +1,22 @@
+---
+title:   "`r params$title`"
+params:
+  title: "Alaska non-grid"
+  svg:   "images/regs_not-grid_ak.svg"
+---
+
+<div>
+ <div class="svghere">
+ </div>
+</div>
+
+<script>
+<!-- 
+File > Download as SVG from:
+ test regs - Google Slides
+ https://docs.google.com/presentation/d/11gT3DUVhRu__wT2kUtX3oxJrutsAv2i5Eug2bkJQTEM/edit
+-->
+$('.svghere').load('`r params$svg`');
+
+$('.svghere').unwrap();
+</script>
