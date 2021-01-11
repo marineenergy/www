@@ -2,7 +2,7 @@
 pagetitle: "Regulations"
 output:
   html_document:
-    css: [libs/styles.css, libs/regs-acoe_tiles.css]
+    css: [libs/styles.css, libs/regs-usace_tiles.css]
 ---
 
 ```{r setup, include=FALSE}
@@ -25,130 +25,101 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 
 <div style="clear:both;"></div>
 
-## ACOE-led Processes
+## USACE-led Processes
 
-Projects in state waters require authorization from the U.S. Army Corps of Engineers(ACOE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the ACOE encompasses the following regulatory elements:
-
+Projects in state waters require authorization from the U.S. Army Corps of Engineers (USACE) regardless of whether the project is grid-connected or not. See further definitions and requirements in <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (p. 73-74; Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the USACE encompasses the following regulatory elements:
 
 <div style="clear:both;"></div>
 
 <div class="tiles">
 
-<div>
+<div class="tile-01">
   <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-401" target="_blank">
   <h5>Clean Water Act §401</h5>
   <p>(CWA §401)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-02">
   <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-404" target="_blank">
-  <h5>
-  Clean Water Act §404
-  </h5>
-  <p>
-  (CWA §404)
-  </p>
+  <h5>Clean Water Act §404</h5>
+  <p>(CWA §404)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-03">
   <a href="https://openei.org/wiki/MHK-env/Regulations/CWA-408" target="_blank">
-  <h5>
-  Clean Water Act §408
-  </h5>
-  <p>
-  (CWA §408)
-  </p>
+  <h5>Clean Water Act §408</h5>
+  <p>(CWA §408)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-04">
   <a href="https://openei.org/wiki/MHK-env/Regulations/CZMA" target="_blank">
-  <h5>
-  Coastal Zone Management Act
-  </h5>
+  <h5>Coastal Zone Management Act</h5>
   <p>(CZMA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-05">
   <a href="https://openei.org/wiki/MHK-env/Regulations/ESA" target="_blank">
-  <h5>
-  Endangered Species Act
-  </h5>
+  <h5>Endangered Species Act</h5>
   <p>(ESA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-06">
   <a href="https://openei.org/wiki/MHK-env/Regulations/RHA-10" target="_blank">
-  <h5>
-  Rivers and Harbors Act §10
-  </h5>
+  <h5>Rivers and Harbors Act §10</h5>
   <p>(RHA §10)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-07">
   <a href="https://openei.org/wiki/MHK-env/Regulations/NEPA" target="_blank">
-  <h5>
-  National Environmental Policy Act
-  </h5>
+  <h5>National Environmental Policy Act</h5>
   <p>(NEPA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-08">
   <a href="https://openei.org/wiki/MHK-env/Regulations/FWCA" target="_blank">
-  <h5>
-  Fish and Wildlife Coordination Act
-  </h5>
+  <h5>Fish and Wildlife Coordination Act</h5>
   <p>(FWCA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-09">
   <a href="https://openei.org/wiki/MHK-env/Regulations/NHPA" target="_blank">
-  <h5>
-  National Historic Preservation Act
-  </h5>
+  <h5>National Historic Preservation Act</h5>
   <p>(NHPA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-10">
   <a href="https://openei.org/wiki/MHK-env/Regulations/Essential_Fish_Habitat" target="_blank">
-  <h5>
-  Essential Fish Habitat
-  </h5>
+  <h5>Essential Fish Habitat</h5>
   <p>(EFH)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-11">
   <a href="https://openei.org/wiki/MHK-env/Regulations/MBTA" target="_blank">
-  <h5>
-  Migratory Bird Treaty Act
-  </h5>
+  <h5>Migratory Bird Treaty Act</h5>
   <p>(MBTA)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-12">
   <a href="https://openei.org/wiki/MHK-env/Regulations/PATON" target="_blank">
-  <h5>
-  Private Aids to Navigation
-  </h5>
+  <h5>Private Aids to Navigation</h5>
   <p>(PATONs)</p>
   </a>
 </div>
 
-<div>
+<div class="tile-13">
   <a href="https://openei.org/wiki/MHK-env/Regulations/MMPA" target="_blank">
-  <h5>
-  Marine Mammal Protection Act
-  </h5>
+  <h5>Marine Mammal Protection Act</h5>
   <p>(MMPA)</p>
   </a>
 </div>
@@ -156,5 +127,5 @@ Projects in state waters require authorization from the U.S. Army Corps of Engin
 </div>
 
 <script>
-$("#acoe-led-processes > div.tiles > div > p").remove();
+$("#usace-led-processes > div.tiles > div > p").remove();
 </script>

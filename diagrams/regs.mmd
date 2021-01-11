@@ -7,17 +7,17 @@ territory{fa:fa-institution<br> Is the project<br>in state waters?}
 boem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]
 lead{fa:fa-people-arrows<br> Who is leading<br>the project?}
 state[State Process]
-acoe[ACOE Process]
+usace[USACE Process]
 
 grid-->|Yes|ferc
 grid-->|No|territory
 territory-->|Yes|lead
 territory-->|No|boem
 lead --> state
-lead --> acoe
+lead --> usace
 
 click ferc "./regs-ferc.html"
-click acoe "./regs-acoe.html"
+click usace "./regs-usace.html"
 click state "./regs-state.html"
 click boem "https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines" _blank
 
@@ -27,5 +27,5 @@ classDef endNode:active fill:#75a189;
 
 classDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;
 
-class ferc,acoe,state,boem endNode
+class ferc,usace,state,boem endNode
 class grid,territory,lead decisionNode

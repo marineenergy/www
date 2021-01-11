@@ -33,6 +33,7 @@
 <script src="site_libs/chromatography-0.1/chromatography.js"></script>
 <script src="site_libs/DiagrammeR-binding-1.0.6.9000/DiagrammeR.js"></script>
 
+
 <style type="text/css">
   code{white-space: pre-wrap;}
   span.smallcaps{font-variant: small-caps;}
@@ -40,7 +41,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-      </style>
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -86,6 +87,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 <link rel="stylesheet" href="libs/styles.css" type="text/css" />
 
@@ -293,35 +295,35 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="projects.html">
-    <span class="fa fa-check-square"></span>
+    <span class="fas fa-check-square"></span>
      
     Projects
   </a>
 </li>
 <li>
   <a href="env.html">
-    <span class="fa fa-gears"></span>
+    <span class="fas fa-gears"></span>
      
     Interactions
   </a>
 </li>
 <li>
   <a href="mgt.html">
-    <span class="fa fa-magic"></span>
+    <span class="fas fa-magic"></span>
      
     Management
   </a>
 </li>
 <li>
   <a href="tool.html">
-    <span class="fa fa-map-marked"></span>
+    <span class="fas fa-map-marked"></span>
      
     Report
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fa fa-institution"></span>
+    <span class="fas fa-institution"></span>
      
     Regulations
      
@@ -332,7 +334,7 @@ $(document).ready(function () {
       <a href="regs.html">Regulations</a>
     </li>
     <li>
-      <a href="regs-acoe.html">ACOE Process</a>
+      <a href="regs-usace.html">USACE Process</a>
     </li>
     <li>
       <a href="regs-ferc.html">FERC Process</a>
@@ -346,14 +348,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="about.html">
-    <span class="fa fa-group"></span>
+    <span class="fas fa-group"></span>
      
     About
   </a>
 </li>
 <li>
   <a href="help.html">
-    <span class="fa fa-question"></span>
+    <span class="fas fa-question"></span>
      
     Help
   </a>
@@ -374,8 +376,8 @@ $(document).ready(function () {
 <div id="regulatory-diagram" class="section level2">
 <h2>Regulatory Diagram</h2>
 <center>
-<div id="htmlwidget-3c92a8eb823a0e36bd86" style="width:600px;height:700px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3c92a8eb823a0e36bd86">{"x":{"diagram":"%% edit with https://mermaid-js.github.io/mermaid-live-editor\n\ngraph TD\ngrid{fa:fa-arrows-alt<br> Is the project<br>grid connected?}\nferc[FERC Process fas:fa-external-link]\nterritory{fa:fa-institution<br> Is the project<br>in state waters?}\nboem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]\nlead{fa:fa-people-arrows<br> Who is leading<br>the project?}\nstate[State Process]\nacoe[ACOE Process]\n\ngrid-->|Yes|ferc\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> acoe\n\nclick ferc \"./regs-ferc.html\"\nclick acoe \"./regs-acoe.html\"\nclick state \"./regs-state.html\"\nclick boem \"https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines\" _blank\n\nclassDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8,text-align:center;\nclassDef endNode:hover fill:#75a189;\nclassDef endNode:active fill:#75a189;\n\nclassDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n\nclass ferc,acoe,state,boem endNode\nclass grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3def38d6b3456104d9ad" style="width:600px;height:700px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3def38d6b3456104d9ad">{"x":{"diagram":"%% edit with https://mermaid-js.github.io/mermaid-live-editor\n\ngraph TD\ngrid{fa:fa-arrows-alt<br> Is the project<br>grid connected?}\nferc[FERC Process fas:fa-external-link]\nterritory{fa:fa-institution<br> Is the project<br>in state waters?}\nboem[BOEM Regulatory <br>Framework and <br>Guidelines fas:fa-external-link-alt]\nlead{fa:fa-people-arrows<br> Who is leading<br>the project?}\nstate[State Process]\nusace[USACE Process]\n\ngrid-->|Yes|ferc\ngrid-->|No|territory\nterritory-->|Yes|lead\nterritory-->|No|boem\nlead --> state\nlead --> usace\n\nclick ferc \"./regs-ferc.html\"\nclick usace \"./regs-usace.html\"\nclick state \"./regs-state.html\"\nclick boem \"https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines\" _blank\n\nclassDef endNode fill:#99d1b3,stroke:#333,stroke-width:2px,font-size:90%,line-height:1.5,stroke-opacity:0.8,text-align:center;\nclassDef endNode:hover fill:#75a189;\nclassDef endNode:active fill:#75a189;\n\nclassDef decisionNode fill:#96b0e0,stroke:#333,stroke-width:3px,font-size:90%,line-height:1.5;\n\nclass ferc,usace,state,boem endNode\nclass grid,territory,lead decisionNode"},"evals":[],"jsHooks":[]}</script>
 </center>
 </div>
 
@@ -393,7 +395,7 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

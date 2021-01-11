@@ -1,0 +1,149 @@
+.tiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  -ms-grid-rows: (1fr)[5];
+  /* Grid column layout (3 col X n rows), equal parts */
+  /* -ms-grid-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr); */
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
+  
+  /* This makes both rows equal height */
+  /* grid-template-rows: minmax(auto, 1fr) minmax(auto, 1fr); */
+
+  /* row gap x col gap */
+  /* grid-gap: 2rem 1rem; */
+  margin-top: 4rem;
+  grid-template-areas: "t01 t02 t03" 
+                       "t04 t05 t06"
+                       "t07 t08 t09"
+                       "t10 t11 t12"
+                       "t13";
+}
+
+.tile-01 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    /* grid-area:t01; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-02 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    /* grid-area:t02; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-03 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    /* grid-area:t03; */
+    margin-bottom: 2rem;
+}
+.tile-04 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    /* grid-area:t04; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-05 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    /* grid-area:t05; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-06 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    /* grid-area:t06; */
+    margin-bottom: 2rem;
+}
+.tile-07 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    /* grid-area:t07; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-08 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    /* grid-area:t08; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-09 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    /* grid-area:t09; */
+    margin-bottom: 2rem;
+}
+.tile-10 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    /* grid-area:t10; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-11 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    /* grid-area:t11; */
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+.tile-12 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    /* grid-area:t12; */
+    margin-bottom: 2rem;
+}
+.tile-13 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    /* grid-area:t13; */
+    margin-right: 1rem;
+}
+
+
+
+.tiles > div {
+  /* background: #4dabf5; */
+  /* background: #54a4d8; */
+  background: #255473;
+  padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+  border-radius: 0.2rem;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+}
+
+.tiles div h5 {
+  padding: 0.2rem;
+  font-weight: bold;
+  color: #1b79a1;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.tiles p {
+  font-style: italic;
+  color: black; 
+  /* font-weight: bold; */
+}
+
+.tiles a {
+    background: #f0f0f0;
+    width: 100%;
+    padding: 0.2rem;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.tiles a:hover {
+  opacity: 0.9;
+  color: #255473;
+}
+
