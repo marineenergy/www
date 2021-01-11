@@ -27,8 +27,7 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 
 ## USACE-led Processes
 
-Projects in state waters require authorization from the U.S. Army Corps of Engineers (USACE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the USACE encompasses the following regulatory elements:
-
+Projects in state waters require authorization from the U.S. Army Corps of Engineers (USACE) regardless of whether the project is grid-connected or not. See further definitions and requirements in <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (p. 73-74; Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022).  Authorization from the USACE encompasses the following regulatory elements:
 
 <div style="clear:both;"></div>
 

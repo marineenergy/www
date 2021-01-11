@@ -33,7 +33,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -79,7 +79,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="libs/styles.css" type="text/css" />
 <link rel="stylesheet" href="libs/regs-usace_tiles.css" type="text/css" />
@@ -288,35 +287,35 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="projects.html">
-    <span class="fas fa-check-square"></span>
+    <span class="fa fa-check-square"></span>
      
     Projects
   </a>
 </li>
 <li>
   <a href="env.html">
-    <span class="fas fa-gears"></span>
+    <span class="fa fa-gears"></span>
      
     Interactions
   </a>
 </li>
 <li>
   <a href="mgt.html">
-    <span class="fas fa-magic"></span>
+    <span class="fa fa-magic"></span>
      
     Management
   </a>
 </li>
 <li>
   <a href="tool.html">
-    <span class="fas fa-map-marked"></span>
+    <span class="fa fa-map-marked"></span>
      
     Report
   </a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    <span class="fas fa-institution"></span>
+    <span class="fa fa-institution"></span>
      
     Regulations
      
@@ -341,14 +340,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="about.html">
-    <span class="fas fa-group"></span>
+    <span class="fa fa-group"></span>
      
     About
   </a>
 </li>
 <li>
   <a href="help.html">
-    <span class="fas fa-question"></span>
+    <span class="fa fa-question"></span>
      
     Help
   </a>
@@ -380,7 +379,7 @@ $(document).ready(function () {
 </div>
 <div id="usace-led-processes" class="section level2">
 <h2>USACE-led Processes</h2>
-<p>Projects in state waters require authorization from the U.S. Army Corps of Engineers (USACE) regardless of whether the project is grid-connected or not, unless the project activities fall within the scope of <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022). Authorization from the USACE encompasses the following regulatory elements:</p>
+<p>Projects in state waters require authorization from the U.S. Army Corps of Engineers (USACE) regardless of whether the project is grid-connected or not. See further definitions and requirements in <a href="https://www.govinfo.gov/content/pkg/FR-2017-01-06/pdf/2016-31355.pdf" target="_blank">Nationwide Permit 52 </a> (p. 73-74; Water-Based Renewable Energy Generation Pilot Projects, Effective Date: March 19, 2017; Expiration Date: March 18, 2022). Authorization from the USACE encompasses the following regulatory elements:</p>
 <div style="clear:both;">
 
 </div>
@@ -535,7 +534,7 @@ Copyright &copy; 2020. <a href="/help.html#disclaimer">Disclaimer</a> & <a href=
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
