@@ -37,17 +37,54 @@
   }
 }
 
-
+/* https://elad.medium.com/supporting-css-grid-in-internet-explorer-b38669e75d66 */
 /* Styling for button tiles */
 .tiles {
+  display: -ms-grid;
   display: grid;
-  /* Grid column layout (3 col X n rows), equal parts */
+  -ms-grid-columns: (1fr)[3];
+  -ms-grid-rows: (1fr)[2];
   grid-template-columns: minmax(auto, 1fr) minmax(auto, 1fr) minmax(auto, 1fr);
-  /* This makes both rows equal height */
-  /* grid-template-rows: minmax(auto, 1fr) minmax(auto, 1fr); */
-  /* row gap x col gap */
-  grid-gap: 3rem 1rem;
   margin-top: 4rem;
+  grid-template-areas: "projects tool management" "documents regulations about";
+}
+
+.project-tile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area:projects;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+}
+.tool-tile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area:tool;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+}
+.mgmt-tile {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area:management;
+    margin-bottom: 3rem;
+}
+.docs-tile {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area:documents;
+    margin-right: 1rem;
+}
+.regs-tile {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area:regulations;
+    margin-right: 1rem;
+}
+.about-tile {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area:about;
 }
 
 .tiles > div {
@@ -56,6 +93,8 @@
   padding: 1.5rem 0.2rem 0.2rem 0.2rem;
   border-radius: 0.2rem;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
@@ -78,9 +117,16 @@
     opacity: 1;
 }
 
-.tiles a:hover{
+.tiles a:hover {
   /*opacity:0.9;*/
   background: #ffffff;
+}
+
+.tiles div:hover {
+    /* background: #3A7297; */
+    background: #4383AC;
+    box-shadow: 3px 5px 10px #545454;
+    transform: translateY(-2px);
 }
 
 .tiles p {

@@ -28,8 +28,9 @@ Tools and resources for environmental compliance in support of projects for wave
   
   <img class="logo" src="images\logo.png" alt="MHK-env Logo">
   <h4 style="display:inline-block; text-aling:center;">
-  Tools and resources for environmental compliance in support of projects for
-  wave and tidal [i.e.&nbsp;marine hydrokinetic (MHK)] energy.
+  Tools and resources for environmental compliance in support of projects 
+  involving technologies that leverage the energy from marine and hydrokinetic
+  (MHK) resources such as waves, tides, rivers, and ocean currents.
   </h4>
 
 </div>
@@ -38,7 +39,7 @@ Tools and resources for environmental compliance in support of projects for wave
 
 <div class="tiles">
   
-  <div>
+  <div class="project-tile">
   <a href="projects.html">
   <img src="images\icons\projects.png">
   <h5>
@@ -51,7 +52,7 @@ Tools and resources for environmental compliance in support of projects for wave
   </a>
   </div>
 
-  <div>
+  <div class="tool-tile">
   <a href="tool.html">
   <img src="images\icons\catalog.png" />
   <h5>
@@ -64,19 +65,19 @@ Tools and resources for environmental compliance in support of projects for wave
   </a>
   </div>
   
-  <div>
+  <div class="mgmt-tile">
   <a href="env.html">
   <img src="images\icons\env.png" />
   <h5>
   Environmental Interactions
   </h5>
   <p>
-  Access papers on various environmental interactions from the Tethys Knowledgebase.
+  Access papers on various environmental interactions from the Tethys Knowledge Base.
   </p>
   </a>
   </div>
   
-  <div>
+  <div class="docs-tile">
   <a href="tool.html">
   <!-- <img src="images\icons\searchable.png" /> -->
   <img src="images\icons\guidelines.png" />
@@ -91,7 +92,7 @@ Tools and resources for environmental compliance in support of projects for wave
   </a>
   </div>
   
-  <div>
+  <div class="regs-tile">
   <a href="regs.html">
   <!-- <img src="images\icons\guidelines.png" /> -->
   <img src="images\icons\searchable.png" />
@@ -106,7 +107,7 @@ Tools and resources for environmental compliance in support of projects for wave
   </a>
   </div>
   
-  <div>
+  <div class="about-tile">
   <a href="https://openei.org/wiki/PRIMRE/MRE_Basics" target="_blank">
   <img src="images\icons\question.png" />
   <h5>
@@ -115,7 +116,7 @@ Tools and resources for environmental compliance in support of projects for wave
   <p>
   Learn more about marine and hydrokinetic energy (MHK). 
   MHK is the harnessing of water's kinetic energy to generate electricity. 
-  It encompasses wave, tidal, and ocean current power.
+  It encompasses wave, tidal, and river and ocean current power.
   </p>
   </a>
   </div>

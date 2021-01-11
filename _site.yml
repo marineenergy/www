@@ -23,8 +23,8 @@ navbar:
       menu:
         - text: "Regulations"
           href: regs.html
-        - text: "ACOE Process"
-          href: regs-acoe.html
+        - text: "USACE Process"
+          href: regs-usace.html
         - text: "FERC Process"
           href: regs-ferc.html
         - text: "State Process"
@@ -44,4 +44,5 @@ output:
     include:
 #      before_body: libs/banner.html
       after_body: "libs/footer.html"
+      in_header: "libs/header.html"
 output_dir: "."      
