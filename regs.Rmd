@@ -18,12 +18,12 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 #.        since https://fontawesome.com/icons/people-arrows isn't until 5.14.0
 ```
 
-## Regulatory Diagram
+<br>
+
+# Regulatory Diagram
 
 <center>
 ```{r}
 DiagrammeR::mermaid("diagrams/regs.mmd", width=600, height=700)
 ```
 </center>
-
-
