@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 Source: <a href="https://tethys.pnnl.gov/management-measures" target="_blank">Management Measures Tool for Marine Renewable Energy | Tethys</a>
 
 ```{r init}
+# WARNING!: This web page is being migrated to mhk-env_shiny-apps repo
 library(here)
 library(readr)
 library(dplyr)
