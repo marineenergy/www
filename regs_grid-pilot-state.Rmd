@@ -1,0 +1,14 @@
+---
+title: "regs_grid-pilot-state"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+
+```{r, results=}
+cat(readLines("diagrams/grid-pilot-state.svg"))
+```
+
