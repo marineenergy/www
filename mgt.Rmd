@@ -7,27 +7,18 @@ output: html_document
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
-Source: <a href="https://tethys.pnnl.gov/management-measures" target="_blank">Management Measures Tool for Marine Renewable Energy | Tethys</a>
+Source: [Management Measures Tool for Marine Renewable Energy | Tethys](https://tethys.pnnl.gov/management-measures)
 
 ```{r init}
-# WARNING!: This web page is being migrated to mhk-env_shiny-apps repo
-library(here)
-library(readr)
-library(dplyr)
-library(rvest)
-library(DT)
-library(crosstalk)
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(crosstalk, dplyr, DT, readr)
 
 url     <- "https://tethys.pnnl.gov/management-measures"
-mgt_csv <- here("data/mgt.csv")
-redo    <- F
+mgt_csv <- "/share/github/mhk-env_shiny-apps/data/tethys_mgt.csv"
 
-if (!file.exists(mgt_csv) | redo){
-  read_html(url) %>% 
-    html_table() %>% 
-    .[[1]] %>% 
-    write_csv(mgt_csv)
-}
 d <- read_csv(mgt_csv) %>% 
   rename(
     Category = `Management Measure Category`,
@@ -53,7 +44,6 @@ names(tbl)
 ```
 
 ```{r}
-
 sd <- SharedData$new(d)
 
 bscols(widths = c(4,4,4,6,6),
