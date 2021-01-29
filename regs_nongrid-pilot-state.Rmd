@@ -1,0 +1,15 @@
+---
+title: "Non-Grid Connected Pilot Project in State Waters"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+
+```{r, results="asis"}
+cat(readLines("diagrams/nongrid-pilot-state.svg"))
+```
+
+Source: Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).

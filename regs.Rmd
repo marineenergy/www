@@ -1,29 +1,15 @@
 ---
 pagetitle: "Regulations"
+output: html_document
 ---
 
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = F)
-
-# NOTE: requires DiagrammeR library with latest version of mermaid-js
-#   remotes::install_github("mhk-env/DiagrammeR")
-
-# icons from font awesome in diagram
-htmltools::tagList(rmarkdown::html_dependency_font_awesome())
-# check version:
-#   rmarkdown::html_dependency_font_awesome()$version # 5.1.0
-# view gallery of icons:
-#   https://fontawesome.com/icons?d=gallery&v=5.1.0&m=free
-# TODO: sort icon for "Who is leading the project?"
-#.        since https://fontawesome.com/icons/people-arrows isn't until 5.14.0
 ```
-
-<br>
 
 # Regulatory Diagram
 
-<center>
-```{r}
-DiagrammeR::mermaid("diagrams/regs.mmd", width=600, height=700)
+```{r, results="asis", warning=F}
+cat(readLines("diagrams/Process for Web_export-01.svg"))
 ```
-</center>
+
