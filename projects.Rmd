@@ -33,11 +33,15 @@ permit_types <- c(
   "Notice of Intent/Preliminary Permit Application",
   "Draft Pilot License App",
   "Final Pilot License App",
+  "Pilot License Issued",
   "Draft License App",
+  "Draft Re-License App",
   "Final License App",
+  "Final Re-License App",
   "Environmental Assessment",
   "Settlement Agreement",
-  "Permit Issued")
+  "Permit Issued",
+  "Re-License Issued")
 
 md2html <- function(x){
   markdownToHTML(text = x, fragment.only = T)}
@@ -80,7 +84,7 @@ sites <- d_xy %>%
       "**{project_name}** (_{technology_type}_)"),
     popup_md = glue(
       "**{project_name}** (_{technology_type}_)<br>
-      Dates: {date_beg} to {date_end}<br>
+      Dates: {date_beg} to {ifelse(date_end == format(Sys.Date(), '%m/%d/%Y') %>% str_replace('^0',''), 'ongoing', date_end)}<br>
       Location (lon, lat): {longitude}, {latitude}<br>
       {permits_md}"),
     label_html = map_chr(label_md, md2html),
@@ -124,9 +128,24 @@ d <- readr::read_csv(csv_url) %>%
   select(-starts_with("X"))
 
 #sort data by permit type
-d$permit_type <- factor(d$permit_type, levels = c("Notice of Intent/Preliminary Permit Application", 'Draft Pilot License App', 'Final Pilot License App', "Draft License App", "Final License App", 'Environmental Assessment', 'Settlement Agreement', "Permit Issued"))
+d$permit_type <- factor(d$permit_type, 
+                        levels = c("Notice of Intent/Preliminary Permit Application",
+                                   "Draft Pilot License App",
+                                   "Final Pilot License App",
+                                   "Pilot License Issued",
+                                   "Draft License App",
+                                   "Draft Re-License App",
+                                   "Final License App",
+                                   "Final Re-License App",
+                                   "Environmental Assessment",
+                                   "Settlement Agreement",
+                                   "Permit Issued",
+                                   "Re-License Issued"))
 
-d$technology_type <- factor(d$technology_type, levels = c('Riverine Energy', 'Tidal Energy', 'Wave Energy'))
+d$technology_type <- factor(d$technology_type, 
+                            levels = c('Riverine Energy', 
+                                       'Tidal Energy', 
+                                       'Wave Energy'))
 
 
 #d %>% transform(d, technology_type = as.character(technology_type))
@@ -160,9 +179,10 @@ d_times <- d_times %>%
 ###ggplot figure that has points and bars indicating permitting
 #the fig.width and fig.height above determine the figure size overall
 
-#pick the color scale
+#pick the color and shape scale
 scale <- brewer.pal(n=10, name = 'PiYG')
-scale <- scale[c(1:4, 7:10)]
+scale <- scale[c(1:5, 5, 7, 7:10, 10)]
+shp <- c(rep(24, 3), 25, 24, 25, 24, 25, rep(24, 3), 25) 
 
 #the input to ggplot is what determines the tooltip label
 g <- ggplot(d_permits_2, 
@@ -170,13 +190,14 @@ g <- ggplot(d_permits_2,
   
   #the segment is a gray bar that covers the time period of the permits
   geom_segment(data = d_times, 
-               aes(x = date_beg, y = project_name, xend = date_end, yend = project_name), size = 4, color =         "gray80") +
+               aes(x = date_beg, y = project_name, xend = date_end, yend = project_name, color = project_status), size = 4) +
   
   #the points have colors and shapes indicating different permit types
   geom_point(data = d_permits_2, 
-             aes(x = license_date, y = project_name, color = permit_type), size = 3, shape = 17) +
-  
-  scale_color_manual(values = scale) + 
+             aes(x = license_date, y = project_name, fill = permit_type, shape = permit_type), size = 4, stroke = 0) +
+  scale_color_manual(name = "", values = c("#30A4E1", "#999999"), breaks = c("Active Project", "Inactive Project"))+
+  scale_fill_manual(name = "", values = scale) + 
+  scale_shape_manual(name = "", values = shp) +
   
   #label the plot
   labs(title = "MHK Project Timeline", x = "Year of Project", y = "") +
@@ -260,7 +281,7 @@ p[['x']][['layout']][['annotations']][[5]]$x <- 1.1
 p[['x']][['layout']][['annotations']][[5]]$y <- 0.82
 
 #change the legend title
-p[['x']][['layout']][['annotations']][[5]]$text <- 'Permit Type'
+#p[['x']][['layout']][['annotations']][[5]]$text <- 'Permit Type'
 
 #change the color of a shape to determine which one it is
 p[['x']][['layout']][['shapes']][[4]]$fillcolor <- 'rgba(217, 217, 217, 1)'
@@ -282,6 +303,60 @@ p[['x']][['layout']][['annotations']][[1]]$y <- -.1
 
 #change the size of the bottom gray bar
 p[['x']][['layout']][['shapes']][[6]]$y0 <- 0.01
+
+#Modify legend categories to the unique set
+leg.sorted <- c("Active Project", 
+                "Inactive Project",
+                "Notice of Intent/Preliminary Permit Application",
+                "Draft Pilot License App",
+                "Final Pilot License App",
+                "Pilot License Issued",
+                "Draft License App",
+                "Draft Re-License App",
+                "Final License App",
+                "Final Re-License App",
+                "Environmental Assessment",
+                "Settlement Agreement",
+                "Permit Issued",
+                "Re-License Issued")
+
+leg.1 <- c("Active Project", 
+           "Inactive Project")
+
+leg.1.name <- "Project Status"
+
+leg.2 <- c("Notice of Intent/Preliminary Permit Application",
+           "Draft Pilot License App",
+           "Final Pilot License App",
+           "Pilot License Issued",
+           "Draft License App",
+           "Draft Re-License App",
+           "Final License App",
+           "Final Re-License App",
+           "Environmental Assessment",
+           "Settlement Agreement",
+           "Permit Issued",
+           "Re-License Issued")
+
+leg.2.name <- "Permit Type"
+
+for (i in 1:length(p$x$data)) { 
+  n1 <- p$x$data[[i]]$name # and this is how the value is stored in plotly
+  n2 <- " "
+  for (j in 1:length(leg.sorted)) {
+    if (grepl(x = n1, pattern = leg.sorted[j])) {n2 = leg.sorted[j]} # if the plotly legend name contains the original value, replace it with the original value
+  }
+  p$x$data[[i]]$name <- n2 # now is the time for actual replacement
+  
+  if (grepl(x = n1, pattern = "1|Re-License|Pilot License Issued")) {
+    p$x$data[[i]]$showlegend = TRUE
+  }else{
+    p$x$data[[i]]$showlegend = FALSE
+  }
+
+  p$x$data[[i]]$legendgroup <- n2 # Replace legend group name  
+  
+}
 
 ###Note: cannot add annotations here - probably have to add them at the ggplot level and then can edit them here as needed
 
