@@ -1,0 +1,69 @@
+---
+title: "FERC documents"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+```
+
+```{r init}
+if (!require(librarian)){
+  install.packages("librarian")
+  library(librarian)
+}
+shelf(crosstalk, dplyr, DT, glue, readr)
+
+ferc_docs_csv <- "/share/github/mhk-env_shiny-apps/data/ferc_docs.csv"
+
+d <- read_csv(ferc_docs_csv) %>% 
+  mutate(
+    doc = ifelse(
+      !is.na(url),
+      glue("<a href='url'>{doc}</a>"),
+      doc)) %>% 
+  select(-url)
+```
+
+```{r explore, eval=F}
+d %>%
+  filter(Technology == "Tidal") %>%
+  datatable()
+
+table(d$Technology)
+table(d$Stressor)
+table(d$Receptor)
+table(d$`Specific Receptor`)
+
+datatable(d)
+
+tbl %>% 
+  group_by(Technology, `Management Measure Category`, `Phase of Project`, Stressor, Receptor) %>% 
+  summarize(n = n())
+names(tbl)
+```
+
+```{r}
+# names(d)
+sd <- SharedData$new(d)
+
+bscols(widths = c(6,6,6,6),
+    filter_select("selTech"    , "Technology", sd, group=~technology, multiple = T),
+    filter_select("selPhase"   , "Phase"     , sd, group=~phase     , multiple = T),
+    filter_select("selReceptor", "Receptor"  , sd, group=~receptor  , multiple = T),
+    filter_select("selStressor", "Stressor"  , sd, group=~stressor  , multiple = T),
+    filter_checkbox(
+      "presented_as_potential_interaction", "presented_as_potential_interaction", sd, ~presented_as_potential_interaction, inline = TRUE),
+    filter_checkbox(
+      "decribed_from_observations_at_the_project_site", "decribed_from_observations_at_the_project_site", sd, ~decribed_from_observations_at_the_project_site, inline = TRUE),
+    filter_checkbox(
+      "monitoring_plan_(mp)", "monitoring_plan_(mp)", sd, ~`monitoring_plan_(mp)`, inline = TRUE),
+    filter_checkbox(
+      "adaptive_management_plan_(amp)", "adaptive_management_plan_(amp)", sd, ~`adaptive_management_plan_(amp)`, inline = TRUE),
+    filter_checkbox(
+      "protection_mitigation_and_enhancement", "protection_mitigation_and_enhancement", sd, ~protection_mitigation_and_enhancement, inline = TRUE),
+    filter_checkbox(
+      "bmps_applied", "bmps_applied", sd, ~bmps_applied, inline = TRUE))
+
+datatable(sd, escape = F)
+```
