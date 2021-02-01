@@ -1,5 +1,5 @@
 ---
-title: "regs_grid-pilot-state"
+title: "Pilot-Grid Connected Pilot Project in State Waters"
 output: html_document
 ---
 
@@ -8,7 +8,8 @@ knitr::opts_chunk$set(echo = F)
 ```
 
 
-```{r, results=}
+```{r, results="asis"}
 cat(readLines("diagrams/grid-pilot-state.svg"))
 ```
 
+Source: Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).
