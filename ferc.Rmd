@@ -20,7 +20,7 @@ d <- read_csv(ferc_docs_csv) %>%
   mutate(
     doc = ifelse(
       !is.na(url),
-      glue("<a href='url'>{doc}</a>"),
+      glue("<a href='{url}'>{doc}</a>"),
       doc)) %>% 
   select(-url)
 ```
