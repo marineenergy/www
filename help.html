@@ -104,7 +104,7 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -150,7 +150,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 <link rel="stylesheet" href="libs/styles.css" type="text/css" />
 
@@ -384,7 +383,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
