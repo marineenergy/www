@@ -1,0 +1,10 @@
+@import 'core/variables';
+@import 'core/mixin';
+@import 'core/reset';
+
+@import 'node_modules/bootstrap-scss/bootstrap';
+@import 'vendors/bootstrap-overrides';
+
+@import 'components/header';
+@import 'components/pages';
+@import 'components/footer';

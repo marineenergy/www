@@ -1,0 +1,61 @@
+.no-padding{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.btn-chubby{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn-w-arrow{
+  &:after{
+    content: '\2023';
+    margin-left: 5px;
+  }
+}
+
+body{
+  color: $color-dgray;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font:{
+    family: $font-acumin;
+  }
+  margin-bottom: 20px;
+}
+
+h1{
+  color: $color-navy;
+  font:{
+    size: 42px;
+  }
+  &:after{
+    content: '';
+    width: 50px;
+    border-bottom: solid 3px $color-navy;
+    display: block;
+    margin: 20px auto 10px;
+  }
+}
+
+h2{
+  color: $color-blue;
+  font:{
+    size: 32px;
+  }
+}
+
+h3{
+  color: $color-navy;
+  font:{
+    size: 16px;
+    weight: 700;
+  }
+  text-transform: uppercase;
+}
+
+p{
+  color: $color-dgray;
+}

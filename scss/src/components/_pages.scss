@@ -1,0 +1,86 @@
+body{
+  padding: 0 !important;
+}
+
+.main-container{
+  max-width: none !important;
+  padding: 0;
+}
+
+.home{
+  .jumbotron{
+    background:{
+      color: #fff;
+      image: url('/images/home-waves.png');
+      size: contain;
+      position: bottom center;
+      repeat: no-repeat;
+    }
+    padding: 4rem 2rem 150px;
+    .logo{
+      max-width: 390px;
+      margin: 0px 20px 40px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.content{
+  padding-bottom: 20px;
+  ul,ol{
+    padding-left: 20px;
+  }
+}
+
+.title-bar{
+  background: {
+    color: $color-navy;
+    image: url('/images/back-shine.png');
+    size: cover;
+    repeat: no-repeat;
+  }
+  padding: 10px 0px;
+  margin-bottom: 20px;
+  h1{
+    color: #fff;
+    font:{
+      size: 42px;
+      weight: 700;
+    }
+    margin-bottom: 0px;
+    &:after{
+      display: none;
+    }
+  }
+}
+
+
+.icon-box{
+  padding: 40px 20px;
+  background-color: $color-lgray;
+  border: solid 2px $color-sky;
+  border-radius: 4px;
+  max-width: 320px;
+  min-height: 360px;
+  margin: auto;
+  img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+  h3{
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: 13px;
+  }
+  a{
+    font:{
+      weight: 600;
+    }
+  }
+  &:hover{
+    background-color: $color-white;
+  }
+}

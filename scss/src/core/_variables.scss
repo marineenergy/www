@@ -1,0 +1,42 @@
+/*
+COLORS
+------------------------------------------*/
+$color-white:         #ffffff;
+$color-blue:          #0b56a6;
+$color-navy:          #08274d;
+$color-sky:           #56b2e5;
+$color-lblue:         #45d0f6;
+$color-dgray:         #333333;
+$color-lgray:         #f6f6f6;
+
+$color-primary:       $color-blue;
+$color-secondary:     $color-navy;
+
+/*
+FONTS
+------------------------------------------*/
+$font-acumin:         acumin-pro, sans-serif;
+
+$font-primary:        $font-acumin;
+$font-secondary:      $font-acumin;
+
+
+$smallBreakWidth:     767px;
+$mediumBreakWidth:    991px;
+$largeBreakWidth:     1024px;
+$xlargeBreakWidth:    1199px;
+
+/*
+BOOTSTRAP VARIABLES
+------------------------------------------*/
+$primary:             $color-blue !default;
+$secondary:           $color-sky !default;
+
+$border-radius:       2px !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 1170px
+) !default;
+
+$font-family-sans-serif: $font-acumin;
