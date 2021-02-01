@@ -1,0 +1,10 @@
+@import 'core/variables';
+@import 'core/mixin';
+@import 'core/reset';
+
+//@import 'vendors/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap';
+@import 'vendors/bootstrap-overrides';
+
+@import 'components/header';
+@import 'components/pages';
+@import 'components/footer';

@@ -1,45 +1,50 @@
 name: "mhk-env"
-navbar:
-  title: "MHK-env"
-  type: inverse # inverse or default
-  left:
-    - text: "Projects"
-      icon: fa-check-square
-      href: projects.html
-    # - text: "Literature"
-    #   icon: fa-file-alt
-    #   href: lit.html
-    - text: "Interactions"
-      icon: fa-gears
-      href: env.html
-    - text: "Management"
-      icon: fa-magic
-      href: mgt.html
-    - text: "Report"
-      icon: fa-map-marked
-      href: tool.html
-    - text: "Regulations"
-      icon: fa-institution
-      menu:
-        - text: "Regulations"
-          href: regs.html
-        - text: "USACE Process"
-          href: regs-usace.html
-        - text: "FERC Process"
-          href: regs-ferc.html
-        - text: "State Process"
-          href: regs-state.html
-  right:
-    - text: "About"
-      icon: fa-group
-      href: about.html
-    - text: "Help"
-      icon: fa-question
-      href: help.html
+# navbar:
+#   title: "MHK-env"
+#   type: inverse # inverse or default
+#   left:
+#     - text: "Projects"
+#       icon: fa-check-square
+#       href: projects.html
+#     # - text: "Literature"
+#     #   icon: fa-file-alt
+#     #   href: lit.html
+#     - text: "Interactions"
+#       icon: fa-gears
+#       href: env.html
+#     - text: "Management"
+#       icon: fa-magic
+#       href: mgt.html
+#     - text: "Report"
+#       icon: fa-map-marked
+#       href: tool.html
+#     - text: "Regulations"
+#       icon: fa-institution
+#       menu:
+#         - text: "Regulations"
+#           href: regs.html
+#         - text: "USACE Process"
+#           href: regs-usace.html
+#         - text: "FERC Process"
+#           href: regs-ferc.html
+#         - text: "State Process"
+#           href: regs-state.html
+#   right:
+#     - text: "About"
+#       icon: fa-group
+#       href: about.html
+#     - text: "Help"
+#       icon: fa-question
+#       href: help.html
 output:
   html_document:
     theme: yeti # flatly # journal # darkly # cosmo # yeti # lumen # darkly # https://bootswatch.com/
+    # theme:
+    #   bootswatch: yeti
+    #   version: 4
+    #css: libs/styles-bs4.css
     css: libs/styles.css
+    template: libs/default_mvfooter.html
     mathjax: null    
     include:
 #      before_body: libs/banner.html
