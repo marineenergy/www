@@ -13,7 +13,7 @@
    viewBox="0 0 900 725"
    version="1.1"
    sodipodi:docname="Process for Web_export-01.svg"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
   <metadata
      id="metadata515">
     <rdf:RDF>
@@ -35,16 +35,17 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-height="1147"
      id="namedview513"
      showgrid="false"
-     inkscape:zoom="1.2003863"
-     inkscape:cx="450"
-     inkscape:cy="362.5"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:zoom="1.6976026"
+     inkscape:cx="447.19934"
+     inkscape:cy="350.71868"
+     inkscape:window-x="1680"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
-     inkscape:current-layer="Layer_1" />
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -1200,10 +1201,11 @@
      y2="319.91"
      id="line510" />
   <a
-     id="a1350"
-     xlink:href="https://marineenergy.app/regs-ferc.html"
+     xlink:href="regs-ferc.html"
+     target="_blank"
+     transform="matrix(2.3398,0,0,1.3700204,-30.975731,134.43627)"
      style="opacity:0"
-     transform="matrix(2.3398,0,0,1.3700204,-30.975731,134.43627)">
+     id="a1350">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1"
        id="rect1340"
@@ -1217,7 +1219,8 @@
      id="a1350-0"
      xlink:href="https://www.boem.gov/renewable-energy/regulatory-framework-and-guidelines"
      style="opacity:0"
-     transform="matrix(1.4631672,0,0,0.72340904,677.37251,433.33302)">
+     transform="matrix(1.4631672,0,0,0.72340904,677.37251,433.33302)"
+     target="_blank">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1"
        id="rect1340-8"
@@ -1228,10 +1231,11 @@
        rx="12" />
   </a>
   <a
-     id="a1350-0-3"
-     xlink:href="https://marineenergy.app/regs-state.html"
+     xlink:href="regs-state.html"
+     target="_blank"
+     transform="matrix(0.53725029,0,0,0.55208952,440.80394,510.39991)"
      style="opacity:0"
-     transform="matrix(0.53725029,0,0,0.55208952,440.80394,510.39991)">
+     id="a1350-0-3">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1"
        id="rect1340-8-4"
@@ -1249,10 +1253,11 @@
      rx="25.60409"
      ry="25.604094" />
   <a
-     id="a1521"
-     xlink:href="https://marineenergy.app/regs-usace.html"
+     xlink:href="regs-usace.html"
+     target="_blank"
+     style="stroke-width:1.58967;opacity:0"
      transform="matrix(0.70588237,0,0,0.56060606,103.76393,518.67678)"
-     style="stroke-width:1.58967;opacity:0">
+     id="a1521">
     <ellipse
        style="opacity:0.186275;fill:#000000;fill-opacity:1;stroke-width:1.58967"
        id="path1519"
@@ -1262,10 +1267,11 @@
        ry="44.470261" />
   </a>
   <a
-     id="a1350-0-3-8"
-     xlink:href="https://marineenergy.app/regs_grid-pilot-state.html"
+     xlink:href="regs_grid-pilot-state.html"
+     target="_blank"
+     transform="matrix(1.271913,0,0,0.54313022,-18.512305,414.70476)"
      style="opacity:0;stroke-width:0.655258"
-     transform="matrix(1.271913,0,0,0.54313022,-18.512305,414.70476)">
+     id="a1350-0-3-8">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1;stroke-width:0.655258"
        id="rect1340-8-4-1"
@@ -1277,10 +1283,11 @@
        ry="12.197948" />
   </a>
   <a
-     id="a1350-0-3-8-5"
-     xlink:href="https://marineenergy.app/regs_commercial-competitive-ocs.html"
+     xlink:href="regs_commercial-competitive-ocs.html"
+     target="_blank"
+     transform="matrix(1.271913,0,0,0.54313022,148.25107,416.53477)"
      style="opacity:0;stroke-width:0.655258"
-     transform="matrix(1.271913,0,0,0.54313022,148.25107,416.53477)">
+     id="a1350-0-3-8-5">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1;stroke-width:0.655258"
        id="rect1340-8-4-1-3"
@@ -1292,10 +1299,11 @@
        ry="12.197948" />
   </a>
   <a
-     id="a1350-0-3-8-5-1"
-     xlink:href="https://marineenergy.app/regs_commercial-state.html"
+     xlink:href="regs_commercial-state.html"
+     target="_blank"
+     transform="matrix(1.271913,0,0,0.54313022,-18.512303,480.59474)"
      style="opacity:0;stroke-width:0.655258"
-     transform="matrix(1.271913,0,0,0.54313022,-18.512303,480.59474)">
+     id="a1350-0-3-8-5-1">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1;stroke-width:0.655258"
        id="rect1340-8-4-1-3-8"
@@ -1307,10 +1315,11 @@
        ry="12.197948" />
   </a>
   <a
-     id="a1350-0-3-8-5-5"
-     xlink:href="https://marineenergy.app/regs_commercial-noncompetitive-ocs.html"
+     xlink:href="regs_commercial-noncompetitive-ocs.html"
+     target="_blank"
+     transform="matrix(1.271913,0,0,0.54313022,148.11769,482.41474)"
      style="opacity:0;stroke-width:0.655258"
-     transform="matrix(1.271913,0,0,0.54313022,148.11769,482.41474)">
+     id="a1350-0-3-8-5-5">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1;stroke-width:0.655258"
        id="rect1340-8-4-1-3-0"
@@ -1322,10 +1331,11 @@
        ry="12.197948" />
   </a>
   <a
-     id="a1350-0-3-8-5-5-2"
-     xlink:href="https://marineenergy.app/regs_nongrid-pilot-state.html"
+     xlink:href="regs_nongrid-pilot-state.html"
+     target="_blank"
+     transform="matrix(1.271913,0,0,0.54313022,480.74109,605.26478)"
      style="opacity:0;stroke-width:0.655258"
-     transform="matrix(1.271913,0,0,0.54313022,480.74109,605.26478)">
+     id="a1350-0-3-8-5-5-2">
     <rect
        style="opacity:0.183007;fill:#000000;fill-opacity:1;stroke-width:0.655258"
        id="rect1340-8-4-1-3-0-7"
