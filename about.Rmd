@@ -7,9 +7,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-The Marine and Hydrokinetic (MHK) Environmental Toolkit for Permitting and Licensing effort seeks to increase regulators’ understanding of MHK projects and their potential environmental effects to reduce the amount of time to permit and decrease costs to develop MHK projects. The Toolkit compiles and distills existing environmental, spatial, regulatory, and scientific data into one web-based platform. The current state–of-science on key topics associated with MHK permitting is synthesized in the Toolkit, with live links to existing resources. It is designed to complement other DOE efforts such as the [Portal and Repository for Information on Marine Renewable Energy](https://openei.org/wiki/PRIMRE) (PRIMRE). A series of workshops were held with state and federal regulators to provide input on the functionality of and information contained within the Toolkit, as well as create buy-in with the use of the Toolkit in the MHK permitting and licensing process. 
+The Marine Energy Environmental Toolkit for Permitting and Licensing effort seeks to increase regulators’ understanding of marine energy projects and their potential environmental effects to reduce the amount of time to permit and decrease costs to develop marine energy projects. The Toolkit compiles and distills existing environmental, spatial, regulatory, and scientific data into one web-based platform. The current state–of-science on key topics associated with marine energy permitting is synthesized in the Toolkit, with live links to existing resources. It is designed to complement other DOE efforts such as the [Portal and Repository for Information on Marine Renewable Energy](https://openei.org/wiki/PRIMRE) (PRIMRE). A series of workshops were held with state and federal regulators to provide input on the functionality of and information contained within the Toolkit, as well as create buy-in with the use of the Toolkit in the marine energy permitting and licensing process. 
 
-The Toolkit has four major components, integrated into one web-based platform, to streamline the MHK permitting process:
+The Toolkit has four major components, integrated into one web-based platform, to streamline the marine energy permitting process:
 
 1. **Data Catalog & Mapper**
 : Relevant spatial environmental datasets (e.g., [MarineCadastre](https://marinecadastre.gov/)) provide the ability to identify overlapping species, habitats, and human uses for a proposed development area, similar to [OceanReports](https://www.marinecadastre.gov/oceanreports/@-10737743.881037742,4753280.983019757/4).
@@ -25,15 +25,15 @@ The Toolkit has four major components, integrated into one web-based platform, t
 
 ## Mission
 
-The mission of the MHK Toolkit for Permitting and Licensing Project is to create a one-stop-shop for the MHK community to access, review, and compile relevant regulatory, spatial, and academic information to increase the efficiency of the MHK permitting and licensing process.
+The mission of the Marine Energy Environmental Toolkit for Permitting and Licensing Project is to create a one-stop-shop for the marine energy community to access, review, and compile relevant regulatory, spatial, and academic information to increase the efficiency of the marine energy permitting and licensing process.
 
 The project has four main objectives:
 
 1. **Distill** scientific knowledge into an Assessment Framework and Status Reports. 
 
-1. **Develop** an easily accessible online MHK Environ¬mental Permitting Toolkit. 
+1. **Develop** an easily accessible online marine energy environmental permitting Toolkit. 
 
-1. **Conduct** in-person meetings and webinars with relevant regulators from federal and state agencies to share and gather input on the Toolkit and to share expert understanding of potential effects and state-of-the-science for MHK projects. 
+1. **Conduct** in-person meetings and webinars with relevant regulators from federal and state agencies to share and gather input on the Toolkit and to share expert understanding of potential effects and state-of-the-science for marine energy projects. 
 
 1. **Pilot** test the Toolkit and gather lessons learned from the permitting process.
 
