@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
-Source: [Management Measures Tool for Marine Renewable Energy | Tethys](https://tethys.pnnl.gov/management-measures)
+Source: <a href="https://tethys.pnnl.gov/management-measures" target="_blank">Management Measures Tool for Marine Renewable Energy | Tethys</a>
 
 ```{r init}
 if (!require(librarian)){
