@@ -245,6 +245,7 @@
                    id="image40" /><a
                    id="a877-1"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/NHPA"
+                   target="_blank"
                    style="fill:#000000;fill-opacity:1;opacity:0"><rect
                      style="fill:#000000;stroke-width:0.00141366;fill-opacity:1"
                      id="rect875"
@@ -255,6 +256,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-2"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/FWCA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350)"
                    transform="matrix(0.82599132,0,0,1.0322737,0.09667847,-0.05631036)"
                    target="_blank"><rect
@@ -267,6 +269,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-3"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/FWCA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2)"
                    transform="matrix(0.15852207,0,0,1.0322679,0.74384498,-0.05630694)"
                    target="_blank"><rect
@@ -279,6 +282,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-4"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/MMPA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7)"
                    transform="matrix(0.93113375,0,0,1.0321679,0.04823794,-0.10026156)"
                    target="_blank"><rect
@@ -291,6 +295,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-5"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/ESA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5)"
                    transform="matrix(0.9380941,0,0,1.0321719,0.04215314,-0.1424634)"
                    target="_blank"><rect
@@ -303,6 +308,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-6"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/Essential_Fish_Habitat"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4)"
                    transform="matrix(0.8592102,0,0,1.0321782,0.11204596,-0.18347083)"
                    target="_blank"><rect
@@ -315,6 +321,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-7"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/NHPA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2)"
                    transform="matrix(0.9612953,0,0,1.0321704,-0.00981019,-0.22205317)"
                    target="_blank"><rect
@@ -327,6 +334,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-8"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/NHPA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4)"
                    transform="matrix(0.12794049,0,0,1.0321694,0.77009243,-0.22205261)"
                    target="_blank"><rect
@@ -339,6 +347,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-9"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/PATON"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3)"
                    transform="matrix(0.52700595,0,0,1.0321155,0.26586988,-0.26543132)"
                    target="_blank"><rect
@@ -351,6 +360,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-10"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/PATON"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8)"
                    transform="matrix(0.21843058,0,0,1.0321534,0.62334739,-0.26545353)"
                    target="_blank"><rect
@@ -362,7 +372,8 @@
                      y="-0.60518765"
                      transform="scale(1,-1)" /></a><a
                    id="a877-11"
-                   xlink:href="https://mhk-env.us/regs-usace.html"
+                   xlink:href="regs-usace.html"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2)"
                    transform="matrix(1.7914878,0,0,1.1933116,-0.74404035,-0.4063975)"
                    target="_blank"><rect
@@ -375,6 +386,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-12"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/RHA-10"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5)"
                    transform="matrix(0.1487607,0,0,0.93526152,0.75167243,-0.23756695)"
                    target="_blank"><rect
@@ -387,6 +399,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-13"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/CWA-404"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5-4)"
                    transform="matrix(0.14876069,0,0,0.93526152,0.75167243,-0.27252662)"
                    target="_blank"><rect
@@ -399,6 +412,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-14"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/CWA-401"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5-4-5)"
                    transform="matrix(1.8401495,0,0,0.93512619,-0.85461319,-0.31224981)"
                    target="_blank"><rect
@@ -411,6 +425,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-15"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/CWA-401"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5-4-5-4)"
                    transform="matrix(0.22047649,0,0,1.2326497,0.64985371,-0.49230719)"
                    target="_blank"><rect
@@ -423,6 +438,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-16"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/CZMA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5-4-5-4-8)"
                    transform="matrix(0.76571004,0,0,1.0390264,0.08136512,-0.43106754)"
                    target="_blank"><rect
@@ -435,6 +451,7 @@
                      transform="scale(1,-1)" /></a><a
                    id="a877-17"
                    xlink:href="https://openei.org/wiki/MHK-env/Regulations/CZMA"
+                   target="_blank"
                    style="opacity:0;fill:#000000;fill-opacity:1;filter:url(#filter7350-2-7-5-4-2-4-3-8-2-5-4-5-4-8-7)"
                    transform="matrix(0.22744322,0,0,1.2003788,0.6437036,-0.52992078)"
                    target="_blank"><rect
