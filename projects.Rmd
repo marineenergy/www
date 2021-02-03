@@ -76,6 +76,10 @@ d_permits <- d %>%
     permits_md = paste(permit_md, collapse = "\n"),
     .groups = "drop")
 
+date_now <- format(Sys.Date(), '%m/%d/%Y') %>% 
+  str_replace('^0','') %>% 
+  str_replace('/0','/')
+
 sites <- d_xy %>% 
   left_join(
     d_permits, by = "project_name") %>% 
@@ -84,13 +88,22 @@ sites <- d_xy %>%
       "**{project_name}** (_{technology_type}_)"),
     popup_md = glue(
       "**{project_name}** (_{technology_type}_)<br>
-      Dates: {date_beg} to {ifelse(date_end == format(Sys.Date(), '%m/%d/%Y') %>% str_replace('^0',''), 'ongoing', date_end)}<br>
+      Dates: {date_beg} to {
+        ifelse(
+          date_end == date_now, 
+          'ongoing', 
+          date_end)}<br>
       Location (lon, lat): {longitude}, {latitude}<br>
       {permits_md}"),
     label_html = map_chr(label_md, md2html),
     popup_html = map_chr(popup_md, md2html)) %>% 
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326, remove = F) %>% 
   arrange(project_name)
+
+# sites %>% 
+#   st_drop_geometry() %>% 
+#   filter(project_name == "PacWave-N") %>% 
+#   View()
 
 sites$label_html <- sites$label_html %>% lapply(HTML)
 sites$popup_html <- sites$popup_html %>% lapply(HTML)
