@@ -1202,7 +1202,6 @@
      id="line510" />
   <a
      xlink:href="regs-ferc.html"
-     target="_blank"
      transform="matrix(2.3398,0,0,1.3700204,-30.975731,134.43627)"
      style="opacity:0"
      id="a1350">
@@ -1232,7 +1231,6 @@
   </a>
   <a
      xlink:href="regs-state.html"
-     target="_blank"
      transform="matrix(0.53725029,0,0,0.55208952,440.80394,510.39991)"
      style="opacity:0"
      id="a1350-0-3">
@@ -1254,7 +1252,6 @@
      ry="25.604094" />
   <a
      xlink:href="regs-usace.html"
-     target="_blank"
      style="stroke-width:1.58967;opacity:0"
      transform="matrix(0.70588237,0,0,0.56060606,103.76393,518.67678)"
      id="a1521">
@@ -1268,7 +1265,6 @@
   </a>
   <a
      xlink:href="regs_grid-pilot-state.html"
-     target="_blank"
      transform="matrix(1.271913,0,0,0.54313022,-18.512305,414.70476)"
      style="opacity:0;stroke-width:0.655258"
      id="a1350-0-3-8">
@@ -1284,7 +1280,6 @@
   </a>
   <a
      xlink:href="regs_commercial-competitive-ocs.html"
-     target="_blank"
      transform="matrix(1.271913,0,0,0.54313022,148.25107,416.53477)"
      style="opacity:0;stroke-width:0.655258"
      id="a1350-0-3-8-5">
@@ -1300,7 +1295,6 @@
   </a>
   <a
      xlink:href="regs_commercial-state.html"
-     target="_blank"
      transform="matrix(1.271913,0,0,0.54313022,-18.512303,480.59474)"
      style="opacity:0;stroke-width:0.655258"
      id="a1350-0-3-8-5-1">
@@ -1316,7 +1310,6 @@
   </a>
   <a
      xlink:href="regs_commercial-noncompetitive-ocs.html"
-     target="_blank"
      transform="matrix(1.271913,0,0,0.54313022,148.11769,482.41474)"
      style="opacity:0;stroke-width:0.655258"
      id="a1350-0-3-8-5-5">
@@ -1332,7 +1325,6 @@
   </a>
   <a
      xlink:href="regs_nongrid-pilot-state.html"
-     target="_blank"
      transform="matrix(1.271913,0,0,0.54313022,480.74109,605.26478)"
      style="opacity:0;stroke-width:0.655258"
      id="a1350-0-3-8-5-5-2">
