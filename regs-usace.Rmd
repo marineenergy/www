@@ -15,10 +15,10 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 }
 </style>
 
-<h1 class="title toc-ignore">
+<h1>
   <a href="./regs.html" style="text-decoration:none;">
-  <span class="fas fa-arrow-circle-left"></span>
-  </a>&nbsp; Regulations
+    <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
+  </a>&nbsp;Regulations
 </h1>
 
 <br>

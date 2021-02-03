@@ -10,10 +10,10 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
 
 
-<h1 class="title toc-ignore">
+<h1>
   <a href="./regs.html" style="text-decoration:none;">
-    <span class="fas fa-arrow-circle-left"></span>
-  </a>&nbsp; Regulations
+    <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
+  </a>&nbsp;Regulations
 </h1>
 
 <br>
@@ -24,11 +24,25 @@ Grid-connected projects fall under FERC’s regulatory process.
 
 <br>
 
+Given its role in regulation of energy projects, FERC has established Memoranda of Understanding with other significant participants, including:
+
+<br>
+
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-doi.pdf" target="_blank">U.S. Department of Interior </a>
+
+- <a href="https://www.ferc.gov/sites/default/files/2020-06/Guidance-document-on-Outer-Continental-Shelf-development-with-DOI.pdf" target="_blank">Bureau of Ocean Energy Management </a>
+
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-uscg-03-2013.pdf" target="_blank">U.S. Coast Guard </a>
+
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/07-21-16.pdf" target="_blank">U.S. Army Corps of Engineers </a>
+
+<br>
 
 ##### **Resources**
 
 - <a href="https://www.ferc.gov/industries-data/hydropower/licensing/hydrokinetic-projects" target="_blank">Hydrokinetic Projects (FERC) </a>
 - <a href="https://www.energy.gov/sites/prod/files/2020/09/f78/mhk-regulatory-processes-handbook-2020.pdf" target="_blank">Handbook of Marine Hydrokinetic Regulatory Processes (DOE-EERE)</a>
+
     </li>
 </ul>
 

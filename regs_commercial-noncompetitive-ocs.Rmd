@@ -1,5 +1,5 @@
 ---
-title: "Non-Competitive Commercial Lease & FERC Standard License for Projects on the OCS"
+pagetitle: "Regulations"
 output: html_document
 ---
 
@@ -7,9 +7,17 @@ output: html_document
 knitr::opts_chunk$set(echo = F)
 ```
 
+<h1>
+  <a href="./regs.html" style="text-decoration:none;">
+    <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
+  </a>&nbsp;Regulations
+</h1>
 
+<br>
+<center>
 ```{r, results="asis"}
 cat(readLines("diagrams/commercial-noncompetitive-ocs.svg"))
 ```
+</center>
 
 Source: Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).

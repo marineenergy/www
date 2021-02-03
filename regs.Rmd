@@ -9,7 +9,9 @@ knitr::opts_chunk$set(echo = F)
 
 # Regulatory Diagram
 
+<center>
 ```{r, results="asis", warning=F}
 cat(readLines("diagrams/Process for Web_export-01.svg"))
 ```
+</center>
 

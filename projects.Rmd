@@ -100,11 +100,6 @@ sites <- d_xy %>%
   st_as_sf(coords = c("longitude", "latitude"), crs = 4326, remove = F) %>% 
   arrange(project_name)
 
-# sites %>% 
-#   st_drop_geometry() %>% 
-#   filter(project_name == "PacWave-N") %>% 
-#   View()
-
 sites$label_html <- sites$label_html %>% lapply(HTML)
 sites$popup_html <- sites$popup_html %>% lapply(HTML)
 
