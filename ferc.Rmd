@@ -1,5 +1,5 @@
 ---
-title: "FERC documents"
+title: "FERC Documents"
 output: html_document
 ---
 
@@ -53,17 +53,47 @@ bscols(widths = c(6,6,6,6),
     filter_select("selReceptor", "Receptor"  , sd, group=~receptor  , multiple = T),
     filter_select("selStressor", "Stressor"  , sd, group=~stressor  , multiple = T),
     filter_checkbox(
-      "presented_as_potential_interaction", "presented_as_potential_interaction", sd, ~presented_as_potential_interaction, inline = TRUE),
+      "presented_as_potential_interaction", 
+      "Presented as potential interaction?", 
+      sd, ~presented_as_potential_interaction, inline = TRUE),
     filter_checkbox(
-      "decribed_from_observations_at_the_project_site", "decribed_from_observations_at_the_project_site", sd, ~decribed_from_observations_at_the_project_site, inline = TRUE),
+      "decribed_from_observations_at_the_project_site", 
+      "Described from observations at the project site?", 
+      sd, ~decribed_from_observations_at_the_project_site, inline = TRUE),
     filter_checkbox(
-      "monitoring_plan_(mp)", "monitoring_plan_(mp)", sd, ~`monitoring_plan_(mp)`, inline = TRUE),
+      "monitoring_plan_(mp)", 
+      "Monitoring Plan (MP)?", 
+      sd, ~`monitoring_plan_(mp)`, inline = TRUE),
     filter_checkbox(
-      "adaptive_management_plan_(amp)", "adaptive_management_plan_(amp)", sd, ~`adaptive_management_plan_(amp)`, inline = TRUE),
+      "adaptive_management_plan_(amp)", 
+      "Adaptive Management Plan (AMP)?", 
+      sd, ~`adaptive_management_plan_(amp)`, inline = TRUE),
     filter_checkbox(
-      "protection_mitigation_and_enhancement", "protection_mitigation_and_enhancement", sd, ~protection_mitigation_and_enhancement, inline = TRUE),
+      "protection_mitigation_and_enhancement", 
+      "Protection, mitigation, and ehnhancement?", 
+      sd, ~protection_mitigation_and_enhancement, inline = TRUE),
     filter_checkbox(
-      "bmps_applied", "bmps_applied", sd, ~bmps_applied, inline = TRUE))
-
-datatable(sd, escape = F)
+      "bmps_applied", 
+      "Best Management Practices (BMP) applied?", 
+      sd, ~bmps_applied, inline = TRUE))
+sd %>% 
+datatable(
+  escape = F,
+  colnames = c(
+    "Document"               = "doc",
+    "Key Effects"            = "key_effects",
+    "Key Interaction Detail" = "key_interaction_detail",
+    "MP Notes"               = "notes_mp",
+    "AMP Notes"              = "notes_amp",
+    "General Notes"          = "notes_general",
+    "Receptor"               = "receptor",
+    "Stressor"               = "stressor",
+    "Technology"             = "technology",
+    "Project Phase"          = "phase",
+    "Presented as potential interaction?" = "presented_as_potential_interaction",
+    "Described from observations at the project site?" = "decribed_from_observations_at_the_project_site",
+    "MP" = "monitoring_plan_(mp)",
+    "AMP" = "adaptive_management_plan_(amp)",
+    "Protection, mitigation, and ehnhancement?" = "protection_mitigation_and_enhancement",
+    "BMPs applied?" = "bmps_applied"))
 ```
