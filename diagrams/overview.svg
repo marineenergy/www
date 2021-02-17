@@ -12,7 +12,7 @@
    data-name="Layer 1"
    viewBox="0 0 831.8 579.8"
    version="1.1"
-   sodipodi:docname="overview2.svg"
+   sodipodi:docname="overview.svg"
    inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
   <metadata
      id="metadata602">
@@ -36,17 +36,151 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="840"
+     inkscape:window-width="1680"
      inkscape:window-height="997"
      id="namedview598"
      showgrid="false"
-     inkscape:zoom="0.82351527"
-     inkscape:cx="675.76161"
-     inkscape:cy="279.00623"
-     inkscape:window-x="840"
+     inkscape:zoom="1.388658"
+     inkscape:cx="404.34721"
+     inkscape:cy="308.5713"
+     inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="Layer_1" />
+     inkscape:current-layer="Layer_1"
+     inkscape:document-rotation="0" />
+  <a
+     xlink:href="regs-ferc.html"
+     id="a604">
+    <g
+       id="ferc">
+      <rect
+         id="rect128"
+         x="180.8"
+         y="211.9"
+         width="29.1"
+         height="37.18"
+         fill="#fff"
+         stroke="#051a37"
+         stroke-miterlimit="10"
+         stroke-width="1.5" />
+      <rect
+         id="rect130"
+         x="176.5"
+         y="215.5"
+         width="29.1"
+         height="37.18"
+         fill="#fff"
+         stroke="#051a37"
+         stroke-miterlimit="10"
+         stroke-width="1.5" />
+      <rect
+         id="rect132"
+         x="172.8"
+         y="219.2"
+         width="29.1"
+         height="37.18"
+         fill="#fff"
+         stroke="#051a37"
+         stroke-miterlimit="10"
+         stroke-width="1.5" />
+      <line
+         id="line502"
+         x1="176.5"
+         y1="226.7"
+         x2="188.4"
+         y2="226.7"
+         fill="none"
+         stroke="#30a4e1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.5" />
+      <line
+         id="line504"
+         x1="176.5"
+         y1="231.6"
+         x2="194.3"
+         y2="231.6"
+         fill="none"
+         stroke="#30a4e1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.5" />
+      <line
+         id="line506"
+         x1="176.5"
+         y1="236.4"
+         x2="194.3"
+         y2="236.4"
+         fill="none"
+         stroke="#30a4e1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.5" />
+      <line
+         id="line508"
+         x1="176.5"
+         y1="241.3"
+         x2="194.3"
+         y2="241.3"
+         fill="none"
+         stroke="#30a4e1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.5" />
+      <line
+         id="line510"
+         x1="176.5"
+         y1="246.2"
+         x2="194.3"
+         y2="246.2"
+         fill="none"
+         stroke="#30a4e1"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="1.5" />
+      <path
+         id="rect136-2"
+         data-name="rect136"
+         d="M102.1,182.7H274.7c6,0,10.8,6.9,10.8,15.4V329.4c0,8.6-4.8,15.5-10.8,15.5H102.1c-6,0-10.8-6.9-10.8-15.5V198.1C91.3,189.6,96.1,182.7,102.1,182.7Z"
+         fill="none"
+         stroke="#051a37"
+         stroke-miterlimit="10"
+         stroke-width="1.5" />
+      <text
+         transform="translate(150.6 200)"
+         font-size="13"
+         font-family="MyriadPro-Bold, Myriad Pro"
+         font-weight="700"
+         id="text474">FE<tspan
+   x="13.8"
+   y="0"
+   letter-spacing="0em"
+   id="tspan460">R</tspan><tspan
+   x="21.4"
+   y="0"
+   id="tspan462">C </tspan><tspan
+   x="31.8"
+   y="0"
+   letter-spacing="-0.01em"
+   id="tspan464">P</tspan><tspan
+   x="39.2"
+   y="0"
+   letter-spacing="-0.01em"
+   id="tspan466">r</tspan><tspan
+   x="44.1"
+   y="0"
+   letter-spacing="0em"
+   id="tspan468">o</tspan><tspan
+   x="51.6"
+   y="0"
+   letter-spacing="-0.01em"
+   id="tspan470">c</tspan><tspan
+   x="57.3"
+   y="0"
+   letter-spacing="0em"
+   id="tspan472">ess</tspan></text>
+    </g>
+  </a>
   <line
      id="line500"
      x1="605.1"
@@ -719,139 +853,6 @@
        y="0"
        letter-spacing="0em"
        id="tspan447">ers?</tspan></text>
-  <a
-     xlink:href="regs-ferc.html"
-     id="a604">
-    <g
-       id="ferc">
-      <rect
-         id="rect128"
-         x="180.8"
-         y="211.9"
-         width="29.1"
-         height="37.18"
-         fill="#fff"
-         stroke="#051a37"
-         stroke-miterlimit="10"
-         stroke-width="1.5" />
-      <rect
-         id="rect130"
-         x="176.5"
-         y="215.5"
-         width="29.1"
-         height="37.18"
-         fill="#fff"
-         stroke="#051a37"
-         stroke-miterlimit="10"
-         stroke-width="1.5" />
-      <rect
-         id="rect132"
-         x="172.8"
-         y="219.2"
-         width="29.1"
-         height="37.18"
-         fill="#fff"
-         stroke="#051a37"
-         stroke-miterlimit="10"
-         stroke-width="1.5" />
-      <line
-         id="line502"
-         x1="176.5"
-         y1="226.7"
-         x2="188.4"
-         y2="226.7"
-         fill="none"
-         stroke="#30a4e1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="1.5" />
-      <line
-         id="line504"
-         x1="176.5"
-         y1="231.6"
-         x2="194.3"
-         y2="231.6"
-         fill="none"
-         stroke="#30a4e1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="1.5" />
-      <line
-         id="line506"
-         x1="176.5"
-         y1="236.4"
-         x2="194.3"
-         y2="236.4"
-         fill="none"
-         stroke="#30a4e1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="1.5" />
-      <line
-         id="line508"
-         x1="176.5"
-         y1="241.3"
-         x2="194.3"
-         y2="241.3"
-         fill="none"
-         stroke="#30a4e1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="1.5" />
-      <line
-         id="line510"
-         x1="176.5"
-         y1="246.2"
-         x2="194.3"
-         y2="246.2"
-         fill="none"
-         stroke="#30a4e1"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="1.5" />
-      <path
-         id="rect136-2"
-         data-name="rect136"
-         d="M102.1,182.7H274.7c6,0,10.8,6.9,10.8,15.4V329.4c0,8.6-4.8,15.5-10.8,15.5H102.1c-6,0-10.8-6.9-10.8-15.5V198.1C91.3,189.6,96.1,182.7,102.1,182.7Z"
-         fill="none"
-         stroke="#051a37"
-         stroke-miterlimit="10"
-         stroke-width="1.5" />
-      <text
-         transform="translate(150.6 200)"
-         font-size="13"
-         font-family="MyriadPro-Bold, Myriad Pro"
-         font-weight="700"
-         id="text474">FE<tspan
-   x="13.8"
-   y="0"
-   letter-spacing="0em"
-   id="tspan460">R</tspan><tspan
-   x="21.4"
-   y="0"
-   id="tspan462">C </tspan><tspan
-   x="31.8"
-   y="0"
-   letter-spacing="-0.01em"
-   id="tspan464">P</tspan><tspan
-   x="39.2"
-   y="0"
-   letter-spacing="-0.01em"
-   id="tspan466">r</tspan><tspan
-   x="44.1"
-   y="0"
-   letter-spacing="0em"
-   id="tspan468">o</tspan><tspan
-   x="51.6"
-   y="0"
-   letter-spacing="-0.01em"
-   id="tspan470">c</tspan><tspan
-   x="57.3"
-   y="0"
-   letter-spacing="0em"
-   id="tspan472">ess</tspan></text>
-    </g>
-  </a>
   <line
      id="line468"
      x1="234.3"
@@ -1043,79 +1044,43 @@
            id="tspan528">e</tspan></text>
     </g>
   </a>
-  <g
-     id="state_grid">
-    <rect
-       id="rect10"
-       x="119.6"
-       y="397.7"
-       width="50.2"
-       height="50.22"
-       rx="12"
-       fill="#051a37" />
-    <text
-       transform="translate(129.7 426.6)"
-       font-size="13"
-       fill="#fff"
-       font-family="MyriadPro-Bold, Myriad Pro"
-       font-weight="700"
-       id="text544"><tspan
-         letter-spacing="0em"
-         id="tspan534">S</tspan><tspan
-         x="7"
-         y="0"
-         id="tspan536">t</tspan><tspan
-         x="11.7"
-         y="0"
-         letter-spacing="-0.01em"
-         id="tspan538">a</tspan><tspan
-         x="18.5"
-         y="0"
-         letter-spacing="0em"
-         id="tspan540">t</tspan><tspan
-         x="23.2"
-         y="0"
-         letter-spacing="0em"
-         id="tspan542">e</tspan></text>
-  </g>
   <a
      xlink:href="regs-state.html"
-     id="a671">
+     id="a244">
     <g
-       id="state_not-grid">
+       id="state_grid">
       <rect
-         id="rect10-2"
-         data-name="rect10"
-         x="473.9"
-         y="448.8"
+         id="rect10"
+         x="119.6"
+         y="397.7"
          width="50.2"
          height="50.22"
          rx="12"
          fill="#051a37" />
       <text
-         transform="translate(484 477.8)"
+         transform="translate(129.7 426.6)"
          font-size="13"
          fill="#fff"
          font-family="MyriadPro-Bold, Myriad Pro"
          font-weight="700"
-         id="text558"><tspan
+         id="text544"><tspan
            letter-spacing="0em"
-           id="tspan548">S</tspan><tspan
+           id="tspan534">S</tspan><tspan
            x="7"
            y="0"
-           id="tspan550">t</tspan><tspan
+           id="tspan536">t</tspan><tspan
            x="11.7"
            y="0"
            letter-spacing="-0.01em"
-           id="tspan552">a</tspan><tspan
+           id="tspan538">a</tspan><tspan
            x="18.5"
            y="0"
            letter-spacing="0em"
-           id="tspan554">t</tspan><tspan
+           id="tspan540">t</tspan><tspan
            x="23.2"
            y="0"
            letter-spacing="0em"
-           id="tspan556">e</tspan></text>
+           id="tspan542">e</tspan></text>
     </g>
   </a>
   <a
@@ -1146,69 +1111,74 @@
   </a>
   <a
      xlink:href="regs_nongrid-pilot-state.html"
-     id="a681">
+     id="a1888">
     <g
-       id="pilot_non-grid">
+       id="g1886">
+      <g
+         id="g1900">
+        <rect
+           id="rect472"
+           x="544.09998"
+           y="529.29999"
+           width="118.4"
+           height="50.220001"
+           rx="12"
+           fill="#051a37" />
+        <text
+           font-size="13px"
+           fill="#ffffff"
+           font-family="MyriadPro-Bold, 'Myriad Pro'"
+           font-weight="700"
+           id="text558-0-9"
+           x="586.20575"
+           y="559.23737"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;fill:#ffffff"
+           xml:space="preserve"><tspan
+             sodipodi:role="line"
+             id="tspan1895"
+             x="586.20575"
+             y="559.23737">Pilot</tspan></text>
+      </g>
+    </g>
+  </a>
+  <a
+     xlink:href="file:///Users/bbest/github/mhk-env.github.io/diagrams/regs-state.html"
+     transform="translate(348.582,52.468999)"
+     id="a244-2">
+    <g
+       id="state_grid-5">
       <rect
-         id="rect472"
-         x="544.1"
-         y="529.3"
-         width="118.4"
-         height="50.22"
+         id="rect10-3"
+         x="119.6"
+         y="397.70001"
+         width="50.200001"
+         height="50.220001"
          rx="12"
          fill="#051a37" />
-      <path
-         d="M590.7,541.8l2.7-.2a4.1,4.1,0,0,1,2.7.7,2.7,2.7,0,0,1,.9,2,2.9,2.9,0,0,1-.8,2.1,4.3,4.3,0,0,1-2.8.9h-.7v3.1h-2Zm2,3.9h.7c1,0,1.7-.5,1.7-1.4s-.6-1.3-1.6-1.3h-.8Z"
-         fill="#fff"
-         id="path570" />
-      <path
-         d="M600.1,542.3a1,1,0,0,1-1,1,1,1,0,0,1-1.1-1,1,1,0,0,1,1.1-1A.9.9,0,0,1,600.1,542.3Zm-2,8.1v-6.3h2v6.3Z"
-         fill="#fff"
-         id="path572" />
-      <path
-         d="M601.7,541.2h1.9v9.2h-1.9Z"
-         fill="#fff"
-         id="path574" />
-      <path
-         d="M611.5,547.2a3.3,3.3,0,1,1-3.2-3.3A3.1,3.1,0,0,1,611.5,547.2Zm-4.6,0c0,1.1.5,1.9,1.3,1.9s1.3-.7,1.3-1.9-.4-1.9-1.3-1.9S606.9,546.3,606.9,547.2Z"
-         fill="#fff"
-         id="path576" />
-      <path
-         d="M614.9,542.2v1.9h1.5v1.4h-1.5v2.3c0,.8.2,1.1.8,1.1h.6v1.5H615a2,2,0,0,1-1.4-.5,2.5,2.5,0,0,1-.6-1.9v-2.6h-.8v-1.4h.8v-1.4Z"
-         fill="#fff"
-         id="path578" />
-      <path
-         d="M577.4,566v-8.8h2.3l1.8,3.3a27.5,27.5,0,0,1,1.4,3h.1a22.3,22.3,0,0,1-.2-3.7v-2.6h1.8V566h-2.1l-1.8-3.4a22.3,22.3,0,0,1-1.5-3.1h-.1c.1,1.2.1,2.4.1,3.9V566Z"
-         fill="#fff"
-         id="path580" />
-      <path
-         d="M592.5,562.8a3.3,3.3,0,1,1-3.2-3.3A3.1,3.1,0,0,1,592.5,562.8Zm-4.6,0c0,1.1.5,1.9,1.3,1.9s1.3-.7,1.3-1.9-.4-1.9-1.3-1.9S587.9,561.9,587.9,562.8Z"
-         fill="#fff"
-         id="path582" />
-      <path
-         d="M593.7,561.7v-2h1.7v.8h0a2.4,2.4,0,0,1,2-1c1.3,0,2.3.9,2.3,2.7V566h-2v-3.5c0-.8-.3-1.4-1-1.4a1.1,1.1,0,0,0-1,.8.6.6,0,0,0-.1.4V566h-2Z"
-         fill="#fff"
-         id="path584" />
-      <path
-         d="M604.4,561.9v1.4H601v-1.4Z"
-         fill="#fff"
-         id="path586" />
-      <path
-         d="M613.1,565.6a10.1,10.1,0,0,1-2.9.5,4.9,4.9,0,0,1-3.6-1.2,4.2,4.2,0,0,1-1.2-3.2c0-2.9,2.1-4.5,5-4.5a6.1,6.1,0,0,1,2.4.4l-.4,1.6a5.2,5.2,0,0,0-2.1-.4,2.6,2.6,0,0,0-2.9,2.8,2.7,2.7,0,0,0,2.8,2.9h1v-1.9h-1.4V561h3.3Z"
-         fill="#fff"
-         id="path588" />
-      <path
-         d="M614.6,561.7v-2h1.7v1.1h.1a1.9,1.9,0,0,1,1.7-1.3h.4v1.9H618a1.3,1.3,0,0,0-1.4,1V566h-2Z"
-         fill="#fff"
-         id="path590" />
-      <path
-         d="M621.6,557.9a1,1,0,0,1-1.1,1,1,1,0,0,1-1-1,.9.9,0,0,1,1-1A1,1,0,0,1,621.6,557.9Zm-2.1,8.1v-6.3h2V566Z"
-         fill="#fff"
-         id="path592" />
-      <path
-         d="M629.3,556.8V566h-1.7v-.9h0a2.4,2.4,0,0,1-2,1.1c-1.5,0-2.8-1.3-2.8-3.3s1.4-3.4,2.9-3.4a2.1,2.1,0,0,1,1.7.7h0v-3.4Zm-2,5.5V562a1.3,1.3,0,0,0-1.2-1c-.9,0-1.4.8-1.4,1.8s.6,1.8,1.4,1.8a1.1,1.1,0,0,0,1.1-1,.6.6,0,0,0,.1-.4Z"
-         fill="#fff"
-         id="path594" />
+      <text
+         transform="translate(129.7,426.6)"
+         font-size="13px"
+         fill="#ffffff"
+         font-family="MyriadPro-Bold, 'Myriad Pro'"
+         font-weight="700"
+         id="text544-7"><tspan
+           letter-spacing="0em"
+           id="tspan534-4">S</tspan><tspan
+           x="7"
+           y="0"
+           id="tspan536-6">t</tspan><tspan
+           x="11.7"
+           y="0"
+           letter-spacing="-0.01em"
+           id="tspan538-9">a</tspan><tspan
+           x="18.5"
+           y="0"
+           letter-spacing="0em"
+           id="tspan540-2">t</tspan><tspan
+           x="23.200001"
+           y="0"
+           letter-spacing="0em"
+           id="tspan542-9">e</tspan></text>
     </g>
   </a>
 </svg>
