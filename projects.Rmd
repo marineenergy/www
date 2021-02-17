@@ -16,90 +16,15 @@ library(sf)
 library(leaflet)
 # library(DT)
 library(markdown)
-library(markdown)
 library(htmltools)
 ```
 
 ## Map
 
 ```{r map}
-# [MHK Project Timeline Input - Google Sheets](https://docs.google.com/spreadsheets/d/1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0/edit#gid=793817660)
+sites_csv <- "/share/github/mhk-env_shiny-apps/data/project_sites.csv"
 
-#get the data
-csv_key <- "1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0"
-csv_url <- glue::glue("https://docs.google.com/spreadsheets/d/{csv_key}/gviz/tq?tqx=out:csv&sheet=0")
-
-permit_types <- c(
-  "Notice of Intent/Preliminary Permit Application",
-  "Draft Pilot License App",
-  "Final Pilot License App",
-  "Pilot License Issued",
-  "Draft License App",
-  "Draft Re-License App",
-  "Final License App",
-  "Final Re-License App",
-  "Environmental Assessment",
-  "Settlement Agreement",
-  "Permit Issued",
-  "Re-License Issued")
-
-md2html <- function(x){
-  markdownToHTML(text = x, fragment.only = T)}
-
-d <- readr::read_csv(csv_url) %>% 
-  select(-starts_with("X"))
-
-d_xy <- d %>% 
-  filter(!is.na(longitude), !is.na(latitude)) %>% 
-  select(
-    project_name, 
-    technology_type, 
-    date_beg, date_end,
-    longitude, latitude)
-
-d_permits <- d %>% 
-  select(
-    project_name, 
-    permit_type, license_date, link) %>% 
-  filter(!is.na(permit_type)) %>% 
-  mutate(
-    permit_type  = factor(
-      permit_type, levels = permit_types, ordered = T)) %>% 
-  arrange(project_name, permit_type) %>% 
-  mutate(
-    permit_md = ifelse(
-      is.na(link),
-      glue("- {permit_type}: {license_date}"),
-      glue("- <a href='{link}' target='_blank'>{permit_type}</a>: {license_date}"))) %>% 
-  group_by(project_name) %>% 
-  summarize(
-    permits_md = paste(permit_md, collapse = "\n"),
-    .groups = "drop")
-
-date_now <- format(Sys.Date(), '%m/%d/%Y') %>% 
-  str_replace('^0','') %>% 
-  str_replace('/0','/')
-
-sites <- d_xy %>% 
-  left_join(
-    d_permits, by = "project_name") %>% 
-  mutate(
-    label_md = glue(
-      "**{project_name}** (_{technology_type}_)"),
-    popup_md = glue(
-      "**{project_name}** (_{technology_type}_)<br>
-      Dates: {date_beg} to {
-        ifelse(
-          date_end == date_now, 
-          'ongoing', 
-          date_end)}<br>
-      Location (lon, lat): {longitude}, {latitude}<br>
-      {permits_md}"),
-    label_html = map_chr(label_md, md2html),
-    popup_html = map_chr(popup_md, md2html)) %>% 
-  st_as_sf(coords = c("longitude", "latitude"), crs = 4326, remove = F) %>% 
-  arrange(project_name)
-
+sites <- read_csv(sites_csv) 
 sites$label_html <- sites$label_html %>% lapply(HTML)
 sites$popup_html <- sites$popup_html %>% lapply(HTML)
 
@@ -126,63 +51,11 @@ library(ggplot2)
 #library(ggiraph)
 library(RColorBrewer)
 
-# Using [MHK Project Timeline Input - Google Sheets](https://docs.google.com/spreadsheets/d/1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0/edit#gid=793817660)
+prj_times_csv   <- "/share/github/mhk-env_shiny-apps/data/project_times.csv"
+prj_permits_csv <- "/share/github/mhk-env_shiny-apps/data/project_permits.csv"
 
-
-#get the data
-csv_key <- "1HC5hXyi2RQSHevnV7rvyk748U5-X3iUw70ewHEfrHm0"
-csv_url <- glue::glue("https://docs.google.com/spreadsheets/d/{csv_key}/gviz/tq?tqx=out:csv&sheet=0")
-d <- readr::read_csv(csv_url) %>% 
-  select(-starts_with("X"))
-
-#sort data by permit type
-d$permit_type <- factor(d$permit_type, 
-                        levels = c("Notice of Intent/Preliminary Permit Application",
-                                   "Draft Pilot License App",
-                                   "Final Pilot License App",
-                                   "Pilot License Issued",
-                                   "Draft License App",
-                                   "Draft Re-License App",
-                                   "Final License App",
-                                   "Final Re-License App",
-                                   "Environmental Assessment",
-                                   "Settlement Agreement",
-                                   "Permit Issued",
-                                   "Re-License Issued"))
-
-d$technology_type <- factor(d$technology_type, 
-                            levels = c('Riverine Energy', 
-                                       'Tidal Energy', 
-                                       'Wave Energy'))
-
-
-#d %>% transform(d, technology_type = as.character(technology_type))
-
-#data cleanup
-d_times <- d %>% 
-  filter(!is.na(date_beg)) %>% 
-  mutate(
-    date_beg = as.Date(date_beg, format = "%m/%d/%Y"),
-    date_end = as.Date(date_end, format = "%m/%d/%Y")) %>% 
-  arrange(project_number, project_name)
-
-#data cleanup
-d_permits <- d %>% 
-  filter(!is.na(permit_type)) %>% 
-  select(project_name, project_number, permit_type, license_date, link, technology_type) %>% 
-  mutate(license_date = as.Date(license_date, format = "%m/%d/%Y")) %>% 
-  arrange(project_number, project_name, license_date) %>% 
-  arrange(permit_type, project_number)
-
-#rename the link column to url
-d_permits_2 <- d_permits %>% 
-  rename(urls = link)
-
-d_permits_2 <- d_permits %>% 
-  arrange(technology_type, permit_type, project_name, .by_group = F)
-
-d_times <- d_times %>% 
-  arrange(technology_type, project_name, .by_group = F)
+d_permits <- read_csv(prj_permits_csv)
+d_times   <- read_csv(prj_times_csv)
 
 ###ggplot figure that has points and bars indicating permitting
 #the fig.width and fig.height above determine the figure size overall
@@ -190,10 +63,10 @@ d_times <- d_times %>%
 #pick the color and shape scale
 scale <- brewer.pal(n=10, name = 'PiYG')
 scale <- scale[c(1:5, 5, 7, 7:10, 10)]
-shp <- c(rep(24, 3), 25, 24, 25, 24, 25, rep(24, 3), 25) 
+shp   <- c(rep(24, 3), 25, 24, 25, 24, 25, rep(24, 3), 25) 
 
 #the input to ggplot is what determines the tooltip label
-g <- ggplot(d_permits_2, 
+g <- ggplot(d_permits, 
             aes(text = paste('License Date: ', license_date, '\nProject Name: ', project_name, '\nPermit Type: ', permit_type))) +
   
   #the segment is a gray bar that covers the time period of the permits
@@ -201,7 +74,7 @@ g <- ggplot(d_permits_2,
                aes(x = date_beg, y = project_name, xend = date_end, yend = project_name, color = project_status), size = 4) +
   
   #the points have colors and shapes indicating different permit types
-  geom_point(data = d_permits_2, 
+  geom_point(data = d_permits, 
              aes(x = license_date, y = project_name, fill = permit_type, shape = permit_type), size = 4, stroke = 0) +
   scale_color_manual(name = "", values = c("#30A4E1", "#999999"), breaks = c("Active Project", "Inactive Project"))+
   scale_fill_manual(name = "", values = scale) + 
