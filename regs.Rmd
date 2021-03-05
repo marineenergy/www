@@ -8,7 +8,11 @@ knitr::opts_chunk$set(echo = F)
 ```
 
 # Regulatory Diagram
-
+<center>The diagram below provides a step-wise guide to the regulatory process for different kinds of wave energy projects. This provides users with little to no experience in permitting and licensing Marine Energy projects access to relevant state and federal regulations and links to additional resources based on project factors such as: grid connection, project location and jurisdiction, and lead agency.</center>
+<br>
+<br>
+<center>Follow the prompts to navigate the diagram. At the end of the decision tree, select the green rectangle to access additional information. </center>
+<br>
 <center>
 ```{r, results="asis", warning=F}
 cat(readLines("diagrams/overview.svg"))
