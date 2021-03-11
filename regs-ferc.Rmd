@@ -28,13 +28,13 @@ Given its role in regulation of energy projects, FERC has established Memoranda 
 
 <br>
 
-1. <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-doi.pdf" target="_blank">U.S. Department of Interior </a>
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-doi.pdf" target="_blank">U.S. Department of Interior </a>
 
-  - <a href="https://www.ferc.gov/sites/default/files/2020-06/Guidance-document-on-Outer-Continental-Shelf-development-with-DOI.pdf" target="_blank">Bureau of Ocean Energy Management </a>
+- <a href="https://www.ferc.gov/sites/default/files/2020-06/Guidance-document-on-Outer-Continental-Shelf-development-with-DOI.pdf" target="_blank">Bureau of Ocean Energy Management </a>
 
-2. <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-uscg-03-2013.pdf" target="_blank">U.S. Coast Guard </a>
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/mou-uscg-03-2013.pdf" target="_blank">U.S. Coast Guard </a>
 
-3. <a href="https://www.ferc.gov/sites/default/files/2020-04/07-21-16.pdf" target="_blank">U.S. Army Corps of Engineers </a>
+- <a href="https://www.ferc.gov/sites/default/files/2020-04/07-21-16.pdf" target="_blank">U.S. Army Corps of Engineers </a>
 
 <br>
 
@@ -45,4 +45,5 @@ Given its role in regulation of energy projects, FERC has established Memoranda 
 
     </li>
 </ul>
-
+<br>
+<br>
