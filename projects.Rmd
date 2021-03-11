@@ -19,12 +19,24 @@ library(markdown)
 library(htmltools)
 ```
 
+This page provides an overview of all past and present Marine Energy projects in the United States at different levels of development and provides active links to permitting documents from either the <a href="https://elibrary.ferc.gov/eLibrary/search" target="_blank">FERC eLibrary</a> or <a href="https://tethys.pnnl.gov/knowledge-base" target="_blank">Tethys Knowledge Base</a>.
+<br>
+<br>
+
 ## Map
 
+To learn more about a project, select the blue pin on the map with your cursor and a pop up will open with the project's name, timeline, geographic coordinates and a list of all submitted permitting and licensing materials to date. Where available, the permitting/licensing documents have been linked to a downloadable PDF of the document or to pages with additional information.
+<br>
+<br>
 ```{r map}
 sites_csv <- "/share/github/mhk-env_shiny-apps/data/project_sites.csv"
 
 sites <- read_csv(sites_csv) 
+
+# sites %>% 
+#   filter(project_name == "WETS") %>% 
+#   pull(popup_html)
+# 
 sites$label_html <- sites$label_html %>% lapply(HTML)
 sites$popup_html <- sites$popup_html %>% lapply(HTML)
 
@@ -39,7 +51,8 @@ leaflet(
 
 ## Timeline
 
-To access the relevant FERC documents per project and phase, please click on the triangles in the following plot:
+The figure below shows all past and present Marine Energy projects and the permitting milestones of each over time organized by energy type (riverine, tidal, and wave). You can access relevant FERC documents per project and permitting milestones by clicking on the triangles in the plot. 
+<br>
 
 ```{r}
 library(dplyr)
@@ -56,6 +69,31 @@ prj_permits_csv <- "/share/github/mhk-env_shiny-apps/data/project_permits.csv"
 
 d_permits <- read_csv(prj_permits_csv)
 d_times   <- read_csv(prj_times_csv)
+
+#Create factored list for permit type and technology type for plotting symbols/colors
+d_permits$permit_type <- factor(d_permits$permit_type, 
+                        levels = c("Notice of Intent/Preliminary Permit Application",
+                                   "Draft Pilot License App",
+                                   "Final Pilot License App",
+                                   "Pilot License Issued",
+                                   "Draft License App",
+                                   "Draft Re-License App",
+                                   "Final License App",
+                                   "Final Re-License App",
+                                   "Environmental Assessment",
+                                   "Settlement Agreement",
+                                   "Permit Issued",
+                                   "Re-License Issued"))
+
+d_permits$technology_type <- factor(d_permits$technology_type, 
+                            levels = c('Riverine Energy', 
+                                       'Tidal Energy', 
+                                       'Wave Energy'))
+
+d_times$technology_type <- factor(d_times$technology_type, 
+                            levels = c('Riverine Energy', 
+                                       'Tidal Energy', 
+                                       'Wave Energy'))
 
 ###ggplot figure that has points and bars indicating permitting
 #the fig.width and fig.height above determine the figure size overall
@@ -99,12 +137,12 @@ g <- ggplot(d_permits,
         axis.text.y = element_text(color="black", size=12, vjust = -1),
         axis.title.y=element_text(face="bold", size=13),
         axis.title.x=element_text(face="bold", size=13),
-        #plot.margin = margin(.15, .2, 0, 0, "cm"),
+        plot.margin = margin(.15, .2, 0, 2.5, "cm"),
         plot.background = element_rect(fill = "transparent", colour = NA))
 
 # interactive plot with tooltip
 #specify the tooltip in the ggplotly function to get custom text
-p = ggplotly(g, tooltip = 'text', height = 700, width = 1000)
+p = ggplotly(g, tooltip = 'text', height = 700, width = NULL)
 #p
 
 ##this part is from stackoverflow and works to adjust the y axis ticks and labels, as well as partly adjust the gray bars on the right
