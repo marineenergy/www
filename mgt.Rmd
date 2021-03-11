@@ -6,6 +6,13 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 ```
+The Management Measures tool allows users to search and query the Tethys Management Measures Tool for Marine Renewable Energy - a robust compilation of marine energy management measures identified by international Marine Renewable Energy regulators and researchers.
+
+<br>
+
+To search for management measures, select the type of technology, category of measure, project phase, receptor and stressor of interest from the drop down menu. Note that it is possible to select multiple options for each field. As you select different technologies, categories, phases, receptors, and stressors, the table will begin to filter options as choices are selected. The total number of available entries can be found below the table. 
+
+<br>
 
 Source: <a href="https://tethys.pnnl.gov/management-measures" target="_blank">Management Measures Tool for Marine Renewable Energy | Tethys</a>
 
