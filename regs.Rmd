@@ -13,9 +13,10 @@ The diagram below provides a step-wise guide to the regulatory process for diffe
 <br>
 Follow the prompts to navigate the diagram. At the end of the decision tree, select the green rectangle to access additional information. 
 <br>
+<br>
 <center>
 ```{r, results="asis", warning=F}
-cat(readLines("diagrams/overview.svg"))
+cat(readLines("diagrams/overview_v2.svg"))
 ```
 </center>
 
