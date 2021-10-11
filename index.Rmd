@@ -1,0 +1,20 @@
+---
+pagetitle: "Marine Energy"
+---
+
+```{r setup, include=FALSE}
+# see: https://www-dev.marineenergy.app
+knitr::opts_chunk$set(echo = F, warning = F, message = F)
+librarian::shelf(
+  bslib, here, htmltools, readr)
+```
+
+## Welcome!
+
+```{r, eval=F}
+# TODO: convert existing carousel in bs 5 to bs 4, so compatible menus
+#   https://getbootstrap.com/docs/4.0/components/carousel/
+index_body <- read_file(here("../apps_dev/splash/www/html_snippets/index_body.html"))
+HTML(index_body)
+```
+
