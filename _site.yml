@@ -1,28 +1,32 @@
 name: "Marine Energy Environmental Toolkit"
 navbar:
-  title: "MarineEnergy.app"
-  type: inverse # inverse or default
+  # title: "MarineEnergy.app"
+  title: <a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a>
+  type: default
   left:
+    - text: "Home"
+      href: index.html
+      icon: fa-home
     - text: "Regulations"
-      #icon: fa-institution
+      icon: fa-institution
       href: regs.html
     - text: "More"
-      #icon: fa-institution
       menu:
-        - text: "About"
-          href: about.html
         - text: "Interactions"
           icon: fa-gears
           href: env.html
+        - text: "About"
+          href: about.html
+        # - text: "FAQ"
+        #   href: about.html
 output:
   html_document:
     theme:
-      bootswatch: yeti
       version: 4
-    #css: libs/styles.css
-    #template: libs/default_mvfooter.html
+      bg: "#08274D"
+      fg: "#E6E9ED"
+    css: libs/styles.css
     mathjax: null    
-    #include:
-      #after_body: "libs/footer.html"
-      #in_header: "libs/header.html"
+    include:
+      after_body: "libs/footer.html"
 output_dir: "."
