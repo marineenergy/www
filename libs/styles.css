@@ -93,8 +93,8 @@ hr {
 }
 
 #card-container {
-  height: 40px;
-  width: 240px;
+  height: 50px;
+  width: 350px;
   position: absolute;
   top: 70px;
   right: 150px;
@@ -102,9 +102,10 @@ hr {
 }
 
 .card {
-  background-color: #b8b8b8;
+  background-color: #0b56a6ff; /* #b8b8b8; */
   box-shadow: 0 0 8px #45D0F6;
 }
+
 
 /* ------------------------------*/
 /*	(index) Body                 */
