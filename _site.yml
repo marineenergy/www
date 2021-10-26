@@ -23,8 +23,11 @@ output:
   html_document:
     theme:
       version: 4
-      bg: "#08274D"
-      fg: "#E6E9ED"
+      bg: "#FFFFFF" # dark blue: "#08274D"
+      fg: "#08274D" # light gray: "#E6E9ED"
+    # https://rstudio.github.io/bslib/articles/bslib.html#real-time
+    # theme:
+    #   bslib: true
     css: libs/styles.css
     mathjax: null    
     include:

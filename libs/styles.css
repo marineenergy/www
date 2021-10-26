@@ -2,7 +2,8 @@
 /*	(global) Page                */
 /* ------------------------------*/
 body {
-  padding-bottom: 0 !important;  
+  padding-bottom: 0 !important; 
+  /*background-color: white;*/
 }
 
 .container-fluid {
@@ -93,7 +94,7 @@ hr {
 
 #card-container {
   height: 40px;
-  width: 200px;
+  width: 240px;
   position: absolute;
   top: 70px;
   right: 150px;
@@ -154,6 +155,45 @@ hr {
 	display: block;
 	align-items: center;
 }
+
+/* ------------------------------*/
+/*	(regs) Body                 */
+/* ------------------------------*/
+.regs-body {
+  width: 100%;
+  background-color: white; 
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regs-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#regs-welcome {
+  background-color: #e0e0e0;
+  margin-top: 40px;
+  padding: 1rem;
+}
+
+#regs {
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+
+#regs-info {
+  text-align: left;
+}
+
+#reg-tree {
+  width: 80%;
+}
+
 
 /* ------------------------------*/
 /*	(global) Footer              */

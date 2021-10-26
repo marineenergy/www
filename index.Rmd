@@ -1,5 +1,6 @@
 ---
 pagetitle: "Marine Energy"
+# runtime: shiny # https://rstudio.github.io/bslib/articles/bslib.html#real-time
 ---
 
 ```{r setup, include=FALSE}
@@ -9,6 +10,10 @@ librarian::shelf(
   bslib, here, htmltools, readr)
 ```
 
+```{r, eval=F}
+# https://rstudio.github.io/bslib/articles/bslib.html#real-time
+bslib::bs_themer()
+```
 
 ```{r}
 index_body <- read_file(here("libs/index_body.html"))
