@@ -1,6 +1,5 @@
 ---
 pagetitle: Marine Energy
-# runtime: shiny # https://rstudio.github.io/bslib/articles/bslib.html#real-time 
 ---
 
 ```{r setup, include=FALSE}
