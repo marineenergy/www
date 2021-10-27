@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 231.47 265.12" style="enable-background:new 0 0 231.47 265.12;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0B56A6;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'OpenSans-Bold';}
+	.st4{font-size:30.7198px;}
+	.st5{letter-spacing:3;}
+</style>
+<g id="Regulator_Icon">
+	<path class="st0" d="M39.12,58.15h153.9c3.53,0,6.4,2.87,6.4,6.4v194.17c0,3.53-2.87,6.4-6.4,6.4H39.12c-3.53,0-6.4-2.87-6.4-6.4
+		V64.55C32.72,61.02,35.59,58.15,39.12,58.15z"/>
+	<rect x="51.82" y="83.65" class="st1" width="29.2" height="29.24"/>
+	<rect x="51.82" y="148.85" class="st1" width="29.2" height="29.24"/>
+	<rect x="51.82" y="214.05" class="st1" width="29.2" height="29.24"/>
+	<path class="st2" d="M50.32,93.25l5-6.3l4.5,5.1c1.9,1.9,3.6,3.7,5.4,5.3c2.45-4.65,5.51-8.96,9.1-12.8
+		c3.34-3.66,7.1-6.91,11.2-9.7l5.9,5c-5.35,4.76-10.24,10.02-14.6,15.7c-3.66,4.7-6.94,9.68-9.8,14.9L50.32,93.25z"/>
+	<path class="st2" d="M50.32,158.45l5-6.3c1.4,1.7,2.9,3.3,4.5,5.1s3.6,3.7,5.4,5.3c2.45-4.65,5.51-8.96,9.1-12.8
+		c3.34-3.66,7.1-6.91,11.2-9.7l5.9,5c-5.35,4.76-10.24,10.02-14.6,15.7c-3.66,4.7-6.94,9.68-9.8,14.9L50.32,158.45z"/>
+	
+		<rect x="62.71" y="215.42" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -142.1841 113.9929)" class="st2" width="7.6" height="26.42"/>
+	
+		<rect x="53.33" y="224.86" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -142.1958 114.0227)" class="st2" width="26.42" height="7.6"/>
+	<line class="st1" x1="95.72" y1="92.15" x2="172.52" y2="92.15"/>
+	<line class="st1" x1="95.72" y1="104.45" x2="172.52" y2="104.45"/>
+	<line class="st1" x1="95.72" y1="157.35" x2="172.52" y2="157.35"/>
+	<line class="st1" x1="95.72" y1="169.65" x2="172.52" y2="169.65"/>
+	<line class="st1" x1="95.72" y1="222.55" x2="172.52" y2="222.55"/>
+	<line class="st1" x1="95.72" y1="234.85" x2="172.52" y2="234.85"/>
+	<text transform="matrix(1 0 0 1 5.7545 22.0234)" class="st0 st3 st4 st5">REGULATOR</text>
+</g>
+</svg>
