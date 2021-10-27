@@ -46,7 +46,7 @@ hr {
 /*	(index) Carousel             */
 /* ------------------------------*/
 #hero {
-	height: 420px;
+	height: 440px;
 	width: 100%;
 	overflow: hidden;
 	background-color: black;
@@ -67,14 +67,18 @@ hr {
 }
 
 .carousel-img {
-	height: 420px;
+	height: 440px;
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	align-items: center;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	opacity: .8;
+	/*padding-top: 1.5rem;*/
+	/*padding-bottom: 1.5rem;*/}
+	
+.carousel-img .d-block .w-100 {
+  opacity: 75%;
 }
 
 .carousel-control-prev, .carousel-control-next {
@@ -94,17 +98,33 @@ hr {
 
 #card-container {
   height: 50px;
-  width: 350px;
+  width: 500px;
   position: absolute;
   top: 70px;
   right: 150px;
-  color: black;
+  color: white;
 }
 
 .card {
   background-color: #0b56a6ff; /* #b8b8b8; */
   box-shadow: 0 0 8px #45D0F6;
 }
+
+.card-title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card-text { 
+  font-size: 16px;
+}
+
+#report-btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
 
 
 /* ------------------------------*/
