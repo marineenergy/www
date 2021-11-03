@@ -28,7 +28,12 @@ body {
 
 #spacer {
   height: 40px;
-  background-color: white;
+  background-color: #08274d;
+}
+
+#section-title {
+  color: black;
+  margin-top: 10px;
 }
 
 hr {
@@ -74,6 +79,7 @@ hr {
 	display: block;
 	align-items: center;
 	opacity: .8;
+	object-fit: cover;
 	/*padding-top: 1.5rem;*/
 	/*padding-bottom: 1.5rem;*/}
 	
@@ -126,12 +132,49 @@ hr {
 }
 
 
+#img-credit-container {
+  position: absolute;
+  display: inline-block;
+  align-content: center;
+  bottom: 0px;
+  z-index: 10;
+  height: 20px;
+  width: 100%;
+  background-color: #808080;
+  opacity: 0.75;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
+#img-credit-text {
+  display: inline-block;
+  z-index: 15;
+  opacity: 1.0 !important;
+  text-align: left;
+  vertical-align: center !important;
+  font-size: 11px;
+  color: black !important;
+}
+
 
 /* ------------------------------*/
 /*	(index) Body                 */
 /* ------------------------------*/
 #graphic-content {
   text-align: center;  
+  align-content: center;
+}
+
+.graphic-svg {
+  right: 3%;
+  width: 95%;
+  max-width: 1000px;
+  align-content: center;
+  align-items: center;
+  padding-left: 70px;
+  padding-top: 10px;
+  padding-right: 70px;
+  padding-bottom: 5px;
 }
 
 /* PLACEHOLDERS */
@@ -140,15 +183,30 @@ hr {
   text-align: center;
 }
 
-#how-r1c1, #how-r1c3, #how-r2c1 {
-  background-color: black;
-  height: 50;
-  color: white;
+#how-row1 {
+  font-size: 16px;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  position: relative;
+  max-width: 1000px;
+  float:center;
 }
 
-#how-r1c2, #how-r2c2 {
-  background-color: powderblue;
-  height: 100px;
+#how-r1c1, #how-r1c2, #how-r1c3, #how-r2c1 {
+  background-color: white;
+  height: 120px;
+  width: 50px !important;
+  color: #0b56a6ff;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+
+#how-r2c2 {
+  background-color: white;
+  height: 50px;
   color: black;
 }
 
