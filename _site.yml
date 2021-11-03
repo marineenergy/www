@@ -3,7 +3,6 @@ navbar:
   # title: "MarineEnergy.app"
   title: <a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a>
   type: default
-  inverse: TRUE
   # bg: "#08274D"
   # fg: "FFFFFF"
   left:
