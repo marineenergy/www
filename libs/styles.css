@@ -185,11 +185,11 @@ hr {
   text-align: center; 
 }
 
-#tkit-text {
+.tkit-text {
   font-size: 16px;
 }
 
-#tkit-r1 {
+.tkit-r1 {
   /*background-color: white;*/
   height: 100%;
   min-height:400px;
@@ -197,7 +197,7 @@ hr {
   padding-right: 80px;
 }
 
-#tkit-r1-box {
+.tkit-r1-box {
   text-align: left; 
   display: flex;
   flex-direction: row;
@@ -209,7 +209,7 @@ hr {
   padding-right: 80px;
 }
 
-#tkit-img-title{
+.tkit-img-title{
   display: flex;
   align-items: center;
   flex-direction: column;
