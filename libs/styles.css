@@ -160,6 +160,13 @@ hr {
 /* ------------------------------*/
 /*	(index) Body                 */
 /* ------------------------------*/
+section.wrapper {
+  min-width: 600px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
 #graphic-content {
   text-align: center;  
   align-content: center;
@@ -168,7 +175,6 @@ hr {
 .graphic-svg {
   right: 3%;
   width: 95%;
-  max-width: 1000px;
   align-content: center;
   align-items: center;
   padding-left: 70px;
@@ -190,7 +196,6 @@ hr {
   align-items: center;
   align-self: center;
   position: relative;
-  max-width: 1000px;
   float:center;
 }
 
