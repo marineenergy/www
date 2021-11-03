@@ -290,6 +290,7 @@ $(document).ready(function () {
   <!--Carousel-->
   <div id="hero" class="homesection-row">
     <div id="hero-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+      
       <div class="carousel-inner" role="listbox">
         
         <!--01 Reporting Tool-->
@@ -304,16 +305,16 @@ $(document).ready(function () {
             </span>
           </div>
           <!--card-->
-                    <div class="row card-container" style="top: 60px;">
+                    <div id="card-container" class="row">
                             <div class="card">
                               <div class="card-body">
-                                <h4 class="card-title">Reporting Tool</h4>
+                                <h3 class="card-title">Reporting Tool</h3>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/04_icon_reporting-tool.svg" style="width: 80%; margin-right: 5%;">
+                                  <img src="images/vector_svg_icons/04_icon_reporting-tool.svg" style="width: 30%; margin-right: 5%;">
                                   <p class="card-text">Create and share a summary report of information from existing marine energy projects, academic publications, regulatory documents, management measures, and spatial information based on your area and topics of interest.</p>
                                 </div>
-                              <hr style="opacity: 0;">
-                              <a class="btn btn-light btn-sm btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button"><i class="fas fa-long-arrow-alt-right"></i>&nbsp&nbspLearn More</a>
+                              <hr>
+                              <a class="btn btn-primary btn-lg btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button">→  Learn More</a>
                 </div>
                             </div>
                     </div>
@@ -330,16 +331,16 @@ $(document).ready(function () {
             </span>
           </div>
           <!--card-->
-                    <div class="row card-container" style="top: 85px;">
+                    <div id="card-container" class="row">
                             <div class="card">
                               <div class="card-body">
-                                <h4 class="card-title">Regulation</h4>
+                                <h3 class="card-title">Regulation</h3>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/03_icon_regulation.svg" style="width: 40%; margin-right: 10%;">
+                                  <img src="images/vector_svg_icons/03_icon_regulation.svg" style="height: 120px; top: -40px; margin-right: 10%;">
                                   <p class="card-text">A compilation of regulatory resources. View all state or federal statutes and resources or navigate a flow map answering simple questions about a project to identify relevant regulatory resources.</p>
                                 </div>
-                              <hr style="opacity: 0;">
-                              <a class="btn btn-light btn-sm btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button"><i class="fas fa-long-arrow-alt-right"></i>&nbsp&nbspLearn More</a>
+                              <hr>
+                              <a class="btn btn-primary btn-lg btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button">→  Learn More</a>
                 </div>
                             </div>
                     </div>
@@ -356,16 +357,16 @@ $(document).ready(function () {
             </span>
           </div>
           <!--card-->
-                    <div class="row card-container" style="top: 85px;">
+                    <div id="card-container" class="row">
                       <div class="card">
                               <div class="card-body">
-                                <h4 class="card-title">Environmental Interactions</h4>
+                                <h3 class="card-title">Environmental Interactions</h3>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/05_icon_interactions.svg" style="width: 80%; margin-right: 5%;">
+                                  <img src="images/vector_svg_icons/05_icon_interactions.svg" style="width: 30%; margin-right: 5%;">
                                   <p class="card-text">View a table of academic papers available on the Tethys Knowledgebase by stressor-receptor combination in order to understand what is known about specific interactions.</p>
                                 </div>
-                              <hr style="opacity: 0;">
-                              <a class="btn btn-light btn-sm btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button"><i class="fas fa-long-arrow-alt-right"></i>&nbsp&nbspLearn More</a>
+                              <hr>
+                              <a class="btn btn-primary btn-lg btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button">→  Learn More</a>
                 </div>
                             </div>
                     </div>
@@ -382,16 +383,16 @@ $(document).ready(function () {
             </span>
           </div>
           <!--card-->
-                    <div class="row card-container" style="top: 95px;">
+                    <div id="card-container" class="row">
                             <div class="card">
                               <div class="card-body">
-                                <h4 class="card-title">About</h4>
+                                <h3 class="card-title">About</h3>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
                                   <img src="images/vector_svg_icons/02_icon_about.svg" style="margin-right: 5%;">
                                   <p class="card-text">Learn more about the project team members, funding source, intended audiences, and other frequently asked questions.</p>
                                 </div>
-                              <hr style="opacity: 0;">
-                              <a class="btn btn-light btn-sm btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button"><i class="fas fa-long-arrow-alt-right"></i>&nbsp&nbspLearn More</a>
+                              <hr>
+                              <a class="btn btn-primary btn-lg btn-block" href="https://marineenergy.app/about.html" id="report-btn" role="button">→  Learn More</a>
                 </div>
                             </div>
                     </div>
@@ -413,7 +414,8 @@ $(document).ready(function () {
 
   <!--Spacer-->
   <div class="container">
-    <div id="spacer" class="row"></div>
+    <div id="spacer" class="row">
+    </div>
   </div>
 
   <!--How it works-->
@@ -436,6 +438,8 @@ $(document).ready(function () {
       </div>
     </div>
   </section>
+  
+
   
   <!--Spacer-->
   <div class="container">
@@ -494,7 +498,6 @@ $(document).ready(function () {
   
 <!--End-->
 </div>
-<p><script src="libs/main.js"></script></p>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
