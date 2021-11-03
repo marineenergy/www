@@ -3,7 +3,7 @@
 /* ------------------------------*/
 body {
   padding-bottom: 0 !important; 
-  /*background-color: white;*/
+  min-width: 980px;
 }
 
 .container-fluid {
@@ -27,24 +27,29 @@ body {
 }
 
 #spacer {
-  height: 40px;
-  background-color: #08274d;
+  height: 25px;
 }
 
-#section-title {
+h2 {
   color: black;
-  margin-top: 10px;
 }
 
 hr {
-  border-top: 1px solid black;
+  border-top: 1px solid #45D0F6;
+}
+
+.btn-light {
+  background-color: #45D0F6;
+  border-color: #45D0F6;
+  color: #08274D !important;
 }
 
 /* ------------------------------*/
 /*	(global) Navbar              */
 /* ------------------------------*/
 .navbar {
-  background-color: #08274d;
+  background-color: #08274d !important;
+  color: #E6E9ED !important;
 }
 
 /* ------------------------------*/
@@ -62,7 +67,7 @@ hr {
 }
 
 #hero-carousel {
-  position: relative;  
+  position: relative; 
 }
 
 .carousel-inner {
@@ -80,8 +85,7 @@ hr {
 	align-items: center;
 	opacity: .8;
 	object-fit: cover;
-	/*padding-top: 1.5rem;*/
-	/*padding-bottom: 1.5rem;*/}
+}
 	
 .carousel-img .d-block .w-100 {
   opacity: 75%;
@@ -89,22 +93,18 @@ hr {
 
 .carousel-control-prev, .carousel-control-next {
 	width: 7%;
-	color: white;
+	/*color: white;*/
 	text-shadow: 0 1px 6px #45D0F6;
 	font-size: 200%;
-}
-
-#hero a {
-  color: white;
 }
 
 .carousel-control {
   opacity: .5;  
 }
 
-#card-container {
+.card-container {
   height: 50px;
-  width: 500px;
+  width: 460px;
   position: absolute;
   top: 70px;
   right: 150px;
@@ -122,7 +122,7 @@ hr {
 }
 
 .card-text { 
-  font-size: 16px;
+  font-size: 1em;
 }
 
 #report-btn {
@@ -132,43 +132,38 @@ hr {
 }
 
 
-#img-credit-container {
+.img-credit-container {
   position: absolute;
-  display: inline-block;
-  align-content: center;
   bottom: 0px;
-  z-index: 10;
-  height: 20px;
+  height: 1em;
   width: 100%;
-  background-color: #808080;
-  opacity: 0.75;
+  background-color: rgba(128, 128, 128, 0.5);
   padding-left: 20px;
-  padding-bottom: 5px;
 }
 
-#img-credit-text {
-  display: inline-block;
-  z-index: 15;
-  opacity: 1.0 !important;
+.img-credit-text {
   text-align: left;
-  vertical-align: center !important;
-  font-size: 11px;
-  color: black !important;
+  vertical-align: center;
+  font-size: 0.7em;
+  color: black;
 }
 
+.img-credit-text a {
+  color: #D4D4D4;
+}
 
 /* ------------------------------*/
 /*	(index) Body                 */
 /* ------------------------------*/
-#graphic-content {
+#how {
   text-align: center;  
   align-content: center;
 }
 
-.graphic-svg {
+.how-svg {
   right: 3%;
   width: 95%;
-  max-width: 1000px;
+  max-width: 1170px;
   align-content: center;
   align-items: center;
   padding-left: 70px;
@@ -177,7 +172,27 @@ hr {
   padding-bottom: 5px;
 }
 
-/* PLACEHOLDERS */
+.how-txt {
+  text-align: center;
+  white-space: no-wrap;
+  min-width: 255px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#how-choose {
+  
+}
+
+#how-view {
+  
+}
+
+#how-share {
+  
+}
+
+/* PLACEHOLDERS
 #how, #more, #graphic {
   color: white;
   text-align: center;
@@ -222,6 +237,7 @@ hr {
   color: black;
   height: 100px;
 }
+*/
 
 #wave {
   background-color: white;
