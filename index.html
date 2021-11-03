@@ -261,7 +261,7 @@ $(document).ready(function () {
       <a href="env.html">
         <span class="fa fa-gears"></span>
          
-        Interactions
+        Environmental interactions
       </a>
     </li>
     <li>
@@ -296,13 +296,12 @@ $(document).ready(function () {
         <div class="carousel-item active">
           <img class="carousel-img d-block w-100" src="images/bg_img_small/04_reporting-tool_sm.jpg">
           <!--img credit-->
-          <div class="img-credit-container">
-            <div class="img-credit-text">
-              <p>
-                Image: CorPower Ocean C3 in Scapa Flow Orkney  |  Source:
-                <a href="https://www.corpowerocean.com/">CorPower Ocean.</a>
-              </p>
-            </div>
+          <div id="img-credit-container">
+            <div id="img-credit-bg"></div>
+            <span id="img-credit-text">
+              <p id="img-credit-text">Image: CorPower Ocean C3 in Scapa Flow Orkney. Source: </p>
+              <a id="img-credit-text" href="https://tethys-engineering.pnnl.gov/photo-library?search=&page=1" target="_blank">MRE Photo Library | Tethys Engineering.</a>
+            </span>
           </div>
           <!--card-->
                     <div class="row card-container" style="top: 60px;">
@@ -324,13 +323,11 @@ $(document).ready(function () {
         <div class="carousel-item">
           <img class="carousel-img d-block w-100" src="images/bg_img_small/03_regulation_sm.jpg">
           <!--img credit-->
-          <div class="img-credit-container">
-            <div class="img-credit-text">
-              <p>
-                Image: Wave Swell Energy's UniWave200 Installed at King Island (Beach Shot)  |  Source: 
-                <a href="https://tethys-engineering.pnnl.gov/photo-library?search=&page=1">MRE Photo Library > Tethys Engineering.</a>
-              </p>
-            </div>
+          <div id="img-credit-container">
+            <span>
+              <p id="img-credit-text">Image: Wave Swell Energy's UniWave200 Installed at King Island (Beach Shot). Source: </p>
+              <a id="img-credit-text" href="https://tethys-engineering.pnnl.gov/photo-library?search=&page=1" target="_blank">MRE Photo Library | Tethys Engineering.</a>
+            </span>
           </div>
           <!--card-->
                     <div class="row card-container" style="top: 85px;">
@@ -352,13 +349,11 @@ $(document).ready(function () {
         <div class="carousel-item">
           <img class="carousel-img d-block w-100" src="images/bg_img_small/05_interactions_sm.jpg">
           <!--img credit-->
-          <div class="img-credit-container">
-            <div class="img-credit-text">
-              <p>
-                Image: OceanBased Perpetual Energy - Ocean Current Energy Converter  |  Source:
-                <a href="https://oceanbased.energy/">OceanBased Perpetual Energy.</a>
-              </p>
-            </div>
+          <div id="img-credit-container">
+            <span id="img-credit-text">
+              <p id="img-credit-text">Image: OceanBased Perpetual Energy - Ocean Current Energy Converter. Source: </p>
+              <a id="img-credit-text" href="https://tethys-engineering.pnnl.gov/photo-library?search=&page=1" target="_blank">MRE Photo Library | Tethys Engineering.</a>
+            </span>
           </div>
           <!--card-->
                     <div class="row card-container" style="top: 85px;">
@@ -380,13 +375,11 @@ $(document).ready(function () {
         <div class="carousel-item">
           <img class="carousel-img d-block w-100" src="images/bg_img_small/02_about_sm.jpg">
                     <!--img credit-->
-          <div class="img-credit-container">
-            <div class="img-credit-text">
-              <p>
-                Image: Wave Swell Energy's UniWave200 Installed at King Island (Beach Shot)  |  Source: 
-                <a href="https://www.waveswell.com/">Wave Swell Energy.</a>
-              </p>
-            </div>
+          <div id="img-credit-container">
+            <span id="img-credit-text">
+              <p id="img-credit-text">Image: Wave Swell Energy's UniWave200 Installed at King Island (Beach Shot). Source: </p>
+              <a id="img-credit-text" href="https://tethys-engineering.pnnl.gov/photo-library?search=&page=1" target="_blank">MRE Photo Library | Tethys Engineering.</a>
+            </span>
           </div>
           <!--card-->
                     <div class="row card-container" style="top: 95px;">
@@ -424,30 +417,25 @@ $(document).ready(function () {
   </div>
 
   <!--How it works-->
-  <div id="how" class="container">
-    <div class="row">
-      <div class="col">
-        <h2>How It Works</h2>
+  <section>
+    <div class="container">
+      <div id="graphic" class="row">
+        <div id="section-title" class="col">
+          <h2>How It Works</h2>
+        </div>
+      </div>
+      <div id="graphic-content" class="row justify-content-center">
+        <img class="graphic-svg" src="images/vector_svg_icons/06_icon-how-it-works-notext.svg">
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <img class="how-svg justify-content-center" src="images/vector_svg_icons/06_icon-how-it-works-notext.svg">
+    <div class="container" style="left: 15%">
+      <div id="how-row1" class="row justify-content-center" style="width: 90%;">
+        <div id="how-r1c1" class="col">Choose your site location and topics of interest (stressor-receptor interactions).</div>
+        <div id="how-r1c2" class="col">View selected content based on site location and topics of interest.</div>
+        <div id="how-r1c3" class="col">Develop and share reports.</div>
       </div>
     </div>
-      <div class="row justify-content-center">
-        <div id="how-choose" class="col-md-2 offset-md-3 how-txt">
-          Choose your site location and topics of interest (stressor-receptor interactions).
-        </div>
-        <div id="how-view" class="col-md-2 how-txt">
-          View selected content based on site location and topics of interest.
-        </div>
-        <div id="how-share" class="col-md-2 how-txt">
-          Develop and share reports.
-        </div>
-      </div>
-  </div>
-
+  </section>
   
   <!--Spacer-->
   <div class="container">
