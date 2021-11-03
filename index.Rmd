@@ -6,7 +6,7 @@ pagetitle: Marine Energy
 # see: https://www-dev.marineenergy.app
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
 librarian::shelf(
-  bslib, here, htmltools, readr)
+  bslib, here, htmltools, readr, jquerylib)
 ```
 
 ```{r, eval=F}
@@ -17,4 +17,5 @@ bslib::bs_themer()
 ```{r}
 index_body <- read_file(here("libs/index_body.html"))
 HTML(index_body)
+htmltools::tags$script(src = "libs/main.js")
 ```
