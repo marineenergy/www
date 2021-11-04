@@ -3,7 +3,8 @@
 /* ------------------------------*/
 body {
   padding-bottom: 0 !important; 
-  min-width: 980px;
+  min-width: 860px;
+  background-color: #F4F9F9;
 }
 
 .container-fluid {
@@ -155,92 +156,126 @@ hr {
 /* ------------------------------*/
 /*	(index) Body                 */
 /* ------------------------------*/
+
+/* How it works */
 #how {
   text-align: center;  
   align-content: center;
+  max-width: 1170px;
 }
 
 .how-svg {
-  right: 3%;
-  width: 95%;
   max-width: 1170px;
-  align-content: center;
-  align-items: center;
-  padding-left: 70px;
-  padding-top: 10px;
-  padding-right: 70px;
-  padding-bottom: 5px;
 }
+
 
 .how-txt {
-  text-align: center;
-  white-space: no-wrap;
-  min-width: 255px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 233px;
 }
 
+
 #how-choose {
-  
+  right: 9%;
 }
 
 #how-view {
-  
+  left: 2%;
 }
 
 #how-share {
-  
+  left: 14%;
 }
 
-/* PLACEHOLDERS
-#how, #more, #graphic {
-  color: white;
+
+/* Who uses it */
+.tkit-section {
+  background-color: #EAEFEF;
+  box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
+  padding-top: 20px;
+}
+
+#tkit-title {
+  margin-bottom: 20px;
+}
+
+.tkit {
+  color: #08274d; 
   text-align: center;
 }
 
-#how-row1 {
-  font-size: 16px;
-  left: 10%;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  position: relative;
-  max-width: 1000px;
-  float:center;
+.tkit-box {
+  background-color: white;
+  text-align: left; 
+  box-shadow: 0 0 8px #45D0F6;
+  border-radius: 10px;
+  padding: 10px;
+  min-height: 300px;
+  vertical-align: middle;
 }
 
-#how-r1c1, #how-r1c2, #how-r1c3, #how-r2c1 {
-  background-color: white;
-  height: 120px;
-  width: 50px !important;
-  color: #0b56a6ff;
-  margin-left: 5px;
-  margin-right: 5px;
+@media only screen and (min-width: 1650px) {
+  .tkit-box {
+    min-height: 300px;
+  }
+}
+@media only screen and (max-width: 1649px) {
+  .tkit-box {
+    min-height: 320px;
+  }
+}
+@media only screen and (max-width: 1510px) {
+  .tkit-box {
+    min-height: 370px;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .tkit-box {
+    min-height: 400px;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .tkit-box {
+    min-height: 440px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .tkit-box {
+    min-height: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#tkit-left {
+  padding-top: 25px;
+}
+
+#tkit-right {
+  padding-top: 25px;
+}
+
+.tkit-box h3 {
   text-align: center;
 }
 
-#how-r2c2 {
-  background-color: white;
-  height: 50px;
-  color: black;
+.tkit-box img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 120px;
 }
 
-#more-left {
-  background-color: powderblue;
+#tkit-reg-img {
+  width: 100px;
+  padding-bottom: 15px;
 }
 
-#more-right {
-  background-color: white;
-}
-
-#more-left, #more-right {
-  color: black;
-  height: 100px;
-}
-*/
-
+/* Wave img sep */
 #wave {
-  background-color: white;
+  padding-top: 40px;
+  background-color: #EAEFEF;
 }
 
 #wave-img {
@@ -252,65 +287,29 @@ hr {
 }
 
 /* ------------------------------*/
-/*	(index) Toolkit Users        */
-/* ------------------------------*/
-#tkit {
-  color: #08274d; 
-  text-align: center; 
-}
-
-.tkit-text {
-  font-size: 16px;
-}
-
-.tkit-r1 {
-  /*background-color: white;*/
-  height: 100%;
-  min-height:400px;
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
-.tkit-r1-box {
-  text-align: left; 
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 0 8px #45D0F6;
-  min-height:300px;
-  min-width:400px;
-  padding-top: 20px;
-  padding-left: 40px;
-  padding-right: 80px;
-}
-
-.tkit-img-title{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 5%;
-  height: 100%; /*200px*/
-}
-
-/* ------------------------------*/
 /*	(regs) Body                 */
 /* ------------------------------*/
 .regs-body {
+  min-width: 860px;
   width: 100%;
   background-color: white; 
   color: black;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
 }
 
 .regs-content {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 #regs-welcome {
-  background-color: #e0e0e0;
+  background-color: #EAEFEF;
+  box-shadow: inset 0 -5px 10px -5px #000000;
   margin-top: 40px;
   padding: 1rem;
 }
@@ -326,6 +325,41 @@ hr {
 }
 
 #reg-tree {
+  width: 80%;
+}
+
+/* ------------------------------*/
+/*	(interactions) Body          */
+/* ------------------------------*/
+.env-body {
+  min-width: 860px;
+  width: 100%;
+  background-color: #F4F9F9; 
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+.env-container {
+  width: 80%;
+}
+
+
+/* ------------------------------*/
+/*	(about) Body                */
+/* ------------------------------*/
+.about-body {
+  min-width: 860px;
+  width: 100%;
+  background-color: #F4F9F9; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+.about-container {
   width: 80%;
 }
 

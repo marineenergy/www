@@ -18,9 +18,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
-<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
-<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
-<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/bs3compat-0.3.0/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.0/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.0/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -265,7 +265,11 @@ $(document).ready(function () {
       </a>
     </li>
     <li>
-      <a href="about.html">About</a>
+      <a href="about.html">
+        <span class="fa fa-question"></span>
+         
+        About
+      </a>
     </li>
   </ul>
 </li>
@@ -310,7 +314,7 @@ $(document).ready(function () {
                               <div class="card-body">
                                 <h4 class="card-title">Reporting Tool</h4>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/04_icon_reporting-tool.svg" style="width: 80%; margin-right: 5%;">
+                                  <img src="images/vector_svg_icons/04_icon_reporting-tool.svg" style="width: 60px; margin-right: 5%;">
                                   <p class="card-text">Create and share a summary report of information from existing marine energy projects, academic publications, regulatory documents, management measures, and spatial information based on your area and topics of interest.</p>
                                 </div>
                               <hr style="opacity: 0;">
@@ -338,7 +342,7 @@ $(document).ready(function () {
                               <div class="card-body">
                                 <h4 class="card-title">Regulation</h4>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/03_icon_regulation.svg" style="width: 40%; margin-right: 10%;">
+                                  <img src="images/vector_svg_icons/03_icon_regulation.svg" style="width: 60px; margin-right: 10%;">
                                   <p class="card-text">A compilation of regulatory resources. View all state or federal statutes and resources or navigate a flow map answering simple questions about a project to identify relevant regulatory resources.</p>
                                 </div>
                               <hr style="opacity: 0;">
@@ -366,7 +370,7 @@ $(document).ready(function () {
                               <div class="card-body">
                                 <h4 class="card-title">Environmental Interactions</h4>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/05_icon_interactions.svg" style="width: 80%; margin-right: 5%;">
+                                  <img src="images/vector_svg_icons/05_icon_interactions.svg" style="width: 60px; margin-right: 5%;">
                                   <p class="card-text">View a table of academic papers available on the Tethys Knowledgebase by stressor-receptor combination in order to understand what is known about specific interactions.</p>
                                 </div>
                               <hr style="opacity: 0;">
@@ -394,7 +398,7 @@ $(document).ready(function () {
                               <div class="card-body">
                                 <h4 class="card-title">About</h4>
                                 <div style="display: flex; align-items: center; flex-direction: row;">
-                                  <img src="images/vector_svg_icons/02_icon_about.svg" style="margin-right: 5%;">
+                                  <img src="images/vector_svg_icons/02_icon_about.svg" style="width: 60px; margin-right: 5%;">
                                   <p class="card-text">Learn more about the project team members, funding source, intended audiences, and other frequently asked questions.</p>
                                 </div>
                               <hr style="opacity: 0;">
@@ -430,19 +434,19 @@ $(document).ready(function () {
         <h2>How It Works</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
+    <div class="row justify-content-center">
+      <div class="col-9">
         <img class="how-svg justify-content-center" src="images/vector_svg_icons/06_icon-how-it-works-notext.svg">
       </div>
     </div>
       <div class="row justify-content-center">
-        <div id="how-choose" class="col-md-2 offset-md-3 how-txt">
+        <div id="how-choose" class="col-2 how-txt">
           Choose your site location and topics of interest (stressor-receptor interactions).
         </div>
-        <div id="how-view" class="col-md-2 how-txt">
+        <div id="how-view" class="col-2 how-txt">
           View selected content based on site location and topics of interest.
         </div>
-        <div id="how-share" class="col-md-2 how-txt">
+        <div id="how-share" class="col-2 how-txt">
           Develop and share reports.
         </div>
       </div>
@@ -454,6 +458,50 @@ $(document).ready(function () {
     <div id="spacer" class="row"></div>
   </div>
   
+  
+  <!--Toolkit Users-->
+  <div class="container tkit-section">
+      <div class="row tkit">
+        <div id="tkit-title" class="col">
+          <h2>Who uses the Marine Energy Toolkit?</h2>
+        </div>
+      </div>
+      
+      <div class="row tkit justify-content-center">
+        <div class="col-xl-5">
+          <div id="tkit-left" class="row tkit-box">
+            <div class="col-3">
+              <h3>Developer</h3>
+              <img id="tkit-dev-img" src="images/vector_svg_icons/01_icon_developer_regulator_dev_icon.svg">
+            </div>
+            <div class="col-9">
+              <ul>
+                <li>Understand the state of the industry and where projects have been attempted or are permitted</li>
+                <li>Access and review previously permitted project documents to inform your own project development</li>
+                <li>Generate custom reports with compiled spatial, regulatory, and academic information to facilitate consultations with regulators and the development of permitted documents</li>
+                <li>Understand relevant regulations by answering simple questions in a decision tree to identify and access relevant regulatory information and resources</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 offset-xl-1">
+          <div id="tkit-right" class="row tkit-box">
+            <div class="col-3">
+              <h3>Regulator</h3>
+              <img id="tkit-reg-img" src="images/vector_svg_icons/01_icon_developer_regulator_reg_icon.svg">
+            </div>
+            <div class="col-9">
+              <ul>
+                <li>View the latest academic publications on environmental interactions</li>
+                <li>Generate and share reports with colleagues spatial, academic, and regulatory information based on topics (stressors and receptors) and location of interest to inform decision making</li>
+                <li>Review previously permitted project documents to understand current precedent and how environmental interactions and risks were considered and mitigated</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <!--Wave-->
   <div class="container">
     <div id="wave" class="row">
@@ -461,52 +509,8 @@ $(document).ready(function () {
     </div>
   </div>
   
-  <!--Toolkit Users-->
-  <div class="container">
-      <div id="tkit">
-        <h2>Who uses the Marine Energy Toolkit?</h2>
-      </div>
-  </div>
-  
-  <div class="container" style=>
-    <div id="tkit" class="row">
-      <div class="col tkit-r1">
-        <div class = "tkit-r1-box">
-          <div class = "tkit-img-title">
-            <h3>Developer</h3>
-              <img src="images/vector_svg_icons/01_icon_developer_regulator_dev_icon.svg">
-          </div>
-          <p class="tkit-text">
-            <ul>
-              <li>Understand the state of the industry and where projects have been attempted or are permitted</li>
-              <li>Access and review previously permitted project documents to inform your own project development</li>
-              <li>Generate custom reports with compiled spatial, regulatory, and academic information to facilitate consultations with regulators and the development of permitted documents</li>
-              <li>Understand relevant regulations by answering simple questions in a decision tree to identify and access relevant regulatory information and resources</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-      <div class="col tkit-r1">
-        <div class = "tkit-r1-box">
-          <div class = "tkit-img-title">
-            <h3>Regulator</h3>
-              <img src="images/vector_svg_icons/01_icon_developer_regulator_reg_icon.svg">
-          </div>
-          <p class="tkit-text">
-            <ul>
-              <li>View the latest academic publications on environmental interactions</li>
-              <li>Generate and share reports with colleagues spatial, academic, and regulatory information based on topics (stressors and receptors) and location of interest to inform decision making</li>
-              <li>Review previously permitted project documents to understand current precedent and how environmental interactions and risks were considered and mitigated</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 <!--End-->
 </div>
-<p><script src="libs/main.js"></script></p>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">

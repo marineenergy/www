@@ -16,6 +16,7 @@ navbar:
           icon: fa-gears
           href: env.html
         - text: "About"
+          icon: fa-question
           href: about.html
         # - text: "FAQ"
         #   href: about.html
