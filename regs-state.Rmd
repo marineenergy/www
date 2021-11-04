@@ -1,39 +1,52 @@
 ---
 pagetitle: "Regulations"
-output:
-  html_document:
-    css: [libs/styles.css, libs/regs-state.css]
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, warning = F, message = F)
-
-# Display state links based on: 
-# * [regs-state - Google Sheets](https://docs.google.com/spreadsheets/d/1LOrmOM8fLssEGnuC5KuoYhMYl0NZjtdMO1bJUMZ6doc/edit#gid=0)
 ```
 
+
+<div class="regs-body regs-state">
+<div class="container">
+
+<!-- Back arrow -->
+<div class="row regs-row">
 <h1>
-  <a href="./regs.html" style="text-decoration:none;">
-  <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
-  </a>&nbsp;Regulations
+<span>
+<a href="./regs.html#reg-tree" style="text-decoration:none;">
+<i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
+</a>
+</span>
+&nbsp;Regulations
 </h1>
+</div>
 
-<br>
+<!-- Page title -->
+<div class="row regs-row">
+<h2>State-led Processes</h2>
+</div>
 
-## State-led Processes
+<!-- Page description -->
+<div class="row regs-row">
+<p>While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects.  Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process.</p>
+</div>
 
-While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects.  Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process. 
-<br>
-<br>
-The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available.
-<br>
-<br>
+<!-- Page description continued -->
+<div class="row regs-row">
+<p>The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available.</p>
+</div>
 
-  <div class="diagram-container">
-  <!-- state selection -->
-  <div id="state-decision">
-  <select class="custom-select" id="stateSelect">
-  <option value="select-none" selected>Select State:</option>
+<!-- Spacer -->
+<hr style="opacity: 0; height: 24px;">
+
+
+<!-- state selection -->
+<div class="row regs-row">
+<div class="diagram-container">
+<div id="state-decision">
+<select class="custom-select" id="stateSelect">
+<option value="select-none" selected>Select State:</option>
   
 ```{r, results='asis'}
 library(librarian)
@@ -60,13 +73,13 @@ d %>%
   cat()
 ```
 
-  </select>
-  </div>
+</select>
+</div>
 
-  <!-- dynamic state selection -->
-  <div id="state-selection">
-  <div style="height:20px;"></div>
-  <div class="state-content" id="select-none"></div>
+<!-- dynamic state selection -->
+<div id="state-selection">
+<div style="height:20px;"></div>
+<div class="state-content" id="select-none"></div>
 
 ```{r, results='asis'}
 d2 <- d %>% 
@@ -74,7 +87,7 @@ d2 <- d %>%
   mutate(
     item = ifelse(
       is.na(section_link),
-      glue("Hello {state}"),
+      glue("{state}"),
       glue('<a href="{section_link}" target = "_blank">{section_name}</a><br>'))) %>% 
   group_by(state, state_code) %>% 
   summarize(
@@ -90,25 +103,14 @@ d2$state_html %>%
   cat()
 ```
 
-  </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-
-<!-- get user option select -->
+<!-- Get user state selection -->
 <script>
 select = document.getElementById("stateSelect");
 select.onchange = function() {
@@ -127,4 +129,3 @@ select.onchange = function() {
   z.style.display = "block";
 }
 </script>
-

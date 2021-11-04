@@ -26,6 +26,7 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="shortcut icon" href="./images/icons/favicon.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -265,11 +266,10 @@ $(document).ready(function () {
       </a>
     </li>
     <li>
-      <a href="about.html">
-        <span class="fa fa-question"></span>
-         
-        About
-      </a>
+      <a href="about.html">About</a>
+    </li>
+    <li>
+      <a href="help.html">FAQ</a>
     </li>
   </ul>
 </li>
@@ -289,19 +289,42 @@ $(document).ready(function () {
 </div>
 
 
+<div class="regs-body regs-state">
+<div class="container">
+
+<!-- Back arrow -->
+<div class="row regs-row">
 <h1>
-<a href="./regs.html" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> Regulations
+<span> <a href="./regs.html#reg-tree" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> </span>  Regulations
 </h1>
-<p><br></p>
-<div id="state-led-processes" class="section level2">
-<h2>State-led Processes</h2>
-<p>While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects. Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process. <br> <br> The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available. <br> <br></p>
-<div class="diagram-container">
+</div>
+<!-- Page title -->
+<div class="row regs-row">
+<h2>
+State-led Processes
+</h2>
+</div>
+<!-- Page description -->
+<div class="row regs-row">
+<p>
+While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects. Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process.
+</p>
+</div>
+<!-- Page description continued -->
+<div class="row regs-row">
+<p>
+The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available.
+</p>
+</div>
+<!-- Spacer -->
+<hr style="opacity: 0; height: 24px;">
 <!-- state selection -->
+<div class="row regs-row">
+<div class="diagram-container">
 <div id="state-decision">
 <p><select class="custom-select" id="stateSelect"> <option value="select-none" selected>Select State:</option></p>
 <p><option value="alaska">Alaska</option> <option value="california">California</option> <option value="florida">Florida</option> <option value="hawaii">Hawaii</option> <option value="maine">Maine</option> <option value="massachusetts">Massachusetts</option> <option value="new-york">New York</option> <option value="oregon">Oregon</option> <option value="rhode-island">Rhode Island</option> <option value="washington">Washington</option></p>
-</select>
+<p></select></p>
 </div>
 <!-- dynamic state selection -->
 <div id="state-selection">
@@ -343,19 +366,10 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-<!-- get user option select -->
+</div>
+</div>
+</div>
+<!-- Get user state selection -->
 <script>
 select = document.getElementById("stateSelect");
 select.onchange = function() {
@@ -374,7 +388,6 @@ select.onchange = function() {
   z.style.display = "block";
 }
 </script>
-</div>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">

@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = F)
 ```
 
 <div class="regs-body">
-
 <div class="container">
+
 <div id="regs-welcome" class="row">
 <div class="col-4" style="border-right: 1px solid black;">
 <div id="regs" class="regs-content">
@@ -32,10 +32,13 @@ Follow the prompts to navigate the diagram. At the end of the decision tree, sel
 </div>
 </div>
 </div>
-</div>
-<div id="reg-tree" class="row regs-content">
+
+<!--<div id="reg-tree" class="row regs-content">-->
+<div id="reg-tree" class="row regs-row regs-svg">
 ```{r, results="asis", warning=F}
 cat(readLines("diagrams/overview_v2.svg"))
 ```
+</div>
+
 </div>
 </div>

@@ -1,6 +1,5 @@
 name: "Marine Energy Environmental Toolkit"
 navbar:
-  # title: "MarineEnergy.app"
   title: <a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a>
   type: default
   left:
@@ -16,23 +15,20 @@ navbar:
           icon: fa-gears
           href: env.html
         - text: "About"
-          icon: fa-question
           href: about.html
-        # - text: "FAQ"
-        #   href: about.html
+        - text: "FAQ"
+          href: help.html
 output:
   html_document:
     theme:
       version: 4
-      bg: "#FFFFFF" # dark blue: "#08274D"
-      fg: "#08274D" # light gray: "#E6E9ED"
+      bg: "#FFFFFF"
+      fg: "#08274D"
       navbar-bg: "#08274D"
       navbar-fg: "FFFFFF"
-    # https://rstudio.github.io/bslib/articles/bslib.html#real-time
-    # theme:
-    #   bslib: true
     css: libs/styles.css
     mathjax: null    
     include:
-      after_body: "libs/footer.html"
+      in_header: "header.html"
+      after_body: "footer.html"
 output_dir: "."
