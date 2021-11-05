@@ -78,7 +78,6 @@ d %>%
 
 <!-- dynamic state selection -->
 <div id="state-selection">
-<div style="height:20px;"></div>
 <div class="state-content" id="select-none"></div>
 
 ```{r, results='asis'}
@@ -88,14 +87,20 @@ d2 <- d %>%
     item = ifelse(
       is.na(section_link),
       glue("{state}"),
-      glue('<a href="{section_link}" target = "_blank">{section_name}</a><br>'))) %>% 
+      #glue('<a class="state-link" href="{section_link}" target = "_blank">{section_name}</a><br>'))) %>% 
+      glue('<tr><td style="padding: 5px;"><a href="{section_link}" target = "_blank">{section_name}</a></td></tr>'))) %>% 
   group_by(state, state_code) %>% 
   summarize(
     items_html = paste(item, collapse = "\n")) %>% 
   mutate(
     state_html = glue(
       '<div class="state-content" id="{state_code}">
-       {items_html}
+      <table class="state-tbl">
+        <tr>
+        <th>References</th>
+        </tr>
+      {items_html}
+       </table>
        </div>'))
 
 d2$state_html %>% 

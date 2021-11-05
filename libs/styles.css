@@ -94,7 +94,6 @@ hr {
 
 .carousel-control-prev, .carousel-control-next {
 	width: 7%;
-	/*color: white;*/
 	text-shadow: 0 1px 6px #45D0F6;
 	font-size: 200%;
 }
@@ -104,7 +103,7 @@ hr {
 }
 
 .card-container {
-  height: 50px;
+  height: auto;
   width: 460px;
   position: absolute;
   top: 70px;
@@ -173,19 +172,16 @@ hr {
   max-width: 233px;
 }
 
-
-#how-choose {
-  right: 9%;
-}
-
-#how-view {
-  left: 2%;
-}
-
-#how-share {
-  left: 14%;
-}
-
+/* Dynamic text resizing for "How it works" graphic */
+@media only screen and (min-width: 1800px) {#how-choose {right: 9.2%;} #how-view {left: 2%;} #how-share {left: 14%;}}
+@media only screen and (max-width: 1800px) {#how-choose {right: 10%;} #how-view {left: 2.5%;} #how-share {left: 15%;}}
+@media only screen and (max-width: 1650px) {#how-choose {right: 10.5%;} #how-view {left: 3%;} #how-share {left: 16%;}}
+@media only screen and (max-width: 1550px) {#how-choose {right: 10%;} #how-view {left: 2.5%;} #how-share {left: 16%;}}
+@media only screen and (max-width: 1550px) {#how-choose {right: 10%;} #how-view {left: 2.5%;} #how-share {left: 16%;}}
+@media only screen and (max-width: 1475px) {#how-choose {right: 9.5%;} #how-view {left: 2.5%;} #how-share {left: 15%;}}
+@media only screen and (max-width: 1425px) {#how-choose {right: 9%;} #how-view {left: 2.5%;} #how-share {left: 14%;}}
+@media only screen and (max-width: 1350px) {#how-choose {right: 8.5%;} #how-view {left: 2.5%;} #how-share {left: 14%;}}
+@media only screen and (max-width: 1000px) {#how-choose {right: 8.5%;} #how-view {left: 2.5%;} #how-share {left: 13%;}}
 
 /* Who uses it */
 .tkit-section {
@@ -213,31 +209,11 @@ hr {
   vertical-align: middle;
 }
 
-@media only screen and (min-width: 1650px) {
-  .tkit-box {
-    min-height: 300px;
-  }
-}
-@media only screen and (max-width: 1649px) {
-  .tkit-box {
-    min-height: 320px;
-  }
-}
-@media only screen and (max-width: 1510px) {
-  .tkit-box {
-    min-height: 370px;
-  }
-}
-@media only screen and (max-width: 1450px) {
-  .tkit-box {
-    min-height: 400px;
-  }
-}
-@media only screen and (max-width: 1350px) {
-  .tkit-box {
-    min-height: 440px;
-  }
-}
+@media only screen and (min-width: 1650px) {.tkit-box {min-height: 300px;}}
+@media only screen and (max-width: 1649px) {.tkit-box {min-height: 320px;}}
+@media only screen and (max-width: 1510px) {.tkit-box {min-height: 370px;}}
+@media only screen and (max-width: 1450px) {.tkit-box {min-height: 400px;}}
+@media only screen and (max-width: 1350px) {.tkit-box {min-height: 440px;}}
 @media only screen and (max-width: 1200px) {
   .tkit-box {
     min-height: auto;
@@ -265,6 +241,11 @@ hr {
   margin-right: auto;
   display: block;
   width: 120px;
+}
+
+.tkit-img-box {
+  margin:auto;
+  top: -20px;
 }
 
 #tkit-reg-img {
@@ -335,12 +316,11 @@ hr {
   padding-top: 10px;
 }
 
-#reg-tree svg {
-  min-height: 1200px;
-}
-
 .regs-svg svg {
-  min-width: 860px;
+  /*min-height: 980px;
+  min-width: 860px;*/
+  width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -355,6 +335,40 @@ hr {
 
 .state-content {
     display: none;
+}
+
+/* ------------------------------*/
+/* (regs) dropdown table         */
+/* ------------------------------*/
+.state-tbl {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.state-tbl th {
+  background-color: #CFE2F3;
+  color: #213D5F;
+  font-size: 1.3em;
+}
+
+.state-tbl td:nth-child(1) {
+  font-weight: bold;
+}
+
+.state-tbl th td {
+  padding: 12px 15px;
+}
+
+.state-tbl tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.state-tbl tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+
+.state-tbl tbody tr:last-of-type {
+  border-bottom: 2px solid #CFE2F3;
 }
 
 .diagram-container {
@@ -462,8 +476,8 @@ table {
 
 /* Header */
 thead tr {
-  background-color: #009879;
-  color: #ffffff;
+  background-color: #CFE2F3;
+  color: #213D5F;
   text-align: left;
 }
 
@@ -483,19 +497,19 @@ tbody tr {
 }
 
 /* Every secondn row */
-tbody tr:nth-of-type(even) {
+tbody tr:nth-of-type(odd) {
   background-color: #ffffff; /*#f3f3f3;*/
 }
 
 /* Last row */
 tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #CFE2F3;
 }
 
 /* Active row */
 tbody tr.active-row {
   font-weight: bold;
-  color: #009879;
+  color: #CFE2F3;
 }
 
 
