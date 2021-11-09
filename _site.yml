@@ -3,16 +3,17 @@ navbar:
   title: <a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a>
   type: default
   left:
-    - text: "Home"
-      href: index.html
-      icon: fa-home
-    - text: "Regulations"
+    - text: "Reporting Tool" 
+      #icon: fa-institution
+      icon: fa-file-medical-alt
+      href: https://shiny.marineenergy.app/report-v2
+    - text: "Regulations" 
       icon: fa-institution
       href: regs.html
     - text: "More"
       menu:
         - text: "Interactions"
-          icon: fa-gears
+          #icon: fa-gears
           href: env.html
         - text: "About"
           href: about.html
