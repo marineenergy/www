@@ -13,99 +13,20 @@
 
 <title>Regulations</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<header class="container-fluid no-gutters no-padding">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <img src="images/icon-menu.svg" />
-        </span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="images/logo-horizontal.svg" class="default" />
-        <img src="images/logo-horizontal-white.svg" class="white" />
-      </a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/projects.html">Projects</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Regulations
-            </a>
-            <ul class="dropdown-menu sub-menu" role="menu">
-              <li>
-                <a href="/regs.html">Regulations</a>
-              </li>
-              <li>
-                <a href="/regs-usace.html">USACE Process</a>
-              </li>
-              <li>
-                <a href="/regs-ferc.html">FERC Process</a>
-              </li>
-              <li>
-                <a href="/regs-state.html">State Process</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/env.html">Interactions</a>
-          </li>
-          <li>
-            <a href="/ferc.html">Documents</a>
-          </li>
-          <li>
-            <a href="/mgt.html">Management</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Configure">Configure</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Literature">Literature</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Spatial">Spatial</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Reports">Reports</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/about.html">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/help.html">
-              Help
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div><!--/.nav-collapse -->
-  </nav>
-</header>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="shortcut icon" href="./images/icons/favicon.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -114,14 +35,24 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
 
 
-
-<link rel="stylesheet" href="libs/styles.css" type="text/css" />
 
 
 
@@ -146,9 +77,82 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
 
 <!-- tabsets -->
 
@@ -221,6 +225,58 @@ summary {
 
 
 
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://shiny.marineenergy.app/report-v2">
+    <span class="fa fa-file-medical-alt"></span>
+     
+    Reporting Tool
+  </a>
+</li>
+<li>
+  <a href="regs.html">
+    <span class="fa fa-institution"></span>
+     
+    Regulations
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="env.html">Interactions</a>
+    </li>
+    <li>
+      <a href="about.html">About</a>
+    </li>
+    <li>
+      <a href="help.html">FAQ</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
 <div id="header">
 
 
@@ -230,7 +286,7 @@ summary {
 
 
 <h1>
-<a href="./regs.html" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> Regulations
+<a href="./regs.html#reg-tree" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> Regulations
 </h1>
 <br>
 <center>
@@ -240,10 +296,6 @@ summary {
 </svg>
 </center>
 <p>Source: Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).</p>
-
-
-
-</div>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
@@ -259,6 +311,10 @@ summary {
     </div>
   </div>
 </footer>
+
+
+
+</div>
 
 <script>
 

@@ -1,0 +1,29 @@
+---
+title: "tag viewer"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# using the data from the jsoneditor simple example
+#  in R list form
+# https://github.com/timelyportfolio/listviewer#jsoneditor
+library(listviewer)
+
+jsonedit(
+  list(
+    array = c(1,2,3)
+    ,boolean = TRUE
+    ,null = NULL
+    ,number = 123
+    ,object = list( a="b", c="d" )
+    ,string = "Hello World"
+  )
+)
+
+```
+

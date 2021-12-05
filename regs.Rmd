@@ -1,25 +1,44 @@
 ---
 pagetitle: "Regulations"
-output: html_document
+# output: html_document
 ---
+<style>
+body {
+  padding-top: 15px !important;
+}
+</style>
 
 ```{r setup, include=F}
 knitr::opts_chunk$set(echo = F)
 ```
 
-# Regulatory Diagram
+<div class="regs-body">
+<div class="container">
+
+<div id="regs-welcome" class="row">
+<div class="col-4" style="border-right: 1px solid black;">
+<div id="regs" class="regs-content">
+<h2>Regulatory Diagram</h2>
+</div>
+</div>
+<div class="col-8">
+<div id="regs-info" class="regs-content">
+<p>
 The diagram below provides a step-wise guide to the regulatory process for different kinds of wave energy projects. This provides users with little to no experience in permitting and licensing Marine Energy projects access to relevant state and federal regulations and links to additional resources based on project factors such as: grid connection, project location and jurisdiction, and lead agency.
-<br>
-<br>
-Follow the prompts to navigate the diagram. At the end of the decision tree, select the green rectangle to access additional information. 
-<br>
-<br>
-<center>
+</p>
+<p>
+Follow the prompts to navigate the diagram. At the end of the decision tree, select the green rectangle to access additional information.
+</p>
+</div>
+</div>
+</div>
+
+<!--<div id="reg-tree" class="row regs-content">-->
+<div id="reg-tree" class="row regs-row regs-svg">
 ```{r, results="asis", warning=F}
-cat(readLines("diagrams/overview_v3.svg"))
+cat(readLines("diagrams/overview_v2.svg"))
 ```
-</center>
+</div>
 
-<br/>
-<br/>
-
+</div>
+</div>
