@@ -7,17 +7,32 @@ output: html_document
 knitr::opts_chunk$set(echo = F)
 ```
 
+<div class="regs-body">
+
+<div class="container">
+
+<div class="row regs-row">
+
 <h1>
-  <a href="./regs.html" style="text-decoration:none;">
+  <span>
+    <a href="./regs.html#reg-tree" style="text-decoration:none;">
     <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i>
-  </a>&nbsp;Regulations
+    </a>
+  </span>
+  &nbsp;Regulations
 </h1>
 
-<br>
-<center>
+</div>
+
+<div class="row regs-row regs-svg">
 ```{r, results="asis"}
 cat(readLines("diagrams/commercial-noncompetitive-ocs.svg"))
 ```
-</center>
+</div>
 
-Source: Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).
+<div class="row regs-row svg-src">
+  <p><cite>Source:</cite> Pacific Energy Ventures; Pacific Northwest National Laboratory (2020). Handbook of Marine Hydrokinetic Regulatory Processes (Report No. DOE-EE-1793). Report by Pacific Energy Ventures LLC. Report for US Department of Energy (DOE).</p>
+</div>
+
+</div>
+</div>

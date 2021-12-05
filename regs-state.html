@@ -13,99 +13,20 @@
 
 <title>Regulations</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script>
+<script src="site_libs/bs3compat-0.3.1/transition.js"></script>
+<script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
+<script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<header class="container-fluid no-gutters no-padding">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
-          <img src="images/icon-menu.svg" />
-        </span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="images/logo-horizontal.svg" class="default" />
-        <img src="images/logo-horizontal-white.svg" class="white" />
-      </a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="nav navbar-nav">
-          <li>
-            <a href="/projects.html">Projects</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              Regulations
-            </a>
-            <ul class="dropdown-menu sub-menu" role="menu">
-              <li>
-                <a href="/regs.html">Regulations</a>
-              </li>
-              <li>
-                <a href="/regs-usace.html">USACE Process</a>
-              </li>
-              <li>
-                <a href="/regs-ferc.html">FERC Process</a>
-              </li>
-              <li>
-                <a href="/regs-state.html">State Process</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/env.html">Interactions</a>
-          </li>
-          <li>
-            <a href="/ferc.html">Documents</a>
-          </li>
-          <li>
-            <a href="/mgt.html">Management</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Configure">Configure</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Literature">Literature</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Spatial">Spatial</a>
-          </li>
-          <li>
-            <a href="http://shiny.marineenergy.app/report/?nav=Reports">Reports</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="/about.html">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/help.html">
-              Help
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div><!--/.nav-collapse -->
-  </nav>
-</header>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="shortcut icon" href="./images/icons/favicon.ico" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -114,15 +35,24 @@
   div.column{display: inline-block; vertical-align: top; width: 50%;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   ul.task-list{list-style: none;}
-    </style>
+      .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
 
 
 
 
 
-
-<link rel="stylesheet" href="libs/styles.css" type="text/css" />
-<link rel="stylesheet" href="libs/regs-state.css" type="text/css" />
 
 
 
@@ -147,9 +77,82 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
 
 <!-- tabsets -->
 
@@ -222,6 +225,58 @@ summary {
 
 
 
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><a class="navbar-brand" href="index.html"><img src="images/logo-horizontal-white.svg" width="190px" height="24px" class="d-inline-block align-text-top"></a></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="https://shiny.marineenergy.app/report-v2">
+    <span class="fa fa-file-medical-alt"></span>
+     
+    Reporting Tool
+  </a>
+</li>
+<li>
+  <a href="regs.html">
+    <span class="fa fa-institution"></span>
+     
+    Regulations
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    More
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="env.html">Interactions</a>
+    </li>
+    <li>
+      <a href="about.html">About</a>
+    </li>
+    <li>
+      <a href="help.html">FAQ</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
 <div id="header">
 
 
@@ -230,73 +285,474 @@ summary {
 </div>
 
 
+<div class="regs-body regs-state">
+<div class="container">
+
+<!-- Back arrow -->
+<div class="row regs-row">
 <h1>
-<a href="./regs.html" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> Regulations
+<span> <a href="./regs.html#reg-tree" style="text-decoration:none;"> <i class="fa fa-arrow-circle-left" style="color:#0b56a6"></i> </a> </span>  Regulations
 </h1>
-<p><br></p>
-<div id="state-led-processes" class="section level2">
-<h2>State-led Processes</h2>
-<p>While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects. Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process. <br> <br> The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available. <br> <br></p>
-<div class="diagram-container">
+</div>
+<!-- Page title -->
+<div class="row regs-row">
+<h2>
+State-led Processes
+</h2>
+</div>
+<!-- Page description -->
+<div class="row regs-row">
+<p>
+While there are some similarities in state-specific processes that derive from federal mandates and regulations, each state differs with regard to its regulatory process for MHK projects. Typically, state regulatory activities take place in the context of the federal processes, e.g., U.S. Army Corps of Engineers process.
+</p>
+</div>
+<!-- Page description continued -->
+<div class="row regs-row">
+<p>
+The <a href="https://openei.org/wiki/RAPID/Hydropower" target="_blank">Hydropower Toolkit</a> within the Regulatory and Permitting Information Desktop (RAPID) Toolkit of OpenEI provides regulatory information for riverine projects in specific states where it is available.
+</p>
+</div>
+<!-- Spacer -->
+<hr style="opacity: 0; height: 24px;">
 <!-- state selection -->
+<div class="row regs-row">
+<div class="diagram-container">
 <div id="state-decision">
 <p><select class="custom-select" id="stateSelect"> <option value="select-none" selected>Select State:</option></p>
 <p><option value="alaska">Alaska</option> <option value="california">California</option> <option value="florida">Florida</option> <option value="hawaii">Hawaii</option> <option value="maine">Maine</option> <option value="massachusetts">Massachusetts</option> <option value="new-york">New York</option> <option value="oregon">Oregon</option> <option value="rhode-island">Rhode Island</option> <option value="washington">Washington</option></p>
-</select>
+<p></select></p>
 </div>
 <!-- dynamic state selection -->
 <div id="state-selection">
-<div style="height:20px;">
-
-</div>
 <div id="select-none" class="state-content">
 
 </div>
 <div id="alaska" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Land_Use_Permit" target = "_blank">Land Use Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Right_of_Way_Review" target = "_blank">Right of Way Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Tidelands_Lease_Review" target = "_blank">Tidelands Lease Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Special_Area_Review" target = "_blank">Special Area Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Fish_Habitat_Review" target = "_blank">Fish Habitat Review</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Land_Use_Permit" target = "_blank">Land Use Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Right_of_Way_Review" target = "_blank">Right of Way Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Tidelands_Lease_Review" target = "_blank">Tidelands Lease Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Special_Area_Review" target = "_blank">Special Area Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Alaska#Fish_Habitat_Review" target = "_blank">Fish Habitat Review</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="california" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/California#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#Coastal_Development_Permit" target = "_blank">Coastal Development Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Environmental_Quality_Act_Determination" target = "_blank">California Environmental Quality Act Determination</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#State_Lands_Lease" target = "_blank">State Lands Lease</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Endangered_Species_Consultation" target = "_blank">California Endangered Species Consultation</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#Coastal_Development_Permit" target = "_blank">Coastal Development Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Environmental_Quality_Act_Determination" target = "_blank">California Environmental Quality Act Determination</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#State_Lands_Lease" target = "_blank">State Lands Lease</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/California#California_Endangered_Species_Consultation" target = "_blank">California Endangered Species Consultation</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="florida" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Environmental_Resource_Permit" target = "_blank">Environmental Resource Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Endangered_Species_Review" target = "_blank">Endangered Species Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Submerged_Lands_Easement.2FLease" target = "_blank">Submerged Lands Easement/Lease</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Florida#State_Fisheries_Recommendations" target = "_blank">State Fisheries Recommendations</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Environmental_Resource_Permit" target = "_blank">Environmental Resource Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Endangered_Species_Review" target = "_blank">Endangered Species Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#Submerged_Lands_Easement.2FLease" target = "_blank">Submerged Lands Easement/Lease</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Florida#State_Fisheries_Recommendations" target = "_blank">State Fisheries Recommendations</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="hawaii" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#CZMA_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Special_Management_Area_Permit" target = "_blank">Special Management Area Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Shoreline_Certification" target = "_blank">Shoreline Certification</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Shoreline_Setback_Area_Permit" target = "_blank">Shoreline Setback Area Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Hawaii_Environmental_Review_Process" target = "_blank">Hawaii Environmental Review Process</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Land_Use_District_Boundary_Amendment" target = "_blank">Land Use District Boundary Amendment</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Conservation_District_Use_Permit" target = "_blank">Conservation District Use Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#State_Ocean_Lease_Right-of-Entry" target = "_blank">State Ocean Lease Right-of-Entry</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#CZMA_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Special_Management_Area_Permit" target = "_blank">Special Management Area Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Shoreline_Certification" target = "_blank">Shoreline Certification</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Shoreline_Setback_Area_Permit" target = "_blank">Shoreline Setback Area Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Hawaii_Environmental_Review_Process" target = "_blank">Hawaii Environmental Review Process</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Land_Use_District_Boundary_Amendment" target = "_blank">Land Use District Boundary Amendment</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#Conservation_District_Use_Permit" target = "_blank">Conservation District Use Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Hawaii#State_Ocean_Lease_Right-of-Entry" target = "_blank">State Ocean Lease Right-of-Entry</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="maine" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Maine_Waterway_Development_and_Conservation_Act_Permit" target = "_blank">Maine Waterway Development and Conservation Act Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#General_Permit_for_Tidal_Energy_Demonstration_Project" target = "_blank">General Permit for Tidal Energy Demonstration Project</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Maine_Endangered_Species_Act_Review" target = "_blank">Maine Endangered Species Act Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Submerged_Lands_Lease" target = "_blank">Submerged Lands Lease</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Historic_Review" target = "_blank">Historic Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Mandatory_Shoreland_Zoning_Act" target = "_blank">Mandatory Shoreland Zoning Act</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Maine_Waterway_Development_and_Conservation_Act_Permit" target = "_blank">Maine Waterway Development and Conservation Act Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#General_Permit_for_Tidal_Energy_Demonstration_Project" target = "_blank">General Permit for Tidal Energy Demonstration Project</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Maine_Endangered_Species_Act_Review" target = "_blank">Maine Endangered Species Act Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Submerged_Lands_Lease" target = "_blank">Submerged Lands Lease</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Historic_Review" target = "_blank">Historic Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Maine#Mandatory_Shoreland_Zoning_Act" target = "_blank">Mandatory Shoreland Zoning Act</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="massachusetts" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Energy_Facility_Siting_Board_Approval" target = "_blank">Energy Facility Siting Board Approval</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Mass_Environmental_Policy_Act_Certificate" target = "_blank">Mass Environmental Policy Act Certificate</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Mass_Endangered_Species_Act_Review" target = "_blank">Mass Endangered Species Act Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Wetlands_Protection_Act_Order_of_Conditions" target = "_blank">Wetlands Protection Act Order of Conditions</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#State_Fisheries_Recommendations" target = "_blank">State Fisheries Recommendations</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Chapter_91_Waterways_License_or_Permit" target = "_blank">Chapter 91 Waterways License or Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Underwater_Archeological_Survey_Permit" target = "_blank">Underwater Archeological Survey Permit</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Historic_Properties_Review" target = "_blank">Historic Properties Review</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Energy_Facility_Siting_Board_Approval" target = "_blank">Energy Facility Siting Board Approval</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Mass_Environmental_Policy_Act_Certificate" target = "_blank">Mass Environmental Policy Act Certificate</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Mass_Endangered_Species_Act_Review" target = "_blank">Mass Endangered Species Act Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Wetlands_Protection_Act_Order_of_Conditions" target = "_blank">Wetlands Protection Act Order of Conditions</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#State_Fisheries_Recommendations" target = "_blank">State Fisheries Recommendations</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Chapter_91_Waterways_License_or_Permit" target = "_blank">Chapter 91 Waterways License or Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Underwater_Archeological_Survey_Permit" target = "_blank">Underwater Archeological Survey Permit</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Massachusetts#Historic_Properties_Review" target = "_blank">Historic Properties Review</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="new-york" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/New_York#State_Environmental_Quality_Review_Act" target = "_blank">State Environmental Quality Review Act</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/New_York#State_Endangered_Species_Review" target = "_blank">State Endangered Species Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Docking_and_Mooring_Facilities_Permit" target = "_blank">Docking and Mooring Facilities Permit</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/New_York#State_Environmental_Quality_Review_Act" target = "_blank">State Environmental Quality Review Act</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/New_York#State_Endangered_Species_Review" target = "_blank">State Endangered Species Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/New_York#Docking_and_Mooring_Facilities_Permit" target = "_blank">Docking and Mooring Facilities Permit</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="oregon" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Removal-Fill_Review" target = "_blank">Removal-Fill Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Special_Use_Review" target = "_blank">Special Use Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Ocean_Shores_Review" target = "_blank">Ocean Shores Review</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Removal-Fill_Review" target = "_blank">Removal-Fill Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Special_Use_Review" target = "_blank">Special Use Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Oregon#Ocean_Shores_Review" target = "_blank">Ocean Shores Review</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="rhode-island" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Category_B_Assent" target = "_blank">Category B Assent</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Energy_Facility_Siting_Board_License" target = "_blank">Energy Facility Siting Board License</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Category_B_Assent" target = "_blank">Category B Assent</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Rhode_Island#Energy_Facility_Siting_Board_License" target = "_blank">Energy Facility Siting Board License</a>
+</td>
+</tr>
+</table>
 </div>
 <div id="washington" class="state-content">
-<p><a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Water_Quality_Review" target = "_blank">Water Quality Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Washington#State_Environmental_Policy_Act_Review" target = "_blank">State Environmental Policy Act Review</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Aquatic_Use_Authorization" target = "_blank">Aquatic Use Authorization</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Hydraulic_Project_Approval" target = "_blank">Hydraulic Project Approval</a><br> <a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Shoreline_Permit" target = "_blank">Shoreline Permit</a><br></p>
+<table class="state-tbl">
+<tr>
+<th>
+References
+</th>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Coastal_Zone_Management_Act_Consistency_Review" target = "_blank">Coastal Zone Management Act (CZMA) Consistency Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Water_Quality_Review" target = "_blank">Water Quality Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#State_Environmental_Policy_Act_Review" target = "_blank">State Environmental Policy Act Review</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Aquatic_Use_Authorization" target = "_blank">Aquatic Use Authorization</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Hydraulic_Project_Approval" target = "_blank">Hydraulic Project Approval</a>
+</td>
+</tr>
+<tr>
+<td style="padding: 5px;">
+<a href="https://openei.org/wiki/MHK-env/Regulations/Washington#Shoreline_Permit" target = "_blank">Shoreline Permit</a>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-<!-- get user option select -->
+</div>
+</div>
+</div>
+<!-- Get user state selection -->
 <script>
 select = document.getElementById("stateSelect");
 select.onchange = function() {
@@ -315,11 +771,6 @@ select.onchange = function() {
   z.style.display = "block";
 }
 </script>
-</div>
-
-
-
-</div>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
@@ -335,6 +786,10 @@ select.onchange = function() {
     </div>
   </div>
 </footer>
+
+
+
+</div>
 
 <script>
 
