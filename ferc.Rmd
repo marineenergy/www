@@ -14,7 +14,7 @@ if (!require(librarian)){
 }
 shelf(crosstalk, dplyr, DT, glue, readr)
 
-ferc_docs_csv <- "/share/github/mhk-env_shiny-apps/data/ferc_docs.csv"
+ferc_docs_csv <- "/share/github/apps/data/ferc_docs.csv"
 
 d <- read_csv(ferc_docs_csv) %>% 
   mutate(

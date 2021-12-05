@@ -16,7 +16,7 @@ Follow the prompts to navigate the diagram. At the end of the decision tree, sel
 <br>
 <center>
 ```{r, results="asis", warning=F}
-cat(readLines("diagrams/overview_v2.svg"))
+cat(readLines("diagrams/overview_v3.svg"))
 ```
 </center>
 

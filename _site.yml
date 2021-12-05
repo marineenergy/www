@@ -38,13 +38,12 @@ name: "mhk-env"
 #       href: help.html
 output:
   html_document:
-    theme: yeti # flatly # journal # darkly # cosmo # yeti # lumen # darkly # https://bootswatch.com/
-    # theme:
-    #   bootswatch: yeti
-    #   version: 4
-    #css: libs/styles-bs4.css
-    css: libs/styles.css
-    template: libs/default_mvfooter.html
+    theme:
+      version: 4
+      bootswatch: yeti
+    css: libs/styles-bs4.css
+    #css: libs/styles.css
+    # template: libs/default_mvfooter.html
     mathjax: null    
     include:
 #      before_body: libs/banner.html
