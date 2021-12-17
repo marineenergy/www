@@ -293,26 +293,89 @@ $(document).ready(function () {
 <pre class="r"><code># using the data from the jsoneditor simple example
 #  in R list form
 # https://github.com/timelyportfolio/listviewer#jsoneditor
-library(listviewer)
+library(tidyverse)
 
-jsonedit(
-  list(
-    array = c(1,2,3)
-    ,boolean = TRUE
-    ,null = NULL
-    ,number = 123
-    ,object = list( a=&quot;b&quot;, c=&quot;d&quot; )
-    ,string = &quot;Hello World&quot;
-  )
-)</code></pre>
-<div id="htmlwidget-3f99c1cb60ee47988b24" style="width:672px;height:480px;" class="jsonedit html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3f99c1cb60ee47988b24">{"x":{"data":{"array":[1,2,3],"boolean":true,"null":[],"number":123,"object":{"a":"b","c":"d"},"string":"Hello World"},"options":{"mode":"tree","modes":["code","form","text","tree","view"]}},"evals":[],"jsHooks":[]}</script>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="tag_viewer_files/figure-html/pressure-1.png" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
-</div>
+# Read in Tags from Google Sheet----
+# url = https://docs.google.com/spreadsheets/d/1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM/edit#gid=1679546569
+url &lt;- &quot;1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM&quot;
+d &lt;- googlesheets4::read_sheet(url, sheet = &quot;tags&quot;)
+
+cd2 &lt;- d
+
+# Split tag column into multiple columns by hierarchy (&quot;/&quot;)
+cd2 &lt;- cd2 %&gt;% separate(tag, c(&#39;Primary&#39;, &#39;Secondary&#39;, &#39;Supplemental&#39;), sep = &quot;/&quot;, extra = &quot;merge&quot;)
+
+# Create list of primary tag categories
+tag_primary &lt;- cd2 %&gt;%
+  select(Primary) %&gt;%
+  distinct() %&gt;%
+  pull()
+
+# Create list of secondary tag categories
+tag_secondary &lt;- cd2 %&gt;%
+  filter(!is.na(Supplemental)) %&gt;%
+  select(Secondary) %&gt;%
+  distinct() %&gt;%
+  pull()
+
+tag_group_all &lt;- tag_group_a &lt;- tag_group_b &lt;- tag_group_temp &lt;- c()
+n_count &lt;- c()
+
+for(i in tag_primary){
+  
+  
+  cd_temp2 &lt;- cd2 %&gt;% 
+    filter(Primary == i)
+  
+  tags_supplemental &lt;- cd_temp2 %&gt;%
+    select(Secondary, Supplemental) %&gt;%
+    filter(!is.na(Supplemental)) %&gt;%
+    select(Secondary) %&gt;%
+    distinct() %&gt;%
+    pull()
+  
+  cd_temp2_a &lt;- cd_temp2 %&gt;%
+    filter(!Secondary %in% tags_supplemental)
+  
+  tag_group_a &lt;- cd_temp2_a %&gt;% 
+    select(Secondary) %&gt;%
+    as.list()
+  
+  names(tag_group_a) &lt;- i
+  
+  n_count &lt;- length(tag_group_a[[i]])
+  
+  if(length(tags_supplemental)&gt;0){
+    
+    tag_group_temp &lt;- tag_group_a
+    
+  cd_temp2_b &lt;- cd_temp2 %&gt;%
+    filter(Secondary %in% tags_supplemental)
+  
+  n2_count &lt;- 1
+  for(j in tags_supplemental){
+    
+    tag_group_b &lt;- cd_temp2_b %&gt;% 
+      filter(Secondary == j)%&gt;%
+      select(Supplemental) %&gt;%
+      as.list()
+    
+    names(tag_group_b) &lt;- j
+    
+    tag_group_temp[[i]][[n_count+n2_count]] &lt;- tag_group_b
+    
+    n2_count &lt;- n2_count + 1
+    
+  }
+  tag_group_a &lt;- tag_group_temp
+  n_count &lt;- n_count+n2_count
+  }
+  
+    tag_group_all &lt;- c(tag_group_all, tag_group_a)
+}</code></pre>
+<pre class="r"><code>listviewer::jsonedit(tag_group_all)</code></pre>
+<div id="htmlwidget-473c1d5ec60d0b709e48" style="width:1152px;height:768px;" class="jsonedit html-widget"></div>
+<script type="application/json" data-for="htmlwidget-473c1d5ec60d0b709e48">{"x":{"data":{"Consequence":["ALL Consequences","Attraction","Avoidance","Behavioral Change","Collision","Community Change","Displacement","Entanglement or Entrapment","Injury","Mortality"],"Management":["ALL Management","Compliance","DesignFeature","Mitigation","Monitoring","NoneIdentified"],"Phase":["ALL Phases","1. Site Characterization and Assessment","2. Construction","3. Operations, Maintenance and Compliance","4. Decommissioning"],"Receptor":["ALL Receptors","Bats","Benthos","Ecosystem Processes","Invertebrates","Reptiles","Terrestrial Mammals",{"Birds":[null,"Ground-Nesting Birds","Passerines","Raptors","Seabirds","Shorebirds","Waterfowl"]},{"Fish":[null,"Demersal Fish","Pelagic Fish","Sharks"]},{"Habitat":["Benthos","Intertidal"]},{"Human Dimensions":[null,"Climate Change","Environmental Impact Assessment","Fisheries","Legal & Policy","Life Cycle Assessment","Marine Spatial Planning","Navigation","Recreation & Tourism","Social & Economic Data","Stakeholder Engagement","Visual Impacts"]},{"Marine Mammals":[null,"Cetaceans","Pinnipeds"]},{"Physical Environment":[null,"Sediment Transport","Water Quality"]}],"Stressor":["ALL Stressors","EMF","Habitat Change","InvasiveSpecies","Lighting",{"Behavioral Interaction":[null,"Attraction","Avoidance","Displacement"]},{"Noise":[null,"Airborne","Underwater"]},{"Physical Interaction":[null,"Changes in Flow","Chemicals","Dynamic Effects"]}],"Technology":["ALL Technologies","Current","OTEC","Riverine","Salinity Gradient","Tidal","Wave",{"Offshore Wind":[null,"Fixed","Floating"]}]},"options":{"mode":"tree","modes":["code","form","text","tree","view"]}},"evals":[],"jsHooks":[]}</script>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
