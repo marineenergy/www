@@ -134,3 +134,10 @@ select.onchange = function() {
   z.style.display = "block";
 }
 </script>
+
+<script>
+// replace __js-replace_by_bug-url__.html in menu with 
+
+$("a:contains('Report a Bug')").attr("href", "`r paste0('https://docs.google.com/forms/d/e/1FAIpQLSfOKbx4Y_hNUjSj8gfuTuzvTFTIaBDJCojDoNThvkZImc6ZsA/viewform?entry.738205286=https://www.marineenergy.app/', fs::path_ext_set(knitr::current_input(), '.html'))`");
+
+</script>

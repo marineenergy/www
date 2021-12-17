@@ -267,6 +267,9 @@ $(document).ready(function () {
     <li>
       <a href="help.html">FAQ</a>
     </li>
+    <li>
+      <a href="__js-replace_by_bug-url__.html">Report a Bug</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -770,6 +773,12 @@ select.onchange = function() {
   var z = document.getElementById(y);
   z.style.display = "block";
 }
+</script>
+<script>
+// replace __js-replace_by_bug-url__.html in menu with 
+
+$("a:contains('Report a Bug')").attr("href", "https://docs.google.com/forms/d/e/1FAIpQLSfOKbx4Y_hNUjSj8gfuTuzvTFTIaBDJCojDoNThvkZImc6ZsA/viewform?entry.738205286=https://www.marineenergy.app/regs-state.html");
+
 </script>
 
 <footer class="container-fluid no-gutters no-padding">
