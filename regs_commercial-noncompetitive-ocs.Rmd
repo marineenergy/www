@@ -25,6 +25,7 @@ knitr::opts_chunk$set(echo = F)
 </div>
 
 <div class="row regs-row regs-svg">
+<p style="margin:auto; padding-top:7px;">Click on topics of interest in the diagram below for additional information.</p>
 ```{r, results="asis"}
 cat(readLines("diagrams/commercial-noncompetitive-ocs.svg"))
 ```
