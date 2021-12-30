@@ -318,8 +318,8 @@ jsonedit(
     ,string = &quot;Hello World&quot;
   )
 )</code></pre>
-<div id="htmlwidget-582fde625acd8c848405" style="width:672px;height:480px;" class="jsonedit html-widget"></div>
-<script type="application/json" data-for="htmlwidget-582fde625acd8c848405">{"x":{"data":{"array":[1,2,3],"boolean":true,"null":[],"number":123,"object":{"a":"b","c":"d"},"string":"Hello World"},"options":{"mode":"tree","modes":["code","form","text","tree","view"]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b66930d55295e59c7220" style="width:672px;height:480px;" class="jsonedit html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b66930d55295e59c7220">{"x":{"data":{"array":[1,2,3],"boolean":true,"null":[],"number":123,"object":{"a":"b","c":"d"},"string":"Hello World"},"options":{"mode":"tree","modes":["code","form","text","tree","view"]}},"evals":[],"jsHooks":[]}</script>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
@@ -338,11 +338,11 @@ jsonedit(
 
 <script>
 // replace __js-replace_by_bug-url__.html in menu with 
-
 url_form = 'https://docs.google.com/forms/d/e/1FAIpQLSfOKbx4Y_hNUjSj8gfuTuzvTFTIaBDJCojDoNThvkZImc6ZsA/viewform';
 url_page = window.location.href;
-$("a:contains('Report a Bug')").attr("href", url_form + "?entry.738205286=" + url_page);
-
+$("a:contains('Report a Bug')").attr({
+  href:   url_form + "?entry.738205286=" + url_page,
+  target: '_blank'});
 </script>
 
 
