@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r, message = FALSE, warning = FALSE}
+```{r, message = FALSE, warning = FALSE, eval=F}
 # using the data from the jsoneditor simple example
 #  in R list form
 # https://github.com/timelyportfolio/listviewer#jsoneditor
@@ -96,6 +96,6 @@ for(i in tag_primary){
 
 ```
 
-```{r, fig.align = "center", fig.width=12, fig.height = 8}
+```{r, fig.align = "center", fig.width=12, fig.height = 8, eval=F}
 listviewer::jsonedit(tag_group_all)
 ```
