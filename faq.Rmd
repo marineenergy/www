@@ -45,17 +45,23 @@ Environmental regulators and developers of marine hydrokinetic energy technologi
 ### View / download the report
 -->
 
-## `r shiny::icon("youtube")` Navigate **Regulations**?
+## `r shiny::icon("youtube")` Navigate **Regulations**
 
 ```{r}
 
+vembedr::embed_youtube("tIzAb9Oc378")
+```
+
+## `r shiny::icon("youtube")` Navigate **Federal Energy Regulatory Commission (FERC) Documents**
+
+```{r}
 vembedr::embed_youtube("y3gaXVZeXoQ")
 ```
 
-## `r shiny::icon("youtube")` Navigate **Projects**?
+## `r shiny::icon("youtube")` Generate **Custom Reports**
 
 ```{r}
-vembedr::embed_youtube("y3gaXVZeXoQ")
+vembedr::embed_youtube("sREbz0W18cI")
 ```
 
 ## **Disclaimer**
