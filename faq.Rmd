@@ -1,0 +1,87 @@
+---
+title: "Frequently Asked Questions"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 4
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
+librarian::shelf(shiny, vembedr)
+```
+
+```{=html}
+<!--div class="about-body regs-state">
+
+<div class="container about-txt">
+
+<div class="row justify-content-center">
+<div class="col">
+<h1 style="text-align: center;">Frequently Asked Questions</h1>
+</div>
+</div>
+
+<div class="row spacer"></div>
+
+<div class="row"-->
+```
+## Who funded this toolkit?
+
+This project is funded by the **U.S. Department of Energy** and was selected as a winner under Federal Opportunity Announcement DE-FOA-0001837 Marine and Hydrokinetic Technology Advancement and Data Dissemination Topic Area 3: Dissemination of Environmental Data and Analyses to Facilitate the Marine Energy Regulatory Process. <!--br>
+<br-->
+
+## Who is the audience?
+
+Environmental regulators and developers of marine hydrokinetic energy technologies. <!--br>
+<br-->
+
+```{=html}
+<!--
+## How do I use the Reporting Tool?
+
+### Enter criteria in the sidebar
+
+### View / download the report
+-->
+```
+## Video Walkthroughs
+
+### `r shiny::icon("youtube")` Regulations
+
+Navigate the Regulation diagrams and wiki pages.
+
+```{r}
+
+vembedr::embed_youtube("tIzAb9Oc378")
+```
+
+### `r shiny::icon("youtube")` FERC Documents
+
+Navigate project documents from the Federal Energy Regulatory Commission (FERC).
+
+```{r}
+vembedr::embed_youtube("y3gaXVZeXoQ")
+```
+
+### `r shiny::icon("youtube")` Custom Reports
+
+Generate custom reports based on interacting tags, location and content of interest.
+
+```{r}
+vembedr::embed_youtube("sREbz0W18cI")
+```
+
+## Disclaimer
+
+These web services were prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or an agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof. <!--br>
+<br>
+
+</div>
+</div>
+</div-->

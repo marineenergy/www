@@ -18,7 +18,7 @@ navbar:
         - text: "About"
           href: about.html
         - text: "FAQ"
-          href: help.html
+          href: faq.html
         - text: "Report a Bug"
           href: __js-replace_by_bug-url__.html # see regs-state.Rmd for js script to replace
 output:

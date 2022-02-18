@@ -8,22 +8,94 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r}
+```{r, message = FALSE, warning = FALSE, eval=F}
 # using the data from the jsoneditor simple example
 #  in R list form
 # https://github.com/timelyportfolio/listviewer#jsoneditor
-library(listviewer)
+library(tidyverse)
 
-jsonedit(
-  list(
-    array = c(1,2,3)
-    ,boolean = TRUE
-    ,null = NULL
-    ,number = 123
-    ,object = list( a="b", c="d" )
-    ,string = "Hello World"
-  )
-)
+# Read in Tags from Google Sheet----
+# url = https://docs.google.com/spreadsheets/d/1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM/edit#gid=1679546569
+url <- "1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM"
+d <- googlesheets4::read_sheet(url, sheet = "tags")
+
+cd2 <- d
+
+# Split tag column into multiple columns by hierarchy ("/")
+cd2 <- cd2 %>% separate(tag, c('Primary', 'Secondary', 'Supplemental'), sep = "/", extra = "merge")
+
+# Create list of primary tag categories
+tag_primary <- cd2 %>%
+  select(Primary) %>%
+  distinct() %>%
+  pull()
+
+# Create list of secondary tag categories
+tag_secondary <- cd2 %>%
+  filter(!is.na(Supplemental)) %>%
+  select(Secondary) %>%
+  distinct() %>%
+  pull()
+
+tag_group_all <- tag_group_a <- tag_group_b <- tag_group_temp <- c()
+n_count <- c()
+
+for(i in tag_primary){
+  
+  
+  cd_temp2 <- cd2 %>% 
+    filter(Primary == i)
+  
+  tags_supplemental <- cd_temp2 %>%
+    select(Secondary, Supplemental) %>%
+    filter(!is.na(Supplemental)) %>%
+    select(Secondary) %>%
+    distinct() %>%
+    pull()
+  
+  cd_temp2_a <- cd_temp2 %>%
+    filter(!Secondary %in% tags_supplemental)
+  
+  tag_group_a <- cd_temp2_a %>% 
+    select(Secondary) %>%
+    as.list()
+  
+  names(tag_group_a) <- i
+  
+  n_count <- length(tag_group_a[[i]])
+  
+  if(length(tags_supplemental)>0){
+    
+    tag_group_temp <- tag_group_a
+    
+  cd_temp2_b <- cd_temp2 %>%
+    filter(Secondary %in% tags_supplemental)
+  
+  n2_count <- 1
+  for(j in tags_supplemental){
+    
+    tag_group_b <- cd_temp2_b %>% 
+      filter(Secondary == j)%>%
+      select(Supplemental) %>%
+      as.list()
+    
+    names(tag_group_b) <- j
+    
+    tag_group_temp[[i]][[n_count+n2_count]] <- tag_group_b
+    
+    n2_count <- n2_count + 1
+    
+  }
+  tag_group_a <- tag_group_temp
+  n_count <- n_count+n2_count
+  }
+  
+    tag_group_all <- c(tag_group_all, tag_group_a)
+}
+    
 
 ```
 
+```{r, fig.align = "center", fig.width=12, fig.height = 8, eval=F}
+listviewer::jsonedit(tag_group_all)
+```

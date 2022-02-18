@@ -11,7 +11,7 @@
 
 
 
-<title>tag viewer</title>
+<title>Frequently Asked Questions</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -21,22 +21,16 @@
 <script src="site_libs/bs3compat-0.3.1/transition.js"></script>
 <script src="site_libs/bs3compat-0.3.1/tabs.js"></script>
 <script src="site_libs/bs3compat-0.3.1/bs3compat.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.15.3/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.15.3/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet" />
 <link rel="shortcut icon" href="./images/icons/favicon.ico" />
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0PRJW4ZSZY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0PRJW4ZSZY');
-</script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -224,6 +218,75 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
 
 </head>
 
@@ -231,6 +294,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -277,9 +350,6 @@ $(document).ready(function () {
     <li>
       <a href="faq.html">FAQ</a>
     </li>
-    <li>
-      <a href="__js-replace_by_bug-url__.html">Report a Bug</a>
-    </li>
   </ul>
 </li>
       </ul>
@@ -294,95 +364,80 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">tag viewer</h1>
+<h1 class="title toc-ignore">Frequently Asked Questions</h1>
 
 </div>
 
 
-<pre class="r"><code># using the data from the jsoneditor simple example
-#  in R list form
-# https://github.com/timelyportfolio/listviewer#jsoneditor
-library(tidyverse)
+<!--div class="about-body regs-state">
 
-# Read in Tags from Google Sheet----
-# url = https://docs.google.com/spreadsheets/d/1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM/edit#gid=1679546569
-url &lt;- &quot;1MTlWQgBeV4eNbM2JXNXU3Y-_Y6QcOOfjWFyKWfdMIQM&quot;
-d &lt;- googlesheets4::read_sheet(url, sheet = &quot;tags&quot;)
+<div class="container about-txt">
 
-cd2 &lt;- d
+<div class="row justify-content-center">
+<div class="col">
+<h1 style="text-align: center;">Frequently Asked Questions</h1>
+</div>
+</div>
 
-# Split tag column into multiple columns by hierarchy (&quot;/&quot;)
-cd2 &lt;- cd2 %&gt;% separate(tag, c(&#39;Primary&#39;, &#39;Secondary&#39;, &#39;Supplemental&#39;), sep = &quot;/&quot;, extra = &quot;merge&quot;)
+<div class="row spacer"></div>
 
-# Create list of primary tag categories
-tag_primary &lt;- cd2 %&gt;%
-  select(Primary) %&gt;%
-  distinct() %&gt;%
-  pull()
+<div class="row"-->
+<div id="who-funded-this-toolkit" class="section level2">
+<h2>Who funded this toolkit?</h2>
+<p>This project is funded by the <strong>U.S. Department of Energy</strong> and was selected as a winner under Federal Opportunity Announcement DE-FOA-0001837 Marine and Hydrokinetic Technology Advancement and Data Dissemination Topic Area 3: Dissemination of Environmental Data and Analyses to Facilitate the Marine Energy Regulatory Process. <!--br>
+<br--></p>
+</div>
+<div id="who-is-the-audience" class="section level2">
+<h2>Who is the audience?</h2>
+<p>Environmental regulators and developers of marine hydrokinetic energy technologies. <!--br>
+<br--></p>
+<!--
+## How do I use the Reporting Tool?
 
-# Create list of secondary tag categories
-tag_secondary &lt;- cd2 %&gt;%
-  filter(!is.na(Supplemental)) %&gt;%
-  select(Secondary) %&gt;%
-  distinct() %&gt;%
-  pull()
+### Enter criteria in the sidebar
 
-tag_group_all &lt;- tag_group_a &lt;- tag_group_b &lt;- tag_group_temp &lt;- c()
-n_count &lt;- c()
+### View / download the report
+-->
+</div>
+<div id="video-walkthroughs" class="section level2">
+<h2>Video Walkthroughs</h2>
+<div id="regulations" class="section level3">
+<h3><i class="fab fa-youtube" role="presentation" aria-label="youtube icon"></i> Regulations</h3>
+<p>Navigate the Regulation diagrams and wiki pages.</p>
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/tIzAb9Oc378" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+</div>
+<div id="ferc-documents" class="section level3">
+<h3><i class="fab fa-youtube" role="presentation" aria-label="youtube icon"></i> FERC Documents</h3>
+<p>Navigate project documents from the Federal Energy Regulatory Commission (FERC).</p>
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/y3gaXVZeXoQ" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+</div>
+<div id="custom-reports" class="section level3">
+<h3><i class="fab fa-youtube" role="presentation" aria-label="youtube icon"></i> Custom Reports</h3>
+<p>Generate custom reports based on interacting tags, location and content of interest.</p>
+<div class="vembedr">
+<div>
+<iframe src="https://www.youtube.com/embed/sREbz0W18cI" width="533" height="300" frameborder="0" allowfullscreen="" data-external="1"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div id="disclaimer" class="section level2">
+<h2>Disclaimer</h2>
+<p>These web services were prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or an agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof. <!--br>
+<br>
 
-for(i in tag_primary){
-  
-  
-  cd_temp2 &lt;- cd2 %&gt;% 
-    filter(Primary == i)
-  
-  tags_supplemental &lt;- cd_temp2 %&gt;%
-    select(Secondary, Supplemental) %&gt;%
-    filter(!is.na(Supplemental)) %&gt;%
-    select(Secondary) %&gt;%
-    distinct() %&gt;%
-    pull()
-  
-  cd_temp2_a &lt;- cd_temp2 %&gt;%
-    filter(!Secondary %in% tags_supplemental)
-  
-  tag_group_a &lt;- cd_temp2_a %&gt;% 
-    select(Secondary) %&gt;%
-    as.list()
-  
-  names(tag_group_a) &lt;- i
-  
-  n_count &lt;- length(tag_group_a[[i]])
-  
-  if(length(tags_supplemental)&gt;0){
-    
-    tag_group_temp &lt;- tag_group_a
-    
-  cd_temp2_b &lt;- cd_temp2 %&gt;%
-    filter(Secondary %in% tags_supplemental)
-  
-  n2_count &lt;- 1
-  for(j in tags_supplemental){
-    
-    tag_group_b &lt;- cd_temp2_b %&gt;% 
-      filter(Secondary == j)%&gt;%
-      select(Supplemental) %&gt;%
-      as.list()
-    
-    names(tag_group_b) &lt;- j
-    
-    tag_group_temp[[i]][[n_count+n2_count]] &lt;- tag_group_b
-    
-    n2_count &lt;- n2_count + 1
-    
-  }
-  tag_group_a &lt;- tag_group_temp
-  n_count &lt;- n_count+n2_count
-  }
-  
-    tag_group_all &lt;- c(tag_group_all, tag_group_a)
-}</code></pre>
-<pre class="r"><code>listviewer::jsonedit(tag_group_all)</code></pre>
+</div>
+</div>
+</div--></p>
+</div>
 
 <footer class="container-fluid no-gutters no-padding">
   <div class="container">
@@ -399,16 +454,9 @@ for(i in tag_primary){
   </div>
 </footer>
 
-<script>
-// replace __js-replace_by_bug-url__.html in menu with 
-url_form = 'https://docs.google.com/forms/d/e/1FAIpQLSfOKbx4Y_hNUjSj8gfuTuzvTFTIaBDJCojDoNThvkZImc6ZsA/viewform';
-url_page = window.location.href;
-$("a:contains('Report a Bug')").attr({
-  href:   url_form + "?entry.738205286=" + url_page,
-  target: '_blank'});
-</script>
 
-
+</div>
+</div>
 
 </div>
 
@@ -441,6 +489,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 
 </body>
