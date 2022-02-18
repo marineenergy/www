@@ -12,3 +12,12 @@
     </div>
   </div>
 </footer>
+
+<script>
+// replace __js-replace_by_bug-url__.html in menu with 
+url_form = 'https://docs.google.com/forms/d/e/1FAIpQLSfOKbx4Y_hNUjSj8gfuTuzvTFTIaBDJCojDoNThvkZImc6ZsA/viewform';
+url_page = window.location.href;
+$("a:contains('Report a Bug')").attr({
+  href:   url_form + "?entry.738205286=" + url_page,
+  target: '_blank'});
+</script>
