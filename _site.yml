@@ -19,8 +19,8 @@ navbar:
           href: about.html
         - text: "FAQ"
           href: faq.html
-        # - text: "Report a Bug"
-        #   href: __js-replace_by_bug-url__.html # see regs-state.Rmd for js script to replace
+        - text: "Report a Bug"
+          href: __js-replace_by_bug-url__.html # see regs-state.Rmd for js script to replace
 output:
   html_document:
     theme:
@@ -32,6 +32,6 @@ output:
     css: libs/styles.css
     mathjax: null    
     include:
-      in_header: "header.html"
-      after_body: "footer.html"
+      in_header: "_header.html"
+      after_body: "_footer.html"
 output_dir: "."
