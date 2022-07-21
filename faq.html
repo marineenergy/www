@@ -13,7 +13,7 @@
 
 <title>Frequently Asked Questions</title>
 
-<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <link href="site_libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet" />
@@ -386,19 +386,25 @@ div.tocify {
 </div>
 
 
-<!--div class="about-body regs-state">
+<style type="text/css">
+body {
+  background-color: white !important;
+}
+.container-fluid {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
 
-<div class="container about-txt">
+.row {
+  max-width: 1600px !important;
+  margin: auto;
+}
 
-<div class="row justify-content-center">
-<div class="col">
-<h1 style="text-align: center;">Frequently Asked Questions</h1>
-</div>
-</div>
-
-<div class="row spacer"></div>
-
-<div class="row"-->
+.tocify-extend-page {
+  height: 25px !important;
+}
+</style>
+<hr />
 <div id="who-funded-this-toolkit" class="section level2">
 <h2>Who funded this toolkit?</h2>
 <p>This project is funded by the <strong>U.S. Department of
@@ -406,14 +412,12 @@ Energy</strong> and was selected as a winner under Federal Opportunity
 Announcement DE-FOA-0001837 Marine and Hydrokinetic Technology
 Advancement and Data Dissemination Topic Area 3: Dissemination of
 Environmental Data and Analyses to Facilitate the Marine Energy
-Regulatory Process. <!--br>
-<br--></p>
+Regulatory Process.</p>
 </div>
 <div id="who-is-the-audience" class="section level2">
 <h2>Who is the audience?</h2>
 <p>Environmental regulators and developers of marine hydrokinetic energy
-technologies. <!--br>
-<br--></p>
+technologies.</p>
 <!--
 ## How do I use the Reporting Tool?
 
@@ -493,12 +497,13 @@ trademark, manufacturer, or otherwise does not necessarily constitute or
 imply its endorsement, recommendation, or favoring by the United States
 Government or an agency thereof. The views and opinions of authors
 expressed herein do not necessarily state or reflect those of the United
-States Government or any agency thereof. <!--br>
-<br>
-
-</div>
-</div>
-</div--></p>
+States Government or any agency thereof.</p>
+<!-- Move footer to end of body -->
+<script>
+  $( document ).ready(function() {
+    $( "footer" ).detach().appendTo(document.body);
+  });
+</script>
 </div>
 
 <footer class="container-fluid no-gutters no-padding">
