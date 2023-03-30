@@ -12,10 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <div class="row about-txt">
 
-## About the Marine Energy Toolkit
+## About the Marine Energy Environmental Toolkit
 
-The Marine Energy (formerly marine hydrokinetic energy [MHK]) Environmental Toolkit for Permitting and Licensing effort seeks to increase regulators’ and developers' understanding of Marine Energy projects and their potential environmental effects to reduce the amount of time to permit and decrease costs to develop Marine Energy projects. The Toolkit compiles and distills existing environmental, spatial, regulatory, and scientific data into one web-based platform. The current state–of-science on key topics associated with Marine Energy permitting is synthesized in the Toolkit, with live links to existing resources. It is designed to complement other DOE efforts such as the <a href = "https://openei.org/wiki/PRIMRE" target="_blank">Portal and Repository for Information on Marine Renewable Energy (PRIMRE)</a>. A series of workshops were held with state and federal regulators and developers to provide input on the functionality of and information contained within the Toolkit, as well as create buy-in with the use of the Toolkit in the Marine Energy permitting and licensing process.
-<br>
+The Marine Energy Environmental Toolkit for Permitting and Licensing seeks to increase regulators’ and developers’ understanding of marine energy projects and their potential environmental effects to reduce the amount of time to permit and decrease costs to develop marine energy projects. The Toolkit leverages and builds on the exceptional work of marine energy researchers at Pacific Northwest National Laboratory, National Renewable Energy Laboratory, and Sandia National Laboratories. The Toolkit compiles and distills environmental, spatial, regulatory, and scientific data into one web-based platform. The current state-of-science on key topics associated with marine energy permitting is synthesized in the Toolkit, from a variety of sources, with live links to existing resources.
+
+The Toolkit is currently being maintained and additional functionality is being assessed and implemented as part of the <a href = "https://openei.org/wiki/PRIMRE" target="_blank">Portal and Repository for Information on Marine Renewable Energy (PRIMRE)</a>. <br>
 <br>
 The Toolkit has four major components, integrated into one web-based platform, to increase the efficiency and effectiveness of the Marine Energy permitting process:
 
@@ -28,14 +29,14 @@ The Toolkit has four major components, integrated into one web-based platform, t
 1. **Searchable Documents.**
   Documents relevant to projects, precedent, and mitigation are searchable through the <a href="https://tethys.pnnl.gov/knowledge-base" target="_blank">Tethys Knowledge Base</a> or <a href="https://elibrary.ferc.gov/eLibrary/search" target="_blank">FERC eLibrary</a>.
 
-1. **Engagement and Communication.**
-  Community engagement with a focus on communication and outreach between regulators, subject matter experts, stakeholders, and developers.
+1. **Reporting Tool.**
+  Components 1-3 can be compiled based on a user’s queries for archival and sharing with project stakeholders.
 <br>
 <br>
 
 ## Mission
 
-The mission of the Marine Energy (formerly MHK) Environmental Toolkit for Permitting and Licensing Project is to create a one-stop-shop for the Marine Energy community to access, review, and compile relevant regulatory, spatial, and academic information to increase the efficiency of the Marine Energy permitting and licensing process.
+The Mission of the Marine Energy Environmental Toolkit for Permitting and Licensing is to create a one-stop shop for the marine energy community to access, review, and compile relevant regulatory and spatial information and available literature to increase the efficiency of the marine energy permitting and licensing process. 
 
 The project has four main objectives:
 
