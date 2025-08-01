@@ -6,7 +6,7 @@ navbar:
     - text: "Reporting Tool" 
       #icon: fa-institution
       icon: fa-file-medical-alt
-      href: https://shiny.marineenergy.app/report-v2
+      href: https://public.apps.integral-corp.com/app/me-report?sp_hide_navbar=true
     - text: "Regulations" 
       icon: fa-institution
       href: regs.html
